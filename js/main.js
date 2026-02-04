@@ -77,3 +77,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     stats.forEach(stat => statsObserver.observe(stat));
 });
+
+// Daniel Status Update Logic
+async function updateDanielStatus() {
+    const statusContainer = document.querySelector('#daniel-status .status-text');
+    try {
+        const response = await fetch('data/status.json');
+        const data = await response.json();
+        if (data && data.status) {
+            statusContainer.textContent = "丹尼尔 (Daniel) 的日志: " + data.status;
+        }
+    } catch (e) {
+        statusContainer.textContent = "丹尼尔 (Daniel): 正在后台努力工作中... 🤖";
+    }
+}
+
+document.addEventListener('DOMContentLoaded', updateDanielStatus);
