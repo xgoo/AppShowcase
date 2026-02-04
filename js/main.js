@@ -122,16 +122,30 @@ function renderTsumego(level) {
     if (problem && window.besogo) {
         container.innerHTML = ''; // Clear container
         
-        // Construct full SGF URL
-        const sgfUrl = "https://www.verywill.com" + problem.sgf_url;
+        // Construct full SGF URL (Using the base URL provided by Steve)
+        // We add a timestamp to bypass any caching during debugging
+        const sgfUrl = "https://xsgf.verywill.com" + problem.sgf_url + "?t=" + new Date().getTime();
         
+        console.log("Loading SGF from:", sgfUrl);
+
         // Initialize Besogo Board
         besogo.create(container, {
             path: sgfUrl,
-            panel: 'none', // Simple mode for tsumego
+            panel: 'none', 
             coord: 'western',
             tool: 'auto'
         });
+
+        // Add an error listener or check if container is still empty after a delay
+        setTimeout(() => {
+            if (container.innerHTML.includes('Error') || container.innerText.trim() === '') {
+                container.innerHTML = '<div style="padding: 20px; color: var(--color-accent);">' +
+                                   '<div style="font-size: 3rem; margin-bottom: 10px;">🚧</div>' +
+                                   '<p>棋谱服务器正在维护中 (502)</p>' +
+                                   '<p style="font-size: 0.8rem; opacity: 0.7;">拍档丹尼尔与 Steve 正在全力抢修证书配置...</p>' +
+                                   '</div>';
+            }
+        }, 2000);
 
         nameLabel.textContent = problem.name;
         timeLabel.textContent = "更新时间: " + problem.input_time;
