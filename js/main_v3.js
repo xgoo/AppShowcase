@@ -1,7 +1,7 @@
-// 围棋工坊 - Main JavaScript v6 (Robust Rendering)
+// 围棋工坊 - Main JavaScript v7 (Local & Test Mode)
 
 document.addEventListener('DOMContentLoaded', () => {
-    console.log("iProject Studio JS v6 Loading...");
+    console.log("iProject Studio JS v7 Loading (Local Assets)...");
     updateDanielStatus();
     checkWGo();
 });
@@ -20,9 +20,10 @@ async function updateDanielStatus() {
 function checkWGo() {
     const container = document.getElementById('tsumego-display');
     if (typeof WGo === 'undefined') {
-        if (container) container.innerHTML = '<p style="color:#D4A853; padding:20px;">正在加载棋盘引擎...</p>';
+        if (container) container.innerHTML = '<p style="color:#D4A853; padding:20px;">正在加载本地棋盘引擎...</p>';
         setTimeout(checkWGo, 500);
     } else {
+        console.log("WGo is ready!");
         fetchTsumego();
     }
 }
@@ -35,7 +36,8 @@ async function fetchTsumego() {
         currentTsumegoData = await response.json();
         renderTsumego('初级');
     } catch (e) {
-        console.error("Fetch error:", e);
+        console.error("Fetch error, entering TEST MODE...");
+        renderTsumego('TEST');
     }
 }
 
@@ -46,39 +48,43 @@ async function renderTsumego(level) {
     
     if (!container) return;
     
-    const problem = currentTsumegoData.find(p => p.name.includes(level));
-    if (!problem) return;
+    let sgfUrl = "";
+    let problemName = level;
+
+    if (level === 'TEST') {
+        sgfUrl = "data/sgf/test.sgf?t=" + Date.now();
+        problemName = "测试模式：基础星位图";
+    } else {
+        const problem = currentTsumegoData.find(p => p.name.includes(level));
+        if (!problem) {
+            console.warn("Problem not found, fallback to TEST");
+            renderTsumego('TEST');
+            return;
+        }
+        const fileName = problem.sgf_url.split('/').pop();
+        sgfUrl = "data/sgf/" + fileName + "?t=" + Date.now();
+        problemName = problem.name;
+    }
 
     container.innerHTML = '';
-    const fileName = problem.sgf_url.split('/').pop();
-    const sgfUrl = "data/sgf/" + fileName + "?t=" + Date.now();
-    
-    console.log("Fetching SGF content:", sgfUrl);
+    console.log("Rendering SGF from:", sgfUrl);
 
     try {
-        // Fetch SGF content first to ensure it's available
-        const res = await fetch(sgfUrl);
-        const sgfContent = await res.text();
-        
-        if (sgfContent.includes('(;')) {
-            console.log("SGF content loaded, creating player...");
-            new WGo.BasicPlayer(container, {
-                sgf: sgfContent,
-                move: 0,
-                markLastMove: true,
-                display: { background: "#dcb35c" },
-                layout: { right: [], left: [], bottom: [] }
-            });
-        } else {
-            throw new Error("Invalid SGF content");
-        }
+        // Option 1: Try direct file load (more stable with WGo)
+        new WGo.BasicPlayer(container, {
+            sgfFile: sgfUrl,
+            move: 0,
+            markLastMove: true,
+            display: { background: "#dcb35c" },
+            layout: { right: [], left: [], bottom: [] }
+        });
+        console.log("WGo instance created.");
     } catch (err) {
-        console.error("WGo error:", err);
-        container.innerHTML = '<p style="color:#D4A853; padding:20px;">棋谱加载失败，请刷新重试</p>';
+        console.error("WGo Rendering failed:", err);
+        container.innerHTML = '<p style="color:#D4A853; padding:20px;">本地渲染失败，尝试读取文本模式...</p>';
     }
     
-    if (nameLabel) nameLabel.textContent = problem.name;
-    if (timeLabel) timeLabel.textContent = "更新时间: " + problem.input_time;
+    if (nameLabel) nameLabel.textContent = problemName;
 }
 
 // Tab Switching
