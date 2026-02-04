@@ -421,16 +421,23 @@ body {
 
 .tsumego-display {
     aspect-ratio: 1;
-    max-width: 500px;
+    max-width: 600px;
     margin: 0 auto;
-    background: #f0f0f0;
+    background: transparent;
     border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #333;
     position: relative;
     overflow: hidden;
+}
+
+/* Customizing Besogo Board to fit dark theme */
+.besogo-editor {
+    background-color: transparent !important;
+    border: none !important;
+}
+
+.besogo-board {
+    background-color: #dcb35c !important; /* Wood color for the board */
+    border: 2px solid #8b6e37 !important;
 }
 
 .tsumego-loading {

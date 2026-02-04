@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    document.querySelectorAll('.app-card').forEach(card => {
+    document.querySelectorAll('.app-card, .roadmap-item').forEach(card => {
         card.style.opacity = '0';
         card.style.transform = 'translateY(30px)';
         card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
@@ -76,9 +76,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { threshold: 0.5 });
 
     stats.forEach(stat => statsObserver.observe(stat));
+
+    // Daniel Status Update
+    updateDanielStatus();
+    // Tsumego Logic
+    fetchTsumego();
 });
 
-// Daniel Status Update Logic
 async function updateDanielStatus() {
     const statusContainer = document.querySelector('#daniel-status .status-text');
     try {
@@ -92,44 +96,49 @@ async function updateDanielStatus() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', updateDanielStatus);
-
-// Tsumego Logic
+// Tsumego Integration
 let currentTsumegoData = [];
 
 async function fetchTsumego() {
-    const display = document.getElementById('tsumego-display');
     try {
-        const response = await fetch('https://xapi.verywill.com/sgf_list_plus?cid=9&start=0&pageSize=10', {
-            method: 'POST'
-        });
+        // Load from local cache to avoid CORS
+        const response = await fetch('data/tsumego.json');
         currentTsumegoData = await response.json();
         renderTsumego('初级');
     } catch (e) {
-        display.innerHTML = '<div class="error">无法连接题库 API，请稍后再试。</div>';
+        console.error("Tsumego fetch error:", e);
+        const display = document.getElementById('tsumego-display');
+        display.innerHTML = '<div style="color: #D4A853">暂时无法获取棋谱数据，请检查网络。</div>';
     }
 }
 
 function renderTsumego(level) {
-    const display = document.getElementById('tsumego-display');
     const nameLabel = document.getElementById('tsumego-name');
     const timeLabel = document.getElementById('tsumego-time');
+    const container = document.getElementById('tsumego-display');
     
     const problem = currentTsumegoData.find(p => p.name.includes(level));
     
-    if (problem) {
-        // Placeholder for the Go board - in real version, use WGo.js here
-        display.innerHTML = '<div style="text-align:center; padding: 20px; color: #333;">' +
-                           '<div style="font-size: 4rem; margin-bottom: 10px;">⚫⚪</div>' +
-                           '<p>SGF 棋谱已就绪</p>' +
-                           '<a href="https://www.verywill.com' + problem.sgf_url + '" target="_blank" style="color: #D4A853; text-decoration: underline;">下载 SGF 研究</a>' +
-                           '</div>';
+    if (problem && window.besogo) {
+        container.innerHTML = ''; // Clear container
+        
+        // Construct full SGF URL
+        const sgfUrl = "https://www.verywill.com" + problem.sgf_url;
+        
+        // Initialize Besogo Board
+        besogo.create(container, {
+            path: sgfUrl,
+            panel: 'none', // Simple mode for tsumego
+            coord: 'western',
+            tool: 'auto'
+        });
+
         nameLabel.textContent = problem.name;
         timeLabel.textContent = "更新时间: " + problem.input_time;
     }
 }
 
-// Tab Switching
+// Tab Switching Listener
 document.querySelectorAll('.tsumego-tab').forEach(tab => {
     tab.addEventListener('click', (e) => {
         document.querySelectorAll('.tsumego-tab').forEach(t => t.classList.remove('active'));
@@ -137,5 +146,3 @@ document.querySelectorAll('.tsumego-tab').forEach(tab => {
         renderTsumego(tab.dataset.level);
     });
 });
-
-document.addEventListener('DOMContentLoaded', fetchTsumego);
