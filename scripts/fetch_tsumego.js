@@ -30,7 +30,7 @@ async function fetchTsumegoData() {
             if (problem.sgf_url) {
                 const fileName = path.basename(problem.sgf_url);
                 const localPath = path.join(sgfDir, fileName);
-                const remoteUrl = "https://www.verywill.com" + problem.sgf_url;
+                const remoteUrl = "https://xsgf.verywill.com" + problem.sgf_url;
                 
                 try {
                     await downloadFile(remoteUrl, localPath);

@@ -1,0 +1,13 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]GN[          第39题]HA[0]AB[cc][cd][dc][be][cf][cg][df]AW[bg][ch][dh][dg][bj][ef][ee][dd][fc][eb][db][ge]C[白先
+简单地考虑，会变成打劫。请注意次序。]
+
+(;W[bf]N[正解]C[白1是破眼的急所，这稍难注意到的地方。];B[cb];W[ca];B[ba];W[ab]C[黑2挡，白3扳、5点是常用手筋。
+[格言：大猪嘴扳点杀]];B[bc]
+(;W[ce]C[黑6时，白7要紧。];B[af];W[ad];B[ae];W[ac]LB[bd:A][da:B]C[黑即使走到8位顽抗，白走9、11，此后A和B两处，白必得其一。
+恭喜答对！])
+(;W[ad];B[ae]C[失败，重来吧]))
+(;W[bb]N[失败图]C[失败图];B[cb];W[ca];B[bf];W[bh];B[bc];W[de];B[ad]LB[af:A][ba:B]C[白1跳，似也是好棋。经黑2冲后4挤，白5不可省略。黑6挡后、8做眼，此后白在A位扳，黑在B位扑，成劫，白棋失败。])
+(;W[cb];B[bb];W[ba];B[bf]
+(;W[bh];B[bc]LB[ad:A][de:B]C[AB见合
+失败，重来吧])
+(;W[bc];B[bd];W[ab];B[bh]C[失败，重来吧])))

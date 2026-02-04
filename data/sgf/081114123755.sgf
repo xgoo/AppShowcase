@@ -1,0 +1,24 @@
+(;AW[rb][rc][qc][rf][qf][pe][of][nf][rh][le][lc][mc][nc][ob]AB[ra][qb][pb][pc][pd][qe][od][nd][md]SZ[19]C[第11题：黑先
+　　　　　　　　基本图
+【审题】黑棋可以吃掉白角上三子。但是眼
+位意外地还不足！这就只有到上边去搞些名
+堂了。
+〖提示〗白棋掌握着本题或成劫杀、或成
+“长生”无胜负的选择权。
+]
+
+(;B[qd];W[rd];B[re];W[se];B[sd];W[sb];B[ld];W[kd];B[kc];W[jc];B[kb];W[jb]LB[sc:a]C[图一：解题前的整理图。图中白6是最强下法。白6如a位提，黑6扑成劫，无趣。]
+)
+(;B[qd];W[rd];B[re];W[se];B[sd];W[sb];B[ld];W[kd];B[kc];W[kb];B[jc];W[jb];B[ic]
+;W[ke];B[ib];W[mb];B[la];W[ma];B[oa];W[na];B[pa];W[oc];B[sf]LB[ja:a][lb:b][ka:c]C[图二：黑9断时白10如在上边打，则黑棋可以利用“征子”有利的条件争到15位拐。白16虽已是最好的补活办法，但继续到黑23，白失败。图中白16如改在23位粘，则黑a、白b、黑c，对杀白不利。]
+)
+(;B[qd];W[rd];B[re];W[se];B[sd];W[sb];B[ld];W[kd];B[kc];W[jc];B[kb];W[jb];B[lb]
+;W[mb];B[na];W[pa];B[oa];W[nb];B[qa];W[ka];B[sf];W[sc]LB[ma:a][oc:b]C[图三：黑13拐、15点不是好棋。16扳后，走至白22可净杀黑棋。白16如在17位挡，则黑b、白a、黑16、白18、黑21，黑净活。又白16如于b位粘，则黑16、白22、黑a，白也不行。])
+(;B[qd];W[rd];B[re];W[se];B[sd];W[sb];B[ld];W[kd];B[kc];W[jc];B[kb];W[jb];B[oc]
+;W[nb];B[lb];W[mb];B[oa];W[ka];B[sf];W[pa];B[sa];W[qa];B[ra];W[pa];B[sa]C[图四：黑13试应手正着。白14如粘，则17紧气成为先手！以下白20扑破眼时，黑21反扑绝妙！形成“长生”局面。])
+(;B[qd];W[rd];B[re];W[se];B[sd];W[sb];B[ld];W[kd];B[kc];W[jc];B[kb];W[jb];B[oc]
+;W[na];B[sf];W[pa];B[qa];W[sc];B[oa]C[图五：白棋如不愿走成“长生”，黑13卡时，白可在14位虎，变化至19成劫杀。
+
+
+结论：黑先劫。图五是正解。白也可走成图四结果，选择权在白方。
+思考与收获：“长生”的结果和“三劫循环”大致相同。按照日本规则，如双方都坚持循环、不肯退让的话，全局作为“无胜负”处理。]))

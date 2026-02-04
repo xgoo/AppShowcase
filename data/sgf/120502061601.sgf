@@ -1,0 +1,9 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]HA[0]AB[rq][qr][pr][oq][nq][mr][lr][lq]AW[ms][mq][mp][np][nr][or][op][pp][qp][qq][rr][qn]C[黑先
+本题是常用手段。不难。]
+
+(;B[rs];W[sr]
+(;B[ps]C[见合的好手！]
+(;W[pq];B[sq]C[恭喜答对！])
+(;W[rp];B[pq]))
+(;B[sq];W[ps]C[失败，重来吧]))
+(;B[sr];W[rs];B[rp];W[ro];B[qs];W[pq];B[ss];W[sp]C[失败，重来吧]))

@@ -1,0 +1,23 @@
+(;AB[rc][pd][qf][rf][qi][qj]AW[qb][pb][oc][mc][oe][of][pg][ph][rg][ri]SZ[19]C[第12题：黑先
+　　　　　　　　基本图
+【审题】黑方为求生存，只有扩大已方的空
+间。
+〖提示〗黑方应设法利用外围的两个黑子。
+
+]
+(;B[sf];W[rb];B[rh];W[qh];B[sh]C[图一：黑1立是好手！白2如在角上挡，黑3挖即可通连。])
+(;B[sf];W[qh];B[rb];W[pe];B[qe];W[ra];B[od];W[nc];B[nd];W[le];B[sd];W[sb];B[re]
+;W[qd];B[qc];W[pc]C[图二：黑1立时，白2补正应。白4反冲有力，黑5如挡，白6扳，变化至白16，黑棋被净杀。])
+(;B[sf];W[qh];B[rb];W[pe];B[qe];W[ra];B[od];W[nd];B[pc];W[qc];B[qd];W[sb];B[sd]
+;W[re];B[ob];W[nb]C[图三：黑7冲时，白8如挡，则成打劫，黑失败。])
+(;B[sf];W[qh];B[rb];W[pe];B[ra];W[rd];B[qd];W[qe];B[re];W[sd];B[qc]C[图四：白4冲时，黑置之不理而在角上立是正着。白6如在7位扳，黑6位挡即活。又白6如在8位冲，黑9挡也活。])
+(;B[sf];W[qh];B[rb];W[ra];B[pe];W[sb];B[re];W[sc];B[rd]C[图五：白4扳角，黑5、7好手，成活。])
+(;B[sf];W[qh];B[rb];W[ra];B[pe];W[qc];B[qd];W[re];B[sb];W[sd];B[rd];W[se];B[pf]C[图六：这是白6冲、8点的变化。黑5立好手，至黑13成“双活”。从目数上来说，本图白棋略优于前图。]
+)
+(;B[sf];W[qh];B[rb];W[ra];B[pe];W[sb];B[qc];W[re];B[rd];W[qe];B[sc];W[se];B[pc]
+;W[pf];B[od];W[nc];B[nd];W[le];B[sa];W[sg]C[图七：白6扳时，黑7应错！白8点严厉，至白20成净杀，黑棋失败。
+
+
+结论：黑先活。图六是正解。图四、图五是变化。
+思考与收获：整个题图如果从右上向右下移过一路，结果将会如何？如果下移两路呢？
+]))

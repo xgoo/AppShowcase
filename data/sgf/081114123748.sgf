@@ -1,0 +1,18 @@
+(;AW[qc][pc][oc][mc][ne][oe][pe]AB[nc][nb][ob][lc][md][le][mg][of][pf][qe][qd]SZ[19]C[第10题：白先
+　　　　　　　　基本图
+【审题】白方对黑棋外侧的缺陷，必须要加
+以最彻底的利用！否则无法成活。
+〖提示〗弃子是必不可少的。]
+
+(;W[qf];B[qg];W[rf];B[rg];W[rd];B[re]C[图一：白1以下双方无变。但白下一手就不平凡了。])
+(;W[qf];B[qg];W[rf];B[rg];W[rd];B[re];W[rb];B[sd];W[sc]C[图二：白7虎恶手！黑8打时，白只有开劫一途。本图白失败。])
+(;W[qf];B[qg];W[rf];B[rg];W[rd];B[re];W[rb];B[sd];W[pb];B[sb];W[rc];B[sc];W[pd]
+;B[sf];W[nd];B[qa]C[图三：这是前图的变化，黑10正应。以下变化至黑16，白棋反遭净杀。])
+(;W[qf];B[qg];W[rf];B[rg];W[rd];B[re];W[sd];B[se];W[pd];B[sf];W[sb];B[ra];W[rb]
+;B[qa];W[nd];B[rc];W[qb];B[sc];W[pb];B[pa];W[sa]C[图四：白7妙手！黑8应最强，如改走10位提，白13位虎做活。图中白11跳是第二步妙手！以下白棋利用上边的“伏兵”做成“一气吃”。])
+(;W[qf];B[qg];W[rf];B[rg];W[rd];B[re];W[sd];B[se];W[pd];B[sf];W[rb];B[sb];W[nd]
+;B[rc];W[pb];B[qa]C[图五：白11虎错！白棋净死。])
+(;W[qf];B[qg];W[rf];B[rg];W[rd];B[re];W[sd];B[se];W[pd];B[sf];W[sb];B[rc];W[rb]
+;B[pb];W[qb]LB[nd:a][ra:b]C[图六：白11跳时，黑12打也不行。图中黑12如改在a位破眼，白b位尖是巧手！白棋净活。
+
+结论：白先活。图一、四的次序是正解。图六是变化。]))

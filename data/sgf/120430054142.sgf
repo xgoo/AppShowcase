@@ -1,0 +1,7 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]GN[白先黑死]HA[0]AB[ps][pr][qq][rq][sq]AW[qp][rp][sp][pq][oq][or][po]C[白先]
+
+(;W[rr]
+(;B[qr];W[rs]C[恭喜答对])
+(;B[rs]MN[2]N[变化图];W[qr]))
+(;W[rs]N[失败图1];B[rr];W[os];B[ss];W[sr]C[成为劫争，失败。])
+(;W[os]N[失败图2];B[rs]C[黑棋净活。]))
