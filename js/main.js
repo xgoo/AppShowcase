@@ -122,10 +122,11 @@ function renderTsumego(level) {
     if (problem && window.besogo) {
         container.innerHTML = ''; // Clear container
         
-        // Construct full SGF URL (Using the base URL provided by Steve)
-        const sgfUrl = "https://xsgf.verywill.com" + problem.sgf_url;
+        // Use local cached SGF to completely bypass CORS issues
+        const fileName = problem.sgf_url.split('/').pop();
+        const sgfUrl = "data/sgf/" + fileName;
         
-        console.log("Loading SGF from:", sgfUrl);
+        console.log("Loading SGF from local cache:", sgfUrl);
 
         // Initialize Besogo Board
         besogo.create(container, {
@@ -138,12 +139,17 @@ function renderTsumego(level) {
         // Add an error check
         setTimeout(() => {
             if (container.innerText.trim() === 'Error loading file' || container.innerText.trim() === '') {
-                container.innerHTML = '<div style="padding: 20px; color: var(--color-accent);">' +
-                                   '<div style="font-size: 3rem; margin-bottom: 10px;">⚠️</div>' +
-                                   '<p>棋谱加载失败，请检查网络</p>' +
-                                   '</div>';
+                // Fallback to remote URL if local fails
+                const remoteUrl = "https://xsgf.verywill.com" + problem.sgf_url;
+                console.log("Local SGF failed, trying remote:", remoteUrl);
+                besogo.create(container, {
+                    path: remoteUrl,
+                    panel: 'none',
+                    coord: 'western',
+                    tool: 'auto'
+                });
             }
-        }, 5000);
+        }, 3000);
 
         nameLabel.textContent = problem.name;
         timeLabel.textContent = "更新时间: " + problem.input_time;
