@@ -56,32 +56,38 @@ function renderTsumego(level) {
 
     const problem = currentTsumegoData.find(p => p.name.includes(level));
     
-    if (problem && window.besogo) {
+    if (problem && window.WGo) {
         container.innerHTML = '';
         
         const fileName = problem.sgf_url.split('/').pop();
         const sgfUrl = "data/sgf/" + fileName + "?v=" + Date.now();
         
-        console.log("Loading SGF file:", sgfUrl);
+        console.log("Loading SGF with WGo:", sgfUrl);
 
         try {
-            besogo.create(container, {
-                path: sgfUrl,
-                panel: 'none',
-                coord: 'western',
-                tool: 'auto',
-                mobile: 'auto'
+            new WGo.BasicPlayer(container, {
+                sgfFile: sgfUrl,
+                move: 0,
+                markLastMove: true,
+                display: {
+                    background: "#dcb35c"
+                },
+                layout: {
+                    right: [],
+                    left: [],
+                    bottom: []
+                }
             });
-            console.log("Besogo instance created successfully");
+            console.log("WGo Player created successfully");
         } catch (err) {
-            console.error("Besogo creation failed:", err);
+            console.error("WGo Player creation failed:", err);
             container.innerHTML = '<p style="color:red">棋盘组件启动失败</p>';
         }
         
         nameLabel.textContent = problem.name;
         timeLabel.textContent = "更新时间: " + problem.input_time;
     } else {
-        console.error("Problem not found or besogo missing", { problem: !!problem, besogo: !!window.besogo });
+        console.error("Problem not found or WGo missing", { problem: !!problem, WGo: !!window.WGo });
     }
 }
 
