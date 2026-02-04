@@ -8,7 +8,7 @@ async function fetchTsumegoData() {
         const response = await fetch(url, { method: 'POST' });
         const data = await response.json();
         
-        const dataDir = path.join(__dirname, 'data');
+        const dataDir = path.join(__dirname, '..', 'data');
         if (!fs.existsSync(dataDir)) {
             fs.mkdirSync(dataDir);
         }
