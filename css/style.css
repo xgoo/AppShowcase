@@ -324,6 +324,61 @@ body {
 }
 
 /* ========================================
+   Roadmap Section
+   ======================================== */
+.roadmap-section {
+    padding: var(--space-xl) 0;
+    background: var(--color-bg-dark);
+}
+
+.roadmap-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+}
+
+.roadmap-item {
+    background: rgba(255, 255, 255, 0.03);
+    border-left: 4px solid var(--color-text-muted);
+    padding: var(--space-md);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    transition: var(--transition);
+}
+
+.roadmap-item.done {
+    border-color: #34C759;
+}
+
+.roadmap-item.current {
+    border-color: var(--color-accent);
+    background: rgba(212, 168, 83, 0.05);
+    transform: scale(1.02);
+}
+
+.roadmap-item.future {
+    border-color: rgba(255, 255, 255, 0.1);
+    opacity: 0.7;
+}
+
+.roadmap-date {
+    font-size: 0.8rem;
+    color: var(--color-accent);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.roadmap-content h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.roadmap-content p {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+}
+
+/* ========================================
    About Section
    ======================================== */
 .about-section {
