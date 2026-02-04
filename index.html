@@ -180,16 +180,39 @@
                 <div class="roadmap-item current">
                     <div class="roadmap-date">进行中</div>
                     <div class="roadmap-content">
-                        <h4>iTyping 智能算法迭代</h4>
-                        <p>正在训练“弱项精准打击”逻辑，帮 Steve 攻克打字死穴。阿西监督中。</p>
+                        <h4>每日死活题板块</h4>
+                        <p>正在对接 XGoo 题库，将每日挑战直接搬上网页。阿西正在围观进度。</p>
                     </div>
                 </div>
                 <div class="roadmap-item future">
                     <div class="roadmap-date">待启程</div>
                     <div class="roadmap-content">
-                        <h4>围棋社区联动功能</h4>
-                        <p>计划引入每日死活题挂件，将工坊 App 与 Web 深度链接。</p>
+                        <h4>iTyping 算法深度优化</h4>
+                        <p>计划引入打字轨迹热力图，精准定位手感盲区。</p>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tsumego Section -->
+    <section id="tsumego" class="tsumego-section">
+        <div class="container">
+            <h2 class="section-title">每日死活题挑战</h2>
+            <p class="section-subtitle">同步自 XGoo App 实时题库，每天提升一点计算力</p>
+            
+            <div class="tsumego-container">
+                <div class="tsumego-tabs">
+                    <button class="tsumego-tab active" data-level="初级">初级</button>
+                    <button class="tsumego-tab" data-level="中级">中级</button>
+                    <button class="tsumego-tab" data-level="高级">高级</button>
+                </div>
+                <div id="tsumego-display" class="tsumego-display">
+                    <div class="tsumego-loading">正在从 XGoo 调取今日棋局...</div>
+                </div>
+                <div class="tsumego-meta">
+                    <p id="tsumego-name"></p>
+                    <p id="tsumego-time"></p>
                 </div>
             </div>
         </div>

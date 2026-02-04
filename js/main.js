@@ -93,3 +93,49 @@ async function updateDanielStatus() {
 }
 
 document.addEventListener('DOMContentLoaded', updateDanielStatus);
+
+// Tsumego Logic
+let currentTsumegoData = [];
+
+async function fetchTsumego() {
+    const display = document.getElementById('tsumego-display');
+    try {
+        const response = await fetch('https://xapi.verywill.com/sgf_list_plus?cid=9&start=0&pageSize=10', {
+            method: 'POST'
+        });
+        currentTsumegoData = await response.json();
+        renderTsumego('初级');
+    } catch (e) {
+        display.innerHTML = '<div class="error">无法连接题库 API，请稍后再试。</div>';
+    }
+}
+
+function renderTsumego(level) {
+    const display = document.getElementById('tsumego-display');
+    const nameLabel = document.getElementById('tsumego-name');
+    const timeLabel = document.getElementById('tsumego-time');
+    
+    const problem = currentTsumegoData.find(p => p.name.includes(level));
+    
+    if (problem) {
+        // Placeholder for the Go board - in real version, use WGo.js here
+        display.innerHTML = '<div style="text-align:center; padding: 20px; color: #333;">' +
+                           '<div style="font-size: 4rem; margin-bottom: 10px;">⚫⚪</div>' +
+                           '<p>SGF 棋谱已就绪</p>' +
+                           '<a href="https://www.verywill.com' + problem.sgf_url + '" target="_blank" style="color: #D4A853; text-decoration: underline;">下载 SGF 研究</a>' +
+                           '</div>';
+        nameLabel.textContent = problem.name;
+        timeLabel.textContent = "更新时间: " + problem.input_time;
+    }
+}
+
+// Tab Switching
+document.querySelectorAll('.tsumego-tab').forEach(tab => {
+    tab.addEventListener('click', (e) => {
+        document.querySelectorAll('.tsumego-tab').forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        renderTsumego(tab.dataset.level);
+    });
+});
+
+document.addEventListener('DOMContentLoaded', fetchTsumego);
