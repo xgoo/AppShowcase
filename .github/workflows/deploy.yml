@@ -1,0 +1,34 @@
+name: Auto Deploy
+
+on:
+  push:
+    branches: [ main ]  # 当 main 分支有代码推送时触发
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    # 1. 虽然是 SSH 部署，但通常不需要 checkout 代码到 GitHub 运行环境，
+    # 除非你要在 GitHub 上进行编译打包。如果只是去服务器 pull，这步甚至可以省。
+    
+    # 2. 连接服务器并执行命令
+    - name: SSH Remote Commands
+      uses: appleboy/ssh-action@v1.0.3
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.APPSHOW }}
+        # 如果端口不是 22，这里要改，比如 port: 2222
+        # script 里的命令就是你要在服务器上执行的操作
+        script: |
+          # 1. 进入你的项目目录 (请修改为你的实际路径)
+          cd /var/www/verywill.com/appshow
+
+          # 2. 拉取最新代码
+          git pull origin main
+
+          # 3. (可选) 如果是 Node/Python 项目，可能需要安装依赖
+          # npm install 或 pip install -r requirements.txt
+          
+          # 4. 重启服务,服务器是centos
+          systemctl restart nginx
