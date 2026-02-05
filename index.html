@@ -5,14 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>围棋工坊 | Go Game Studio</title>
     <meta name="description" content="专注围棋与棋类应用开发，提供最优质的围棋学习与对弈体验">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=11">
+    <link rel="stylesheet" href="css/components.css?v=11">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="lib/wgo.player.css">
-    <script src="lib/wgo.min.js"></script>
-    <script src="lib/wgo.player.min.js"></script>
+    
+    <!-- Go Board Engine -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/wgo@2.3.1/wgo.player.css">
+    <script src="https://cdn.jsdelivr.net/npm/wgo@2.3.1/wgo.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/wgo@2.3.1/wgo.player.min.js"></script>
 </head>
 <body>
     <!-- Hero Section -->
@@ -178,21 +180,21 @@
                     <div class="roadmap-date">2026.02.04</div>
                     <div class="roadmap-content">
                         <h4>官网自动化部署上线</h4>
-                        <p>成功对接 GitHub Actions，实现代码提交即刻发布，由丹尼尔全权运维。</p>
+                        <p>成功对接 GitHub Actions，实现代码发布由丹尼尔全权运维。</p>
                     </div>
                 </div>
                 <div class="roadmap-item current">
                     <div class="roadmap-date">进行中</div>
                     <div class="roadmap-content">
-                        <h4>每日死活题板块</h4>
-                        <p>正在对接 XGoo 题库，将每日挑战直接搬上网页。阿西正在围观进度。</p>
+                        <h4>每日死活题挑战</h4>
+                        <p>引入交互式 WGo 棋盘。阿西监督中。正在优化移动端布局适配。</p>
                     </div>
                 </div>
                 <div class="roadmap-item future">
                     <div class="roadmap-date">待启程</div>
                     <div class="roadmap-content">
-                        <h4>iTyping 算法深度优化</h4>
-                        <p>计划引入打字轨迹热力图，精准定位手感盲区。</p>
+                        <h4>iTyping 深度优化</h4>
+                        <p>计划引入打字轨迹分析与弱项精准强化训练。</p>
                     </div>
                 </div>
             </div>
@@ -211,8 +213,8 @@
                     <button class="tsumego-tab" data-level="中级">中级</button>
                     <button class="tsumego-tab" data-level="高级">高级</button>
                 </div>
-                <div id="tsumego-display" class="tsumego-display">
-                    <div class="tsumego-placeholder">正在加载棋盘引擎...</div>
+                <div class="tsumego-display-wrapper">
+                    <div id="tsumego-display"></div>
                 </div>
                 <div class="tsumego-meta">
                     <p id="tsumego-name"></p>
