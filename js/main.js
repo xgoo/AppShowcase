@@ -1,82 +1,60 @@
-// 围棋工坊 - Main JavaScript
+// 围棋工坊 - JavaScript v10 (Clean Initialization)
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Smooth scroll
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        });
-    });
-
-    // Daniel Status
     updateDanielStatus();
-    // Tsumego
-    fetchTsumego();
+    initTsumego();
 });
 
 async function updateDanielStatus() {
-    const statusText = document.querySelector('#daniel-status .status-text');
+    const el = document.querySelector('#daniel-status .status-text');
     try {
-        const response = await fetch('data/status.json');
-        const data = await response.json();
-        if (data && data.status) {
-            statusText.textContent = "丹尼尔 (Daniel) 的日志: " + data.status;
-        }
+        const res = await fetch('data/status.json?t=' + Date.now());
+        const data = await res.json();
+        if (el && data.status) el.textContent = "丹尼尔 (Daniel): " + data.status;
+    } catch (e) {}
+}
+
+let tsumegoData = [];
+let player = null;
+
+async function initTsumego() {
+    try {
+        const res = await fetch('data/tsumego.json?t=' + Date.now());
+        tsumegoData = await res.json();
+        loadLevel('初级');
     } catch (e) {
-        console.error("Status update error");
+        console.error("Data load failed");
     }
 }
 
-let currentTsumegoData = [];
-
-async function fetchTsumego() {
-    try {
-        const response = await fetch('data/tsumego.json');
-        currentTsumegoData = await response.json();
-        renderTsumego('初级');
-    } catch (e) {
-        console.error("Tsumego fetch error");
-    }
-}
-
-function renderTsumego(level) {
-    const nameLabel = document.getElementById('tsumego-name');
-    const timeLabel = document.getElementById('tsumego-time');
+function loadLevel(level) {
     const container = document.getElementById('tsumego-display');
+    const nameLabel = document.getElementById('tsumego-name');
     
-    const problem = currentTsumegoData.find(p => p.name.includes(level));
-    
-    if (problem && window.besogo) {
-        container.innerHTML = '';
-        
-        // Use relative path to local cached SGF
-        const fileName = problem.sgf_url.split('/').pop();
-        const sgfUrl = "data/sgf/" + fileName;
-        
-        console.log("Loading SGF:", sgfUrl);
+    if (!container || tsumegoData.length === 0) return;
+    const item = tsumegoData.find(p => p.name.includes(level));
+    if (!item) return;
 
-        besogo.create(container, {
-            path: sgfUrl,
-            panel: 'none',
-            coord: 'western',
-            tool: 'auto',
-            mobile: 'auto'
+    container.innerHTML = '';
+    const sgfUrl = "data/sgf/" + item.sgf_url.split('/').pop() + "?t=" + Date.now();
+
+    if (typeof WGo !== 'undefined') {
+        player = new WGo.BasicPlayer(container, {
+            sgfFile: sgfUrl,
+            move: 0,
+            display: { background: "#dcb35c" },
+            layout: { top:[], right:[], left:[], bottom:[] }
         });
-        
-        nameLabel.textContent = problem.name;
-        timeLabel.textContent = "更新时间: " + problem.input_time;
+        if (nameLabel) nameLabel.textContent = item.name;
+    } else {
+        setTimeout(() => loadLevel(level), 1000);
     }
 }
 
-// Tab Switching
 document.querySelectorAll('.tsumego-tab').forEach(tab => {
-    tab.addEventListener('click', () => {
+    tab.addEventListener('click', function() {
         document.querySelectorAll('.tsumego-tab').forEach(t => t.classList.remove('active'));
-        tab.classList.add('active');
-        renderTsumego(tab.dataset.level);
+        this.classList.add('active');
+        loadLevel(this.dataset.level);
     });
 });
