@@ -1,5 +1,5 @@
 /* ========================================
-   围棋工坊 - Pro Layout v8 (Final Polish)
+   围棋工坊 - Pro Layout v9 (Final Fix)
    ======================================== */
 
 :root {
@@ -12,21 +12,20 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: 'Outfit', 'Noto Sans SC', sans-serif; background: var(--color-bg-dark); color: var(--color-text); overflow-x: hidden; }
+body { font-family: 'Outfit', sans-serif; background: var(--color-bg-dark); color: var(--color-text); overflow-x: hidden; }
 
 .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; width: 100%; }
 
-/* Nav - Fixed spacing for mobile */
+/* Nav */
 .nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
     display: flex; justify-content: space-between; align-items: center;
     padding: 0.8rem 1.5rem; background: rgba(10, 10, 10, 0.95); backdrop-filter: blur(15px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
-.brand-text { font-size: 1.1rem; font-weight: 700; color: var(--color-accent); letter-spacing: 1px; }
+.brand-text { font-size: 1.1rem; font-weight: 700; color: var(--color-accent); }
 .nav-links { display: flex; gap: 1.2rem; }
-.nav-links a { color: var(--color-text-muted); text-decoration: none; font-size: 0.9rem; transition: 0.3s; }
-.nav-links a:hover { color: var(--color-accent); }
+.nav-links a { color: var(--color-text-muted); text-decoration: none; font-size: 0.9rem; }
 
 /* Hero */
 .hero {
@@ -34,69 +33,57 @@ body { font-family: 'Outfit', 'Noto Sans SC', sans-serif; background: var(--colo
     background: radial-gradient(circle at 50% 50%, #1a1a1a 0%, #0a0a0a 100%);
     padding: 0 1rem; text-align: center;
 }
-.hero h1 { font-size: clamp(2rem, 8vw, 4rem); margin-bottom: 1rem; line-height: 1.2; }
-.hero-subtitle { color: var(--color-text-muted); margin-bottom: 2rem; }
-.cta-button { padding: 0.8rem 2rem; background: var(--color-accent); color: #000; text-decoration: none; border-radius: 50px; font-weight: 600; }
+.hero h1 { font-size: clamp(2rem, 8vw, 4rem); margin-bottom: 1rem; }
 
-/* Grid Core */
+/* Apps Grid */
 .apps-section { padding: 5rem 0; background: var(--color-bg-section); }
 .apps-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
     gap: 1.5rem;
     margin-top: 3rem;
 }
 
 .app-card {
     background: #181818; padding: 1.5rem; border-radius: 16px; border: 1px solid #222;
-    display: flex; gap: 1.2rem; transition: 0.3s;
+    display: flex; gap: 1.2rem;
 }
-.app-card:hover { border-color: var(--color-accent); transform: translateY(-5px); }
 .app-icon { width: 64px; height: 64px; border-radius: 14px; overflow: hidden; flex-shrink: 0; }
 .app-icon img { width: 100%; height: 100%; object-fit: cover; }
-.app-info h3 { font-size: 1.1rem; margin-bottom: 0.3rem; }
-.app-info p { color: var(--color-text-muted); font-size: 0.85rem; margin-bottom: 1rem; line-height: 1.4; }
-.app-link img { height: 32px; }
 
 /* Roadmap */
-.roadmap-section { padding: 5rem 0; }
-.roadmap-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2rem; }
+.roadmap-grid { display: grid !important; grid-template-columns: repeat(3, 1fr) !important; gap: 1.5rem; margin-top: 2rem; }
 .roadmap-item { background: #151515; padding: 1.5rem; border-radius: 16px; border-left: 4px solid #333; }
 .roadmap-item.done { border-color: #34C759; }
 .roadmap-item.current { border-color: var(--color-accent); }
 
-/* Tsumego */
+/* Tsumego - THE FIX */
 .tsumego-section { padding: 5rem 0; background: #000; text-align: center; }
 .tsumego-display {
-    width: 100%; max-width: 500px; aspect-ratio: 1 / 1; 
-    margin: 2rem auto; background: #dcb35c; border-radius: 12px; overflow: hidden;
+    width: 100%; max-width: 500px; 
+    aspect-ratio: 1 / 1; 
+    margin: 2rem auto; 
+    background: #dcb35c; 
+    border-radius: 12px; 
+    overflow: hidden;
+    position: relative;
+    box-sizing: content-box !important; /* Prevents stone offset */
 }
-.tsumego-tabs { display: flex; justify-content: center; gap: 0.8rem; margin-bottom: 1.5rem; }
-.tsumego-tab { padding: 8px 18px; border-radius: 50px; border: 1px solid var(--color-accent); background: none; color: #fff; cursor: pointer; font-size: 0.85rem; }
+
+/* WGo Internal Overrides */
+.wgo-player { width: 100% !important; height: 100% !important; }
+.wgo-player-main { height: 100% !important; background: none !important; }
+.wgo-board { margin: 0 auto !important; }
+
+.tsumego-tab { padding: 8px 18px; border-radius: 50px; border: 1px solid var(--color-accent); background: none; color: #fff; cursor: pointer; }
 .tsumego-tab.active { background: var(--color-accent); color: #000; }
 
 /* About */
-.about-section { padding: 5rem 0; }
-.about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
-.stat-number { display: block; font-size: 2.5rem; font-weight: 700; color: var(--color-accent); }
+.about-content { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 3rem; align-items: center; padding: 5rem 0; }
 
-/* Footer */
-.footer { padding: 4rem 0; text-align: center; border-top: 1px solid #222; }
-.daniel-status { padding: 8px 16px; background: rgba(212,168,83,0.1); border-radius: 50px; color: var(--color-accent); margin-bottom: 1rem; display: inline-block; font-size: 0.75rem; }
-
-/* Mobile Overrides (IMPORTANT) */
+/* Mobile */
 @media (max-width: 900px) {
-    .nav { padding: 0.8rem 1rem; }
-    .nav-links { gap: 0.8rem; }
-    .nav-links a { font-size: 0.8rem; }
-    .brand-text { font-size: 1rem; }
-    
-    .apps-grid { grid-template-columns: 1fr; }
-    .roadmap-grid { grid-template-columns: 1fr; }
-    .about-content { grid-template-columns: 1fr; text-align: center; }
+    .apps-grid, .roadmap-grid, .about-content { grid-template-columns: 1fr !important; }
     .app-card { flex-direction: column; align-items: flex-start; }
-}
-
-@media (max-width: 480px) {
-    .nav-links { display: none; } /* Hide links on very small phones to prevent overlap */
+    .nav-links { display: none; }
 }
