@@ -9,6 +9,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="lib/wgo.player.css">
+    <script src="lib/wgo.min.js"></script>
+    <script src="lib/wgo.player.min.js"></script>
 </head>
 <body>
     <!-- Hero Section -->
@@ -165,6 +169,59 @@
         </div>
     </section>
 
+    <!-- Roadmap Section -->
+    <section id="roadmap" class="roadmap-section">
+        <div class="container">
+            <h2 class="section-title">工坊动态</h2>
+            <div class="roadmap-grid">
+                <div class="roadmap-item done">
+                    <div class="roadmap-date">2026.02.04</div>
+                    <div class="roadmap-content">
+                        <h4>官网自动化部署上线</h4>
+                        <p>成功对接 GitHub Actions，实现代码提交即刻发布，由丹尼尔全权运维。</p>
+                    </div>
+                </div>
+                <div class="roadmap-item current">
+                    <div class="roadmap-date">进行中</div>
+                    <div class="roadmap-content">
+                        <h4>每日死活题板块</h4>
+                        <p>正在对接 XGoo 题库，将每日挑战直接搬上网页。阿西正在围观进度。</p>
+                    </div>
+                </div>
+                <div class="roadmap-item future">
+                    <div class="roadmap-date">待启程</div>
+                    <div class="roadmap-content">
+                        <h4>iTyping 算法深度优化</h4>
+                        <p>计划引入打字轨迹热力图，精准定位手感盲区。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tsumego Section -->
+    <section id="tsumego" class="tsumego-section">
+        <div class="container">
+            <h2 class="section-title">每日死活题挑战</h2>
+            <p class="section-subtitle">同步自 XGoo App 实时题库，每天提升一点计算力</p>
+            
+            <div class="tsumego-container">
+                <div class="tsumego-tabs">
+                    <button class="tsumego-tab active" data-level="初级">初级</button>
+                    <button class="tsumego-tab" data-level="中级">中级</button>
+                    <button class="tsumego-tab" data-level="高级">高级</button>
+                </div>
+                <div id="tsumego-display" class="tsumego-display">
+                    <div class="tsumego-placeholder">正在加载棋盘引擎...</div>
+                </div>
+                <div class="tsumego-meta">
+                    <p id="tsumego-name"></p>
+                    <p id="tsumego-time"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- About Section -->
     <section id="about" class="about-section">
         <div class="container">
@@ -222,5 +279,6 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script src="js/tsumego.js"></script>
 </body>
 </html>
