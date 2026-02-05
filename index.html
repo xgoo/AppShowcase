@@ -5,16 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>围棋工坊 | Go Game Studio</title>
     <meta name="description" content="专注围棋与棋类应用开发，提供最优质的围棋学习与对弈体验">
-    <link rel="stylesheet" href="css/style.css?v=11">
-    <link rel="stylesheet" href="css/components.css?v=11">
+    
+    <!-- Design System -->
+    <link rel="stylesheet" href="css/style.css?v=12">
+    <link rel="stylesheet" href="css/components.css?v=12">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Go Board Engine -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/wgo@2.3.1/wgo.player.css">
-    <script src="https://cdn.jsdelivr.net/npm/wgo@2.3.1/wgo.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/wgo@2.3.1/wgo.player.min.js"></script>
+    <!-- Go Board Engine (Local for Stability) -->
+    <link rel="stylesheet" href="lib/wgo.player.css">
+    <script src="lib/wgo.min.js"></script>
+    <script src="lib/wgo.player.min.js"></script>
+    
+    <style>
+        /* Embedded Fix for WGo Offset */
+        #tsumego-display, .tsumego-display-wrapper {
+            box-sizing: content-box !important;
+        }
+        #tsumego-display *, #tsumego-display *::before, #tsumego-display *::after {
+            box-sizing: content-box !important;
+        }
+    </style>
 </head>
 <body>
     <!-- Hero Section -->
