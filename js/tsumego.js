@@ -89,18 +89,23 @@ const TsumegoManager = (() => {
         container.innerHTML = '';
         const fileName = problem.sgf_url.split('/').pop();
         const sgfUrl = "data/sgf/" + fileName + "?t=" + Date.now();
+        
+        // Get container dimensions for proper sizing
+        const containerWidth = container.offsetWidth || 500;
 
-        console.log("TsumegoManager: Rendering " + levelName + " from " + sgfUrl);
+        console.log("TsumegoManager: Rendering " + levelName + " from " + sgfUrl + " (width: " + containerWidth + ")");
 
         try {
-            // Use BasicPlayer with local SGF
+            // Use BasicPlayer with local SGF and explicit width
             currentPlayer = new WGo.BasicPlayer(container, {
                 sgfFile: sgfUrl,
                 move: 0,
                 markLastMove: true,
                 enableKeys: true,
                 enableWheel: false,
+                width: containerWidth,  // Force explicit width
                 board: {
+                    width: containerWidth,  // Also set board width
                     background: "lib/wood1.jpg",
                     stoneHandler: WGo.Board.drawHandlers.REALISTIC
                 },
