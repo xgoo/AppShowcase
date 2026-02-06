@@ -28,7 +28,7 @@
 /* Tsumego Section */
 .tsumego-section {
     padding: var(--space-xl) 0;
-    background: #000;
+    background: var(--color-bg-section); /* Restore theme color */
     text-align: center;
 }
 
