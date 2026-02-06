@@ -488,8 +488,18 @@ body {
    Responsive
    ======================================== */
 @media (max-width: 768px) {
+    .nav {
+        padding: var(--space-sm);
+    }
+    
+    .brand-text {
+        font-size: 1rem;
+    }
+
     .nav-links {
-        display: none;
+        display: flex;
+        gap: var(--space-xs);
+        font-size: 0.85rem;
     }
     
     .about-content {

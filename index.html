@@ -19,19 +19,30 @@
     <script src="lib/wgo.min.js"></script>
     <script src="lib/wgo.player.min.js"></script>
     
-    <style>
-        /* Embedded Fix for WGo Offset */
-        #tsumego-display, .tsumego-display-wrapper {
+        /* 
+         * WGo Offset Fix (v13.1)
+         * - Force content-box to ensure coordinate math is correct.
+         * - Reset padding and borders on the board itself to avoid internal offsets.
+         */
+        #tsumego-display, 
+        .tsumego-display-wrapper, 
+        .wgo-board,
+        .wgo-board canvas {
             box-sizing: content-box !important;
         }
+        
+        .wgo-board {
+            padding: 0 !important;
+            border: none !important;
+            background-color: #dcb35c !important;
+            background-size: 100% 100% !important; /* Force background to fill board */
+            border-radius: 0 !important;
+        }
+
         #tsumego-display *, #tsumego-display *::before, #tsumego-display *::after {
             box-sizing: content-box !important;
         }
-        /* Fix WGo background 404 issue */
-        .wgo-board {
-            background-image: none !important;
-            background-color: #dcb35c !important;
-        }
+        /* Restore background if assets are present, or keep solid color as fallback */
     </style>
 </head>
 <body>

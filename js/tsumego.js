@@ -1,5 +1,5 @@
 /**
- * Tsumego Display Logic v10 - The "Isolation" Edition
+ * Tsumego Display Logic v12 - Local Asset Focus
  */
 
 const TsumegoManager = (() => {
@@ -7,16 +7,20 @@ const TsumegoManager = (() => {
     let currentPlayer = null;
 
     const init = async () => {
+        console.log("TsumegoManager: Initializing...");
         try {
             const response = await fetch('data/tsumego.json?t=' + Date.now());
             tsumegoData = await response.json();
+            console.log("TsumegoManager: Data loaded (" + tsumegoData.length + " items)");
             
-            // Wait for WGo to load
+            // Wait for WGo to load from LOCAL lib/ folder
             const checkWGo = () => {
-                if (typeof WGo !== 'undefined' && WGo.BasicPlayer) {
+                if (typeof WGo !== 'undefined') {
+                    console.log("TsumegoManager: WGo Engine Ready (v" + WGo.version + ")");
                     loadLevel('初级');
                 } else {
-                    setTimeout(checkWGo, 300);
+                    console.log("TsumegoManager: Waiting for WGo library...");
+                    setTimeout(checkWGo, 500);
                 }
             };
             checkWGo();
@@ -29,38 +33,45 @@ const TsumegoManager = (() => {
                 });
             });
         } catch (e) {
-            console.error("Initialization failed", e);
+            console.error("TsumegoManager: Init failed", e);
         }
     };
 
     const loadLevel = (levelName) => {
         const container = document.getElementById('tsumego-display');
+        const nameLabel = document.getElementById('tsumego-name');
+        if (!container || tsumegoData.length === 0) return;
+
         const problem = tsumegoData.find(p => p.name.includes(levelName));
-        if (!container || !problem) return;
+        if (!problem) return;
 
         container.innerHTML = '';
         const fileName = problem.sgf_url.split('/').pop();
         const sgfUrl = "data/sgf/" + fileName + "?t=" + Date.now();
 
-        console.log("Rendering SGF:", sgfUrl);
+        console.log("TsumegoManager: Rendering " + levelName + " from " + sgfUrl);
 
         try {
+            // Use BasicPlayer with local SGF
+            // Set background to wood texture now that assets are in lib/
             currentPlayer = new WGo.BasicPlayer(container, {
                 sgfFile: sgfUrl,
                 move: 0,
                 markLastMove: true,
-                display: { background: "#dcb35c" },
+                enableKeys: true,
+                enableWheel: false,
+                board: {
+                    background: "lib/wood1.jpg",
+                    stoneHandler: WGo.Board.drawHandlers.REALISTIC
+                },
                 layout: { top: [], right: [], left: [], bottom: [] }
             });
             
-            // Critical: Force refresh after render to catch potential container size shifts
-            setTimeout(() => {
-                if (currentPlayer && currentPlayer.update) currentPlayer.update();
-            }, 200);
-
-            document.getElementById('tsumego-name').textContent = problem.name;
+            if (nameLabel) nameLabel.textContent = problem.name;
+            console.log("TsumegoManager: Render successful");
         } catch (err) {
-            console.error("Render failed", err);
+            console.error("TsumegoManager: Render error", err);
+            container.innerHTML = '<div class="tsumego-placeholder">棋盘渲染失败</div>';
         }
     };
 
