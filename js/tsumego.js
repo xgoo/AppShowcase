@@ -133,6 +133,10 @@ const TsumegoManager = (() => {
                     boardEl.style.width = actualWidth + 'px';
                     boardEl.style.height = actualHeight + 'px';
                     
+                    // Sync container dimensions to match board (perfect fit)
+                    container.style.width = actualWidth + 'px';
+                    container.style.height = actualHeight + 'px';
+                    
                     // Ensure background covers this exact area
                     boardEl.style.backgroundSize = '100% 100%';
                     console.log("TsumegoManager: Forced dimensions to " + actualWidth + "x" + actualHeight);
