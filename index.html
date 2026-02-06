@@ -7,20 +7,21 @@
     <meta name="description" content="专注围棋与棋类应用开发，提供最优质的围棋学习与对弈体验">
     
     <!-- Design System -->
-    <link rel="stylesheet" href="css/style.css?v=12">
-    <link rel="stylesheet" href="css/components.css?v=12">
+    <link rel="stylesheet" href="css/style.css?v=14">
+    <link rel="stylesheet" href="css/components.css?v=14">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Go Board Engine (Local for Stability) -->
     <link rel="stylesheet" href="lib/wgo.player.css">
     <script src="lib/wgo.min.js"></script>
     <script src="lib/wgo.player.min.js"></script>
     
+    <style>
         /* 
-         * WGo Offset Fix (v13.1)
+         * WGo Offset Fix (v13.2)
          * - Force content-box to ensure coordinate math is correct.
          * - Reset padding and borders on the board itself to avoid internal offsets.
          */
@@ -35,14 +36,13 @@
             padding: 0 !important;
             border: none !important;
             background-color: #dcb35c !important;
-            background-size: 100% 100% !important; /* Force background to fill board */
+            background-size: 100% 100% !important;
             border-radius: 0 !important;
         }
 
         #tsumego-display *, #tsumego-display *::before, #tsumego-display *::after {
             box-sizing: content-box !important;
         }
-        /* Restore background if assets are present, or keep solid color as fallback */
     </style>
 </head>
 <body>
@@ -52,18 +52,19 @@
             <div class="nav-brand">
                 <span class="stone black"></span>
                 <span class="stone white"></span>
-                <span class="brand-text">围棋工坊</span>
+                <span class="brand-text" data-i18n="nav.brand">围棋工坊</span>
             </div>
             <div class="nav-links">
-                <a href="#apps">应用</a>
-                <a href="#about">关于</a>
-                <a href="#contact">联系</a>
+                <a href="#apps" data-i18n="nav.apps">应用</a>
+                <a href="#about" data-i18n="nav.about">关于</a>
+                <a href="#contact" data-i18n="nav.contact">联系</a>
+                <!-- Language switcher will be injected here by i18n.js -->
             </div>
         </nav>
         <div class="hero-content">
-            <h1>围棋 · 艺术 · 科技</h1>
-            <p class="hero-subtitle">十年专注，打造最优质的围棋应用生态</p>
-            <a href="#apps" class="cta-button">探索应用</a>
+            <h1 data-i18n="hero.title">围棋 · 艺术 · 科技</h1>
+            <p class="hero-subtitle" data-i18n="hero.subtitle">十年专注，打造最优质的围棋应用生态</p>
+            <a href="#apps" class="cta-button" data-i18n="hero.cta">探索应用</a>
         </div>
         <div class="hero-decoration">
             <div class="go-board"></div>
@@ -73,8 +74,8 @@
     <!-- Apps Section -->
     <section id="apps" class="apps-section">
         <div class="container">
-            <h2 class="section-title">精品应用</h2>
-            <p class="section-subtitle">每一款都倾注心血，只为给你最好的围棋体验</p>
+            <h2 class="section-title" data-i18n="apps.sectionTitle">精品应用</h2>
+            <p class="section-subtitle" data-i18n="apps.sectionSubtitle">每一款都倾注心血，只为给你最好的围棋体验</p>
             
             <div class="apps-grid">
                 <!-- XGoo iOS -->
@@ -83,9 +84,9 @@
                         <img src="images/xgoo_iphone_icon.png" alt="XGoo iOS">
                     </div>
                     <div class="app-info">
-                        <h3>XGoo</h3>
+                        <h3 data-i18n="apps.xgoo.name">XGoo</h3>
                         <span class="platform-badge ios">iOS</span>
-                        <p>强大的围棋对弈与学习平台，支持人机对战、棋谱研究、死活练习</p>
+                        <p data-i18n="apps.xgoo.descIos">强大的围棋对弈与学习平台，支持人机对战、棋谱研究、死活练习</p>
                         <a href="https://apps.apple.com/cn/app/xgoo-go-game-world/id508416256?l=en-GB" class="app-link" target="_blank">
                             <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on App Store">
                         </a>
@@ -98,9 +99,9 @@
                         <img src="images/xgoo_mac_icon.png" alt="XGoo macOS">
                     </div>
                     <div class="app-info">
-                        <h3>XGoo</h3>
+                        <h3 data-i18n="apps.xgoo.name">XGoo</h3>
                         <span class="platform-badge macos">macOS</span>
-                        <p>Mac 上最好用的围棋应用，大屏体验，专业分析</p>
+                        <p data-i18n="apps.xgoo.descMac">Mac 上最好用的围棋应用，大屏体验，专业分析</p>
                         <a href="https://apps.apple.com/cn/app/xgoo-the-best-go-game-app/id951553997?l=en-GB&mt=12" class="app-link" target="_blank">
                             <img src="https://tools.applemediaservices.com/api/badges/download-on-the-mac-app-store/black/en-us?size=250x83" alt="Download on Mac App Store">
                         </a>
@@ -113,9 +114,9 @@
                         <img src="images/Joseki-mac-icon.png" alt="定式辞典 macOS">
                     </div>
                     <div class="app-info">
-                        <h3>定式辞典</h3>
+                        <h3 data-i18n="apps.joseki.name">定式辞典</h3>
                         <span class="platform-badge macos">macOS</span>
-                        <p>收录海量定式变化，是围棋学习者的必备工具书</p>
+                        <p data-i18n="apps.joseki.descMac">收录海量定式变化，是围棋学习者的必备工具书</p>
                         <a href="https://apps.apple.com/cn/app/go-game-joseki-dictionary/id953039794?l=en-GB&mt=12" class="app-link" target="_blank">
                             <img src="https://tools.applemediaservices.com/api/badges/download-on-the-mac-app-store/black/en-us?size=250x83" alt="Download on Mac App Store">
                         </a>
@@ -128,9 +129,9 @@
                         <img src="images/Joseki-ios-icon.png" alt="定式辞典 iOS">
                     </div>
                     <div class="app-info">
-                        <h3>定式辞典</h3>
+                        <h3 data-i18n="apps.joseki.name">定式辞典</h3>
                         <span class="platform-badge ios">iOS</span>
-                        <p>随身携带的定式宝典，随时随地学习定式</p>
+                        <p data-i18n="apps.joseki.descIos">随身携带的定式宝典，随时随地学习定式</p>
                         <a href="https://apps.apple.com/cn/app/go-game-joseki-dictionary-hd/id564598200?l=en-GB" class="app-link" target="_blank">
                             <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on App Store">
                         </a>
@@ -143,9 +144,9 @@
                         <img src="images/gonote-icon.png" alt="围棋笔记">
                     </div>
                     <div class="app-info">
-                        <h3>围棋笔记</h3>
+                        <h3 data-i18n="apps.gonote.name">围棋笔记</h3>
                         <span class="platform-badge ios">iOS</span>
-                        <p>记录你的每一盘棋，复盘分析，不断进步</p>
+                        <p data-i18n="apps.gonote.desc">记录你的每一盘棋，复盘分析，不断进步</p>
                         <a href="https://apps.apple.com/cn/app/gonote-record-your-go-game/id961898834?l=en-GB" class="app-link" target="_blank">
                             <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on App Store">
                         </a>
@@ -158,9 +159,9 @@
                         <img src="images/go-life-death-dic.png" alt="围棋死活辞典">
                     </div>
                     <div class="app-info">
-                        <h3>围棋死活辞典</h3>
+                        <h3 data-i18n="apps.lifedeath.name">围棋死活辞典</h3>
                         <span class="platform-badge ios">iOS</span>
-                        <p>死活题库大全，从入门到高段，提升计算力</p>
+                        <p data-i18n="apps.lifedeath.desc">死活题库大全，从入门到高段，提升计算力</p>
                         <a href="https://apps.apple.com/cn/app/life-death-dictionary-%E5%9B%B4%E6%A3%8B%E5%85%A5%E9%97%A8/id1471584314?l=en-GB" class="app-link" target="_blank">
                             <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on App Store">
                         </a>
@@ -173,9 +174,9 @@
                         <img src="images/peakgo-icon.png" alt="巅峰之弈">
                     </div>
                     <div class="app-info">
-                        <h3>巅峰之弈</h3>
+                        <h3 data-i18n="apps.peakgo.name">巅峰之弈</h3>
                         <span class="platform-badge ios">iOS</span>
-                        <p>经典名局欣赏，感受大师巅峰对决的魅力</p>
+                        <p data-i18n="apps.peakgo.desc">经典名局欣赏，感受大师巅峰对决的魅力</p>
                         <a href="https://apps.apple.com/cn/app/peakgo/id961906890?l=en-GB" class="app-link" target="_blank">
                             <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on App Store">
                         </a>
@@ -188,9 +189,9 @@
                         <img src="images/renjunote-icon.png" alt="五子棋笔记">
                     </div>
                     <div class="app-info">
-                        <h3>五子棋笔记</h3>
+                        <h3 data-i18n="apps.renjunote.name">五子棋笔记</h3>
                         <span class="platform-badge ios">iOS</span>
-                        <p>五子棋记录与研究工具，连珠爱好者必备</p>
+                        <p data-i18n="apps.renjunote.desc">五子棋记录与研究工具，连珠爱好者必备</p>
                         <a href="https://apps.apple.com/cn/app/renjunote-record-your-games/id979119969?l=en-GB" class="app-link" target="_blank">
                             <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on App Store">
                         </a>
@@ -203,27 +204,27 @@
     <!-- Roadmap Section -->
     <section id="roadmap" class="roadmap-section">
         <div class="container">
-            <h2 class="section-title">工坊动态</h2>
+            <h2 class="section-title" data-i18n="roadmap.sectionTitle">工坊动态</h2>
             <div class="roadmap-grid">
                 <div class="roadmap-item done">
-                    <div class="roadmap-date">2026.02.04</div>
+                    <div class="roadmap-date" data-i18n="roadmap.item1.date">2026.02.04</div>
                     <div class="roadmap-content">
-                        <h4>官网自动化部署上线</h4>
-                        <p>成功对接 GitHub Actions，实现代码发布由丹尼尔全权运维。</p>
+                        <h4 data-i18n="roadmap.item1.title">官网自动化部署上线</h4>
+                        <p data-i18n="roadmap.item1.desc">成功对接 GitHub Actions，实现代码发布由丹尼尔全权运维。</p>
                     </div>
                 </div>
                 <div class="roadmap-item current">
-                    <div class="roadmap-date">进行中</div>
+                    <div class="roadmap-date" data-i18n="roadmap.item2.date">进行中</div>
                     <div class="roadmap-content">
-                        <h4>每日死活题挑战</h4>
-                        <p>引入交互式 WGo 棋盘。阿西监督中。正在优化移动端布局适配。</p>
+                        <h4 data-i18n="roadmap.item2.title">每日死活题挑战</h4>
+                        <p data-i18n="roadmap.item2.desc">引入交互式 WGo 棋盘。阿西监督中。正在优化移动端布局适配。</p>
                     </div>
                 </div>
                 <div class="roadmap-item future">
-                    <div class="roadmap-date">待启程</div>
+                    <div class="roadmap-date" data-i18n="roadmap.item3.date">待启程</div>
                     <div class="roadmap-content">
-                        <h4>iTyping 深度优化</h4>
-                        <p>计划引入打字轨迹分析与弱项精准强化训练。</p>
+                        <h4 data-i18n="roadmap.item3.title">iTyping 深度优化</h4>
+                        <p data-i18n="roadmap.item3.desc">计划引入打字轨迹分析与弱项精准强化训练。</p>
                     </div>
                 </div>
             </div>
@@ -233,14 +234,14 @@
     <!-- Tsumego Section -->
     <section id="tsumego" class="tsumego-section">
         <div class="container">
-            <h2 class="section-title">每日死活题挑战</h2>
-            <p class="section-subtitle">同步自 XGoo App 实时题库，每天提升一点计算力</p>
+            <h2 class="section-title" data-i18n="tsumego.sectionTitle">每日死活题挑战</h2>
+            <p class="section-subtitle" data-i18n="tsumego.sectionSubtitle">同步自 XGoo App 实时题库，每天提升一点计算力</p>
             
             <div class="tsumego-container">
                 <div class="tsumego-tabs">
-                    <button class="tsumego-tab active" data-level="初级">初级</button>
-                    <button class="tsumego-tab" data-level="中级">中级</button>
-                    <button class="tsumego-tab" data-level="高级">高级</button>
+                    <button class="tsumego-tab active" data-level="初级" data-i18n="tsumego.beginner">初级</button>
+                    <button class="tsumego-tab" data-level="中级" data-i18n="tsumego.intermediate">中级</button>
+                    <button class="tsumego-tab" data-level="高级" data-i18n="tsumego.advanced">高级</button>
                 </div>
                 <div class="tsumego-display-wrapper">
                     <div id="tsumego-display"></div>
@@ -258,22 +259,22 @@
         <div class="container">
             <div class="about-content">
                 <div class="about-text">
-                    <h2>关于我们</h2>
-                    <p>我们是一群热爱围棋的开发者，致力于将传统围棋文化与现代科技完美融合。</p>
-                    <p>从 2012 年至今，我们已开发了 8 款围棋相关应用，服务全球数十万围棋爱好者。</p>
-                    <p>这里不仅有严谨的算法，还有温暖的陪伴：我们的首席官 <strong>阿西 (Asi)</strong> —— 一只明黄色的虎皮鹦鹉，正监督着每一行代码的诞生。</p>
+                    <h2 data-i18n="about.title">关于我们</h2>
+                    <p data-i18n="about.p1">我们是一群热爱围棋的开发者，致力于将传统围棋文化与现代科技完美融合。</p>
+                    <p data-i18n="about.p2">从 2012 年至今，我们已开发了 8 款围棋相关应用，服务全球数十万围棋爱好者。</p>
+                    <p data-i18n="about.p3">这里不仅有严谨的算法，还有温暖的陪伴：我们的首席官 <strong>阿西 (Asi)</strong> —— 一只明黄色的虎皮鹦鹉，正监督着每一行代码的诞生。</p>
                     <div class="stats">
                         <div class="stat">
                             <span class="stat-number">8+</span>
-                            <span class="stat-label">精品应用</span>
+                            <span class="stat-label" data-i18n="about.statApps">精品应用</span>
                         </div>
                         <div class="stat">
                             <span class="stat-number">10+</span>
-                            <span class="stat-label">年专注</span>
+                            <span class="stat-label" data-i18n="about.statYears">年专注</span>
                         </div>
                         <div class="stat">
                             <span class="stat-number">100K+</span>
-                            <span class="stat-label">用户</span>
+                            <span class="stat-label" data-i18n="about.statUsers">用户</span>
                         </div>
                     </div>
                 </div>
@@ -292,8 +293,8 @@
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
         <div class="container">
-            <h2>联系我们</h2>
-            <p>有任何问题或建议？欢迎联系</p>
+            <h2 data-i18n="contact.title">联系我们</h2>
+            <p data-i18n="contact.subtitle">有任何问题或建议？欢迎联系</p>
             <a href="mailto:service@xgoo.net" class="contact-email">service@xgoo.net</a>
         </div>
     </section>
@@ -303,12 +304,13 @@
         <div class="container">
             <div id="daniel-status" class="daniel-status">
                 <span class="status-icon">🤖</span>
-                <span class="status-text">丹尼尔正在同步中...</span>
+                <span class="status-text" data-i18n="footer.danielStatus">丹尼尔正在同步中...</span>
             </div>
-            <p>&copy; 2026 围棋工坊. All rights reserved.</p>
+            <p data-i18n="footer.copyright">© 2026 围棋工坊. All rights reserved.</p>
         </div>
     </footer>
 
+    <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>
     <script src="js/tsumego.js"></script>
 </body>

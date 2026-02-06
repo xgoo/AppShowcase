@@ -1,0 +1,91 @@
+{
+  "lang": "en",
+  "langName": "English",
+  "meta": {
+    "title": "Go Game Studio | Weiqi Apps",
+    "description": "Dedicated to Go game and board game app development, providing the best Go learning and playing experience"
+  },
+  "nav": {
+    "brand": "Go Game Studio",
+    "apps": "Apps",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Go · Art · Technology",
+    "subtitle": "A decade of dedication to creating the finest Go app ecosystem",
+    "cta": "Explore Apps"
+  },
+  "apps": {
+    "sectionTitle": "Premium Apps",
+    "sectionSubtitle": "Each one crafted with passion, just to bring you the best Go experience",
+    "xgoo": {
+      "name": "XGoo",
+      "descIos": "Powerful Go platform for playing and learning, with AI matches, game records, and life & death problems",
+      "descMac": "The best Go app on Mac, with large screen experience and professional analysis"
+    },
+    "joseki": {
+      "name": "Joseki Dictionary",
+      "descMac": "Extensive joseki variations, an essential reference for Go learners",
+      "descIos": "Portable joseki encyclopedia, learn joseki anytime, anywhere"
+    },
+    "gonote": {
+      "name": "Go Note",
+      "desc": "Record every game you play, review and analyze, keep improving"
+    },
+    "lifedeath": {
+      "name": "Life & Death Dictionary",
+      "desc": "Comprehensive tsumego collection, from beginner to advanced, enhance your reading"
+    },
+    "peakgo": {
+      "name": "Peak Go",
+      "desc": "Appreciate classic master games, experience the thrill of legendary matches"
+    },
+    "renjunote": {
+      "name": "Renju Note",
+      "desc": "Gomoku/Renju recording and study tool, essential for enthusiasts"
+    }
+  },
+  "roadmap": {
+    "sectionTitle": "Studio Updates",
+    "item1": {
+      "date": "2026.02.04",
+      "title": "Website Auto-Deployment Live",
+      "desc": "Successfully integrated GitHub Actions, Daniel now handles all deployments."
+    },
+    "item2": {
+      "date": "In Progress",
+      "title": "Daily Tsumego Challenge",
+      "desc": "Introducing interactive WGo board. Under Asi's supervision. Optimizing mobile layout."
+    },
+    "item3": {
+      "date": "Coming Soon",
+      "title": "iTyping Deep Optimization",
+      "desc": "Planning to add typing trajectory analysis and targeted weakness training."
+    }
+  },
+  "tsumego": {
+    "sectionTitle": "Daily Tsumego Challenge",
+    "sectionSubtitle": "Synced from XGoo App's live problem database, improve your reading every day",
+    "beginner": "Beginner",
+    "intermediate": "Intermediate",
+    "advanced": "Advanced"
+  },
+  "about": {
+    "title": "About Us",
+    "p1": "We are a group of developers passionate about Go, dedicated to perfectly blending traditional Go culture with modern technology.",
+    "p2": "Since 2012, we have developed 8 Go-related apps, serving hundreds of thousands of Go enthusiasts worldwide.",
+    "p3": "Here you'll find not only rigorous algorithms, but also warm companionship: our Chief Officer <strong>Asi</strong> — a bright yellow budgie, is supervising every line of code.",
+    "statApps": "Premium Apps",
+    "statYears": "Years of Focus",
+    "statUsers": "Users"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Questions or suggestions? Feel free to reach out"
+  },
+  "footer": {
+    "danielStatus": "Daniel is syncing...",
+    "copyright": "© 2026 Go Game Studio. All rights reserved."
+  }
+}

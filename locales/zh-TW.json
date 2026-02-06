@@ -1,0 +1,91 @@
+{
+  "lang": "zh-TW",
+  "langName": "繁體中文",
+  "meta": {
+    "title": "圍棋工坊 | Go Game Studio",
+    "description": "專注圍棋與棋類應用開發，提供最優質的圍棋學習與對弈體驗"
+  },
+  "nav": {
+    "brand": "圍棋工坊",
+    "apps": "應用",
+    "about": "關於",
+    "contact": "聯繫"
+  },
+  "hero": {
+    "title": "圍棋 · 藝術 · 科技",
+    "subtitle": "十年專注，打造最優質的圍棋應用生態",
+    "cta": "探索應用"
+  },
+  "apps": {
+    "sectionTitle": "精品應用",
+    "sectionSubtitle": "每一款都傾注心血，只為給你最好的圍棋體驗",
+    "xgoo": {
+      "name": "XGoo",
+      "descIos": "強大的圍棋對弈與學習平台，支援人機對戰、棋譜研究、死活練習",
+      "descMac": "Mac 上最好用的圍棋應用，大螢幕體驗，專業分析"
+    },
+    "joseki": {
+      "name": "定式辭典",
+      "descMac": "收錄海量定式變化，是圍棋學習者的必備工具書",
+      "descIos": "隨身攜帶的定式寶典，隨時隨地學習定式"
+    },
+    "gonote": {
+      "name": "圍棋筆記",
+      "desc": "記錄你的每一盤棋，復盤分析，不斷進步"
+    },
+    "lifedeath": {
+      "name": "圍棋死活辭典",
+      "desc": "死活題庫大全，從入門到高段，提升計算力"
+    },
+    "peakgo": {
+      "name": "巔峰之弈",
+      "desc": "經典名局欣賞，感受大師巔峰對決的魅力"
+    },
+    "renjunote": {
+      "name": "五子棋筆記",
+      "desc": "五子棋記錄與研究工具，連珠愛好者必備"
+    }
+  },
+  "roadmap": {
+    "sectionTitle": "工坊動態",
+    "item1": {
+      "date": "2026.02.04",
+      "title": "官網自動化部署上線",
+      "desc": "成功對接 GitHub Actions，實現代碼發布由丹尼爾全權運維。"
+    },
+    "item2": {
+      "date": "進行中",
+      "title": "每日死活題挑戰",
+      "desc": "引入互動式 WGo 棋盤。阿西監督中。正在優化移動端佈局適配。"
+    },
+    "item3": {
+      "date": "待啟程",
+      "title": "iTyping 深度優化",
+      "desc": "計劃引入打字軌跡分析與弱項精準強化訓練。"
+    }
+  },
+  "tsumego": {
+    "sectionTitle": "每日死活題挑戰",
+    "sectionSubtitle": "同步自 XGoo App 即時題庫，每天提升一點計算力",
+    "beginner": "初級",
+    "intermediate": "中級",
+    "advanced": "高級"
+  },
+  "about": {
+    "title": "關於我們",
+    "p1": "我們是一群熱愛圍棋的開發者，致力於將傳統圍棋文化與現代科技完美融合。",
+    "p2": "從 2012 年至今，我們已開發了 8 款圍棋相關應用，服務全球數十萬圍棋愛好者。",
+    "p3": "這裡不僅有嚴謹的演算法，還有溫暖的陪伴：我們的首席官 <strong>阿西 (Asi)</strong> —— 一隻明黃色的虎皮鸚鵡，正監督著每一行代碼的誕生。",
+    "statApps": "精品應用",
+    "statYears": "年專注",
+    "statUsers": "用戶"
+  },
+  "contact": {
+    "title": "聯繫我們",
+    "subtitle": "有任何問題或建議？歡迎聯繫"
+  },
+  "footer": {
+    "danielStatus": "丹尼爾正在同步中...",
+    "copyright": "© 2026 圍棋工坊. All rights reserved."
+  }
+}
