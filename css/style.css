@@ -529,6 +529,8 @@ body {
     
     .stats {
         justify-content: center;
+        gap: var(--space-md); /* Reduce gap on mobile */
+        flex-wrap: wrap; /* Allow wrapping if needed */
     }
     
     .apps-grid {
