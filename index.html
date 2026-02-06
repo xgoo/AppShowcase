@@ -21,15 +21,17 @@
     
     <style>
         /* 
-         * WGo Board Fix (v15.0) - Minimal intervention
-         * Let WGo handle sizing, just ensure background covers
+         * WGo Board Fix (v17.0) - Force overflow hidden
          */
         #tsumego-display {
             box-sizing: content-box !important;
+            overflow: hidden !important;
         }
         
         #tsumego-display .wgo-board {
             background-size: 100% 100% !important;
+            background-repeat: no-repeat !important;
+            overflow: hidden !important;
         }
         
         #tsumego-display .wgo-board,
@@ -305,6 +307,6 @@
 
     <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/tsumego.js?v=17"></script>
+    <script src="js/tsumego.js?v=18"></script>
 </body>
 </html>

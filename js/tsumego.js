@@ -148,6 +148,21 @@ const TsumegoManager = (() => {
                 stoneHandler: WGo.Board.drawHandlers.SHELL
             });
             
+            // Post-render fix: ensure board element matches its internal dimensions
+            setTimeout(() => {
+                const boardEl = container.querySelector('.wgo-board');
+                if (boardEl && currentBoard) {
+                    // WGo stores actual dimensions in board.width/board.height (scaled by pixelRatio)
+                    const pixelRatio = window.devicePixelRatio || 1;
+                    const actualWidth = currentBoard.width / pixelRatio;
+                    const actualHeight = currentBoard.height / pixelRatio;
+                    boardEl.style.width = actualWidth + 'px';
+                    boardEl.style.height = actualHeight + 'px';
+                    boardEl.style.backgroundSize = '100% 100%';
+                    console.log("TsumegoManager: Fixed board size to " + actualWidth + "x" + actualHeight);
+                }
+            }, 50);
+            
             // Draw all stones from initial position
             for (let x = 0; x < boardSize; x++) {
                 for (let y = 0; y < boardSize; y++) {
