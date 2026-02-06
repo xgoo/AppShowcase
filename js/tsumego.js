@@ -109,8 +109,13 @@ const TsumegoManager = (() => {
             const reader = new WGo.KifuReader(currentKifu);
             const section = calculateBounds(reader.game.position, boardSize);
             
-            // Explicit container width
-            const containerWidth = container.offsetWidth || 500;
+            // Smart Responsive Sizing (v32)
+            // Use screen width minus padding (32px) to prevent overflow
+            const screenWidth = window.innerWidth;
+            const maxAvailableWidth = Math.min(500, screenWidth - 32);
+            // Use the smaller of current width or safe max width
+            const currentWidth = container.offsetWidth || 500;
+            const containerWidth = Math.min(currentWidth, maxAvailableWidth);
 
             // Use WGo.Board directly (Bypass BasicPlayer layout issues)
             currentBoard = new WGo.Board(container, {
