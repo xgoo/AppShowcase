@@ -81,6 +81,11 @@ const I18n = {
         // Apply translations
         this.applyTranslations();
         
+        // Notify TsumegoManager to update labels
+        if (typeof TsumegoManager !== 'undefined' && TsumegoManager.updateLabels) {
+            TsumegoManager.updateLabels();
+        }
+        
         // Update URL without reload (optional)
         if (updateUrl && window.history.replaceState) {
             const url = new URL(window.location);
