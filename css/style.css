@@ -489,6 +489,16 @@ body {
    Responsive
    ======================================== */
 @media (max-width: 768px) {
+    /* Prevent hero overflow */
+    .hero::before {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .hero-decoration {
+        display: none; /* Hide decorative board on mobile to prevent overflow */
+    }
+
     .nav {
         padding: var(--space-sm);
     }
