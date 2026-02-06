@@ -21,46 +21,20 @@
     
     <style>
         /* 
-         * WGo Offset Fix (v14.0) - Complete Solution
-         * Root cause: WGo calculates board dimensions based on container,
-         * but the background image doesn't stretch to match canvas layers.
+         * WGo Board Fix (v15.0) - Minimal intervention
+         * Let WGo handle sizing, just ensure background covers
          */
-        
-        /* Container must have explicit dimensions */
         #tsumego-display {
-            width: 500px !important;
-            height: 500px !important;
-            overflow: hidden !important;
             box-sizing: content-box !important;
         }
         
-        /* Force WGo board to fill container exactly */
         #tsumego-display .wgo-board {
-            width: 100% !important;
-            height: 100% !important;
-            box-sizing: border-box !important;
-            background-color: #dcb35c !important;
-            background-image: url('lib/wood1.jpg') !important;
-            background-size: cover !important;
-            background-position: center !important;
-            overflow: hidden !important;
+            background-size: 100% 100% !important;
         }
         
-        /* Ensure all canvas layers match parent size */
+        #tsumego-display .wgo-board,
         #tsumego-display .wgo-board canvas {
-            position: absolute !important;
-            top: 0 !important;
-            left: 0 !important;
-            max-width: 100% !important;
-            max-height: 100% !important;
-        }
-        
-        /* Responsive */
-        @media (max-width: 600px) {
-            #tsumego-display {
-                width: 340px !important;
-                height: 340px !important;
-            }
+            box-sizing: content-box !important;
         }
     </style>
 </head>

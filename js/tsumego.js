@@ -93,24 +93,31 @@ const TsumegoManager = (() => {
         // Get container dimensions for proper sizing
         const containerWidth = container.offsetWidth || 500;
 
-        console.log("TsumegoManager: Rendering " + levelName + " from " + sgfUrl + " (width: " + containerWidth + ")");
+        console.log("TsumegoManager: Rendering " + levelName + " from " + sgfUrl);
 
         try {
-            // Use BasicPlayer with local SGF and explicit width
+            // Use BasicPlayer with local SGF
             currentPlayer = new WGo.BasicPlayer(container, {
                 sgfFile: sgfUrl,
                 move: 0,
                 markLastMove: true,
                 enableKeys: true,
                 enableWheel: false,
-                width: containerWidth,  // Force explicit width
                 board: {
-                    width: containerWidth,  // Also set board width
                     background: "lib/wood1.jpg",
-                    stoneHandler: WGo.Board.drawHandlers.REALISTIC
+                    stoneHandler: WGo.Board.drawHandlers.SHELL
                 },
                 layout: { top: [], right: [], left: [], bottom: [] }
             });
+            
+            // Post-render fix: ensure background covers the board
+            setTimeout(() => {
+                const board = container.querySelector('.wgo-board');
+                if (board) {
+                    board.style.backgroundSize = '100% 100%';
+                    console.log("TsumegoManager: Applied background-size fix");
+                }
+            }, 100);
             
             // Apply localized title and store original
             if (nameLabel) {
