@@ -54,11 +54,11 @@
             /* REMOVED height !important */
         }
         
-        /* Mobile: Fixed 340px (Safe for iPhone SE) */
+        /* Mobile: Initial 340px, but allow JS override */
         @media (max-width: 600px) {
             #tsumego-display {
-                width: 340px !important;
-                height: 340px !important;
+                width: 340px; /* Default width */
+                /* REMOVED height !important */
             }
         }
     </style>
@@ -330,6 +330,6 @@
 
     <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/tsumego.js?v=29"></script>
+    <script src="js/tsumego.js?v=30"></script>
 </body>
 </html>
