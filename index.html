@@ -29,10 +29,11 @@
             box-sizing: content-box !important;
         }
         
-        /* Desktop: Fixed 500px */
+        /* Desktop: Fixed width, Auto height */
         #tsumego-display {
             width: 500px !important;
-            height: 500px !important;
+            height: auto !important; /* Let board define height */
+            min-height: 300px;
             max-width: 100%;
         }
         
@@ -42,7 +43,7 @@
             background-repeat: no-repeat !important;
             box-shadow: none !important;
             width: 100% !important;
-            height: 100% !important;
+            height: auto !important; /* Allow height to adjust naturally */
         }
         
         #tsumego-display .wgo-board canvas {
@@ -51,7 +52,7 @@
             margin: 0 !important;
             padding: 0 !important;
             width: 100% !important;
-            height: 100% !important;
+            height: auto !important; /* Allow canvas height to adjust */
         }
         
         /* Mobile: Fixed 340px (Safe for iPhone SE) */
