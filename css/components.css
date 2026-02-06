@@ -84,8 +84,10 @@
 /* Responsive fix for the board */
 @media (max-width: 600px) {
     #tsumego-display {
-        width: 340px;
-        height: 340px;
+        width: 100% !important;
+        max-width: 340px;
+        height: auto !important;
+        aspect-ratio: 1 / 1;
     }
 }
 

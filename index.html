@@ -21,14 +21,21 @@
     
     <style>
         /* 
-         * WGo Board Fix (v21.0) - The "Zero-Point" Fix
+         * WGo Board Fix (v22.0) - Mobile Safe Mode
          * 1. Force content-box to fix coordinate math.
          * 2. REMOVE BORDERS to align background (border-box) with canvas (padding-box).
          * 3. Force background to cover the full area.
+         * 4. Add aspect-ratio for responsive sizing.
          */
         #tsumego-display,
         #tsumego-display * {
             box-sizing: content-box !important;
+        }
+        
+        #tsumego-display {
+            width: 500px;
+            height: 500px;
+            max-width: 100%; /* Prevent overflow on small screens */
         }
         
         #tsumego-display .wgo-board {
@@ -36,6 +43,8 @@
             background-size: 100% 100% !important; /* Force texture fit */
             background-repeat: no-repeat !important;
             box-shadow: none !important; /* Clean up any shadow messing with dimensions */
+            width: 100% !important;
+            height: 100% !important;
         }
         
         /* Ensure canvas layers are positioned correctly */
@@ -44,6 +53,18 @@
             left: 0 !important;
             margin: 0 !important;
             padding: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+        }
+        
+        /* Mobile Responsive Overrides */
+        @media (max-width: 600px) {
+            #tsumego-display {
+                width: 100% !important;
+                max-width: 340px !important;
+                height: auto !important;
+                aspect-ratio: 1 / 1 !important;
+            }
         }
     </style>
 </head>
