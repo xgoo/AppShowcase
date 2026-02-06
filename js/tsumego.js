@@ -1,6 +1,6 @@
 /**
- * Tsumego Display Logic v16 - Direct Board Control
- * Bypass BasicPlayer's complex layout, use Board directly for precise control
+ * Tsumego Display Logic v17 - Auto Section Detection
+ * Automatically detect stone bounds and show only relevant board area
  */
 
 const TsumegoManager = (() => {
@@ -42,7 +42,7 @@ const TsumegoManager = (() => {
     };
 
     const init = async () => {
-        console.log("TsumegoManager v16: Initializing...");
+        console.log("TsumegoManager v17: Initializing...");
         try {
             const response = await fetch('data/tsumego.json?t=' + Date.now());
             tsumegoData = await response.json();
@@ -71,6 +71,41 @@ const TsumegoManager = (() => {
         }
     };
 
+    /**
+     * Calculate the bounding box of all stones
+     */
+    const calculateBounds = (position, boardSize) => {
+        let minX = boardSize, maxX = 0, minY = boardSize, maxY = 0;
+        let hasStones = false;
+        
+        for (let x = 0; x < boardSize; x++) {
+            for (let y = 0; y < boardSize; y++) {
+                if (position.get(x, y) !== 0) {
+                    hasStones = true;
+                    minX = Math.min(minX, x);
+                    maxX = Math.max(maxX, x);
+                    minY = Math.min(minY, y);
+                    maxY = Math.max(maxY, y);
+                }
+            }
+        }
+        
+        if (!hasStones) {
+            return { top: 0, right: 0, bottom: 0, left: 0 };
+        }
+        
+        // Add margin around stones (2 lines padding, but clamp to board edges)
+        const padding = 2;
+        const top = Math.max(0, minY - padding);
+        const left = Math.max(0, minX - padding);
+        const bottom = Math.max(0, boardSize - 1 - maxY - padding);
+        const right = Math.max(0, boardSize - 1 - maxX - padding);
+        
+        console.log(`TsumegoManager: Bounds calculated - stones at (${minX},${minY}) to (${maxX},${maxY}), section: top=${top}, right=${right}, bottom=${bottom}, left=${left}`);
+        
+        return { top, right, bottom, left };
+    };
+
     const loadLevel = async (levelName) => {
         const container = document.getElementById('tsumego-display');
         const nameLabel = document.getElementById('tsumego-name');
@@ -94,20 +129,24 @@ const TsumegoManager = (() => {
             currentKifu = new WGo.Kifu.fromSgf(sgfContent);
             const boardSize = currentKifu.size || 19;
             
+            // Get initial position using KifuReader
+            const reader = new WGo.KifuReader(currentKifu);
+            const position = reader.game.position;
+            
+            // Calculate section based on stone positions
+            const section = calculateBounds(position, boardSize);
+            
             // Calculate container size
             const containerWidth = container.offsetWidth || 500;
             
-            // Create board with explicit size
+            // Create board with section (only show relevant area)
             currentBoard = new WGo.Board(container, {
                 size: boardSize,
                 width: containerWidth,
+                section: section,
                 background: "lib/wood1.jpg",
                 stoneHandler: WGo.Board.drawHandlers.SHELL
             });
-            
-            // Load initial position from kifu
-            const player = new WGo.KifuReader(currentKifu);
-            const position = player.game.position;
             
             // Draw all stones from initial position
             for (let x = 0; x < boardSize; x++) {
@@ -119,16 +158,57 @@ const TsumegoManager = (() => {
                 }
             }
             
-            // Add any markup from the SGF (labels like A, B, C)
-            if (currentKifu.root && currentKifu.root.LB) {
-                currentKifu.root.LB.forEach(label => {
-                    const match = label.match(/([a-s])([a-s]):(.+)/i);
-                    if (match) {
-                        const x = match[1].charCodeAt(0) - 'a'.charCodeAt(0);
-                        const y = match[2].charCodeAt(0) - 'a'.charCodeAt(0);
-                        currentBoard.addObject({ x: x, y: y, type: 'LB', text: match[3] });
-                    }
-                });
+            // Add any markup from the SGF root node
+            const rootNode = currentKifu.root;
+            if (rootNode) {
+                // Labels (LB property)
+                if (rootNode.LB) {
+                    rootNode.LB.forEach(label => {
+                        // Format: "ab:X" where ab is coordinates and X is the label
+                        const match = label.match(/([a-s])([a-s]):(.+)/i);
+                        if (match) {
+                            const x = match[1].toLowerCase().charCodeAt(0) - 'a'.charCodeAt(0);
+                            const y = match[2].toLowerCase().charCodeAt(0) - 'a'.charCodeAt(0);
+                            currentBoard.addObject({ x: x, y: y, type: 'LB', text: match[3] });
+                        }
+                    });
+                }
+                
+                // Triangles (TR property)
+                if (rootNode.TR) {
+                    rootNode.TR.forEach(coord => {
+                        const x = coord[0].toLowerCase().charCodeAt(0) - 'a'.charCodeAt(0);
+                        const y = coord[1].toLowerCase().charCodeAt(0) - 'a'.charCodeAt(0);
+                        currentBoard.addObject({ x: x, y: y, type: 'TR' });
+                    });
+                }
+                
+                // Circles (CR property)
+                if (rootNode.CR) {
+                    rootNode.CR.forEach(coord => {
+                        const x = coord[0].toLowerCase().charCodeAt(0) - 'a'.charCodeAt(0);
+                        const y = coord[1].toLowerCase().charCodeAt(0) - 'a'.charCodeAt(0);
+                        currentBoard.addObject({ x: x, y: y, type: 'CR' });
+                    });
+                }
+                
+                // Squares (SQ property)
+                if (rootNode.SQ) {
+                    rootNode.SQ.forEach(coord => {
+                        const x = coord[0].toLowerCase().charCodeAt(0) - 'a'.charCodeAt(0);
+                        const y = coord[1].toLowerCase().charCodeAt(0) - 'a'.charCodeAt(0);
+                        currentBoard.addObject({ x: x, y: y, type: 'SQ' });
+                    });
+                }
+                
+                // Marks (MA property)
+                if (rootNode.MA) {
+                    rootNode.MA.forEach(coord => {
+                        const x = coord[0].toLowerCase().charCodeAt(0) - 'a'.charCodeAt(0);
+                        const y = coord[1].toLowerCase().charCodeAt(0) - 'a'.charCodeAt(0);
+                        currentBoard.addObject({ x: x, y: y, type: 'MA' });
+                    });
+                }
             }
 
             // Apply localized title
@@ -137,7 +217,7 @@ const TsumegoManager = (() => {
                 nameLabel.textContent = localizeTsumegoTitle(problem.name);
             }
             
-            console.log("TsumegoManager: Render successful (size: " + boardSize + ", width: " + containerWidth + ")");
+            console.log("TsumegoManager: Render successful (size: " + boardSize + ", section applied)");
             
         } catch (err) {
             console.error("TsumegoManager: Render error", err);
