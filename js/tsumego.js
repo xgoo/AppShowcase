@@ -1,11 +1,12 @@
 /**
- * Tsumego Display Logic v19 - Simple & Clean
- * Just use WGo.BasicPlayer as intended, with proper CSS isolation
+ * Tsumego Display Logic v25 - The Ultimate Combination
+ * Combines v17 (Section Detection) + v18 (Explicit Sizing) + v21 (Zero-Point CSS)
  */
 
 const TsumegoManager = (() => {
     let tsumegoData = [];
-    let currentPlayer = null;
+    let currentBoard = null;
+    let currentKifu = null;
 
     // i18n mappings
     const levelMap = {
@@ -26,11 +27,10 @@ const TsumegoManager = (() => {
     };
 
     const init = async () => {
-        console.log("TsumegoManager v19: Initializing...");
+        console.log("TsumegoManager v25: Initializing...");
         try {
             const response = await fetch('data/tsumego.json?t=' + Date.now());
             tsumegoData = await response.json();
-            console.log("TsumegoManager: Loaded " + tsumegoData.length + " problems");
             
             const checkWGo = () => {
                 if (typeof WGo !== 'undefined') {
@@ -54,7 +54,37 @@ const TsumegoManager = (() => {
         }
     };
 
-    const loadLevel = (levelName) => {
+    /**
+     * Calculate bounding box of stones to set board section
+     */
+    const calculateBounds = (position, boardSize) => {
+        let minX = boardSize, maxX = 0, minY = boardSize, maxY = 0;
+        let hasStones = false;
+        
+        for (let x = 0; x < boardSize; x++) {
+            for (let y = 0; y < boardSize; y++) {
+                if (position.get(x, y) !== 0) {
+                    hasStones = true;
+                    minX = Math.min(minX, x);
+                    maxX = Math.max(maxX, x);
+                    minY = Math.min(minY, y);
+                    maxY = Math.max(maxY, y);
+                }
+            }
+        }
+        
+        if (!hasStones) return { top: 0, right: 0, bottom: 0, left: 0 };
+        
+        const padding = 2;
+        return {
+            top: Math.max(0, minY - padding),
+            right: Math.max(0, boardSize - 1 - maxX - padding),
+            bottom: Math.max(0, boardSize - 1 - maxY - padding),
+            left: Math.max(0, minX - padding)
+        };
+    };
+
+    const loadLevel = async (levelName) => {
         const container = document.getElementById('tsumego-display');
         const nameLabel = document.getElementById('tsumego-name');
         if (!container || tsumegoData.length === 0) return;
@@ -64,25 +94,75 @@ const TsumegoManager = (() => {
 
         container.innerHTML = '';
         const fileName = problem.sgf_url.split('/').pop();
-        const sgfUrl = "data/sgf/" + fileName;
+        const sgfUrl = "data/sgf/" + fileName + "?t=" + Date.now();
 
         console.log("TsumegoManager: Loading " + sgfUrl);
 
         try {
-            // Simple BasicPlayer usage - let WGo handle everything
-            currentPlayer = new WGo.BasicPlayer(container, {
-                sgfFile: sgfUrl,
-                move: 0,
-                markLastMove: true,
-                layout: { top: [], right: [], left: [], bottom: [] }
-            });
+            // Fetch and parse SGF
+            const sgfResponse = await fetch(sgfUrl);
+            const sgfContent = await sgfResponse.text();
+            currentKifu = new WGo.Kifu.fromSgf(sgfContent);
+            const boardSize = currentKifu.size || 19;
             
+            // Calculate section
+            const reader = new WGo.KifuReader(currentKifu);
+            const section = calculateBounds(reader.game.position, boardSize);
+            
+            // Explicit container width
+            const containerWidth = container.offsetWidth || 500;
+
+            // Use WGo.Board directly (Bypass BasicPlayer layout issues)
+            currentBoard = new WGo.Board(container, {
+                size: boardSize,
+                width: containerWidth,
+                section: section,
+                background: "lib/wood1.jpg",
+                stoneHandler: WGo.Board.drawHandlers.SHELL
+            });
+
+            // Post-render fix: Force sync dimensions
+            setTimeout(() => {
+                const boardEl = container.querySelector('.wgo-board');
+                if (boardEl && currentBoard) {
+                    const pixelRatio = window.devicePixelRatio || 1;
+                    const actualWidth = currentBoard.width / pixelRatio;
+                    const actualHeight = currentBoard.height / pixelRatio;
+                    
+                    // Force CSS to match calculated dimensions exactly
+                    boardEl.style.width = actualWidth + 'px';
+                    boardEl.style.height = actualHeight + 'px';
+                    
+                    // Ensure background covers this exact area
+                    boardEl.style.backgroundSize = '100% 100%';
+                    console.log("TsumegoManager: Forced dimensions to " + actualWidth + "x" + actualHeight);
+                }
+            }, 50);
+
+            // Draw stones
+            const position = reader.game.position;
+            for (let x = 0; x < boardSize; x++) {
+                for (let y = 0; y < boardSize; y++) {
+                    const stone = position.get(x, y);
+                    if (stone !== 0) currentBoard.addObject({ x: x, y: y, c: stone });
+                }
+            }
+            
+            // Draw markup (LB, TR, etc.)
+            const rootNode = currentKifu.root;
+            if (rootNode) {
+                if (rootNode.LB) rootNode.LB.forEach(l => {
+                    const m = l.match(/([a-s])([a-s]):(.+)/i);
+                    if(m) currentBoard.addObject({ x: m[1].charCodeAt(0)-97, y: m[2].charCodeAt(0)-97, type: 'LB', text: m[3] });
+                });
+                // Add other markups if needed...
+            }
+
             if (nameLabel) {
                 nameLabel.dataset.originalTitle = problem.name;
                 nameLabel.textContent = localizeTsumegoTitle(problem.name);
             }
             
-            console.log("TsumegoManager: Render complete");
         } catch (err) {
             console.error("TsumegoManager: Error", err);
             container.innerHTML = '<div style="color:#fff;padding:20px;">加载失败: ' + err.message + '</div>';
