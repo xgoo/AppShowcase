@@ -514,9 +514,16 @@ body {
     }
     
     .about-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-        justify-items: center; /* Center grid items */
+        display: flex; /* Switch from Grid to Flex column for stability */
+        flex-direction: column;
+        align-items: center;
+        gap: var(--space-lg);
+        width: 100%;
+    }
+    
+    .about-text {
+        width: 100%;
+        padding: 0 var(--space-sm); /* Ensure text doesn't touch edges */
     }
     
     .about-visual {
