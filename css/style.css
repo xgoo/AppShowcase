@@ -110,6 +110,7 @@ body {
 
 .nav-links {
     display: flex;
+    align-items: center;
     gap: var(--space-md);
 }
 
@@ -118,6 +119,7 @@ body {
     text-decoration: none;
     font-weight: 400;
     transition: var(--transition);
+    line-height: 1;
 }
 
 .nav-links a:hover {
@@ -296,7 +298,6 @@ body {
     border-radius: 20px;
     margin-left: var(--space-xs);
     font-weight: 600;
-    text-transform: uppercase;
     vertical-align: middle;
     line-height: 1;
 }
