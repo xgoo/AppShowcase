@@ -535,15 +535,15 @@ body {
     }
     
     .stats {
-        display: grid; /* Switch to Grid for strict control */
-        grid-template-columns: repeat(3, 1fr); /* Force 3 columns */
-        gap: 0.5rem; /* Tiny gap */
+        display: flex;
+        flex-direction: column; /* Force vertical layout */
+        gap: 1.5rem;
         width: 100%;
-        justify-content: center;
+        align-items: center;
     }
     
     .stat-number {
-        font-size: 1.8rem; /* Even smaller font */
+        font-size: 2.5rem; /* Restore readable size */
     }
     
     .apps-grid {
