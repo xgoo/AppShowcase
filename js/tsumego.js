@@ -124,10 +124,13 @@ const TsumegoManager = (() => {
             // Post-render fix: Force sync dimensions
             setTimeout(() => {
                 const boardEl = container.querySelector('.wgo-board');
-                if (boardEl && currentBoard) {
+                // Use the grid canvas as the source of truth for dimensions
+                const gridCanvas = container.querySelector('canvas');
+                
+                if (boardEl && gridCanvas) {
                     const pixelRatio = window.devicePixelRatio || 1;
-                    const actualWidth = currentBoard.width / pixelRatio;
-                    const actualHeight = currentBoard.height / pixelRatio;
+                    const actualWidth = gridCanvas.width / pixelRatio;
+                    const actualHeight = gridCanvas.height / pixelRatio;
                     
                     // Force CSS to match calculated dimensions exactly
                     boardEl.style.width = actualWidth + 'px';
