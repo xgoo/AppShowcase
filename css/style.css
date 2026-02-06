@@ -44,6 +44,7 @@
 html {
     scroll-behavior: smooth;
     font-size: var(--font-size-base);
+    overflow-x: hidden; /* Prevent horizontal scroll globally */
 }
 
 body {
@@ -51,7 +52,7 @@ body {
     background-color: var(--color-bg-dark);
     color: var(--color-text);
     line-height: 1.6;
-    overflow-x: hidden;
+    overflow-x: hidden; /* Double safety */
 }
 
 .container {

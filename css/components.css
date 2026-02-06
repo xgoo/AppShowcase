@@ -188,4 +188,28 @@
     .lang-dropdown {
         right: -10px;
     }
+    
+    /* Tsumego Layout Compact Mode */
+    .tsumego-section {
+        padding: var(--space-md) 0; /* Reduce padding significantly */
+    }
+    
+    .tsumego-section .section-title {
+        font-size: 1.8rem; /* Smaller title */
+        margin-bottom: 0.5rem;
+    }
+    
+    .tsumego-section .section-subtitle {
+        margin-bottom: 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .tsumego-tabs {
+        margin-bottom: 1rem; /* Closer to board */
+    }
+    
+    .tsumego-tab {
+        padding: 6px 16px; /* Smaller buttons */
+        font-size: 0.9rem;
+    }
 }
