@@ -62,9 +62,9 @@
 
 /* THE GOLDEN FIX: Isolation layer for WGo */
 .tsumego-display-wrapper {
-    display: inline-block;
+    display: block; /* Force block for margin auto to work reliably */
     padding: 0 !important;
-    margin: 0 auto;
+    margin: 0 auto !important; /* Center horizontally */
     background: #dcb35c;
     border: 4px solid #8b6e37;
     border-radius: 8px;
@@ -72,6 +72,7 @@
     /* Wrapper should handle border correctly */
     box-sizing: border-box !important;
     max-width: 100%; /* Prevent overflow */
+    width: fit-content; /* Shrink to wrap content */
 }
 
 #tsumego-display {
