@@ -21,16 +21,29 @@
     
     <style>
         /* 
-         * WGo Board Fix - CSS Isolation
-         * Reset all styles inside tsumego container to browser defaults
+         * WGo Board Fix (v21.0) - The "Zero-Point" Fix
+         * 1. Force content-box to fix coordinate math.
+         * 2. REMOVE BORDERS to align background (border-box) with canvas (padding-box).
+         * 3. Force background to cover the full area.
          */
         #tsumego-display,
-        #tsumego-display *,
-        #tsumego-display *::before,
-        #tsumego-display *::after {
+        #tsumego-display * {
             box-sizing: content-box !important;
-            margin: 0;
-            padding: 0;
+        }
+        
+        #tsumego-display .wgo-board {
+            border: none !important; /* CRITICAL: Remove borders to align coordinates */
+            background-size: 100% 100% !important; /* Force texture fit */
+            background-repeat: no-repeat !important;
+            box-shadow: none !important; /* Clean up any shadow messing with dimensions */
+        }
+        
+        /* Ensure canvas layers are positioned correctly */
+        #tsumego-display .wgo-board canvas {
+            top: 0 !important;
+            left: 0 !important;
+            margin: 0 !important;
+            padding: 0 !important;
         }
     </style>
 </head>
