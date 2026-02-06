@@ -1,0 +1,12 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]HA[0]PB[Black]PW[White]AB[ab][bb][cc][db][dd][de][ec][fc][gd][hd][he][hf][gg][fg][eg][dg][cg][ch][ci][bi][ai]AW[bc][be][cf][df][ef][ee][ed][fd][ge][gf][ff][bg][ag][bh][ah]C[黑先劫杀
+此题看似简单，但若不加思索落子极易步入陷阱。]
+
+(;B[bf]N[正解]C[扑，要点！];W[cd]C[扩大眼位];B[ae]C[好手！];W[ad];B[ac];W[af]C[提];B[bd]C[恭喜答对，白棋顽强的做成打劫活。
+
+另，白２若提一子，黑３在４位点，白净死。])
+(;B[bf]N[变化]C[扑];W[af];B[ad];W[bd];B[ac];W[ae];B[ce])
+(;B[bd]N[失败]C[随手！想的过于简单了。];W[ae]C[立! 看到胜利的曙光了么?]
+(;B[bf];W[ce]C[团 :）];B[af];W[bg]C[黑棋步入陷阱。
+失败，重来吧])
+(;B[ce];W[bf]C[失败，重来吧]))
+(;B[ce];W[bf];B[ae];W[bd]C[失败，重来吧]))
