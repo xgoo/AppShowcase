@@ -1,0 +1,7 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]HA[0]AB[rq][qq][pq][pr][or][ns][sp]AW[rn][mr][nr][oq][op][pp][qp][rp]C[白先，劫杀]
+
+(;W[rr];B[rs];W[qs];B[sr];W[ss]C[白先劫，恭喜答对])
+(;W[sq];B[sr];W[qs];B[rs]C[失败，重来吧])
+(;W[sr];B[rr];W[qs];B[sq];W[rs];B[ps]C[失败，重来吧])
+(;W[qs]
+(;B[rs];W[rr];B[sr];W[ss]C[恭喜答对])))
