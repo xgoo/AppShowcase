@@ -77,11 +77,11 @@
             camera.position.y = 700; 
             waveOffset = -450;
         } else {
-            // 桌面端：【v77 反向调整】
-            // Camera Y: 1000 -> 400 (降低机位，平视，压低地平线)
-            // WaveOffset: -750 (保持深潜)
+            // 桌面端：【v78 双倍低角度】
+            // Camera Y: 400 -> 200 (极限低角度，强纵深感)
+            // WaveOffset: -750 (保持不变)
             camera.position.z = 1000; 
-            camera.position.y = 400; 
+            camera.position.y = 200; 
             waveOffset = -750; 
         }
     }
