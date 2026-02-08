@@ -13,7 +13,7 @@
     var AMOUNTX = 60;
     var AMOUNTY = 40;
 
-    var target = new THREE.Vector3(0, -200, 0); // 【v76】压低注视点，配合高机位
+    var target = new THREE.Vector3(0, 100, 0); // 【v77】注视点回调到 100 (抬头)
     var waveOffset = -450; 
 
     init();
@@ -77,12 +77,11 @@
             camera.position.y = 700; 
             waveOffset = -450;
         } else {
-            // 桌面端：【v76 调整】
-            // Camera Z: 1000 (保持不变)
-            // Camera Y: 600 -> 1000 (拉高机位，增加俯视感)
-            // WaveOffset: -750 (保持不变)
+            // 桌面端：【v77 反向调整】
+            // Camera Y: 1000 -> 400 (降低机位，平视，压低地平线)
+            // WaveOffset: -750 (保持深潜)
             camera.position.z = 1000; 
-            camera.position.y = 1000; 
+            camera.position.y = 400; 
             waveOffset = -750; 
         }
     }
