@@ -102,8 +102,9 @@
             for (var iy = 0; iy < AMOUNTY; iy++) {
                 particle = particles[i++];
                 
-                // 偏移 -200：最佳位置
-                particle.position.y = (Math.sin((ix + count) * 0.3) * 25) + (Math.sin((iy + count) * 0.5) * 25) - 200;
+                // 【v74 最佳位置】
+                // 偏移量 -450：大幅下沉，确保波浪完全位于“探索应用”按钮下方
+                particle.position.y = (Math.sin((ix + count) * 0.3) * 25) + (Math.sin((iy + count) * 0.5) * 25) - 450;
                 
                 particle.scale.x = particle.scale.y = (Math.sin((ix + count) * 0.3) + 1) * 2 + (Math.sin((iy + count) * 0.5) + 1) * 2;
             }
