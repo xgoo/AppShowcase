@@ -505,8 +505,8 @@ body {
     
     /* Mobile font override - ensured visibility */
     .hero h1 {
-        font-size: 3.5rem !important; 
-        line-height: 1.1;
+        font-size: 2.5rem !important; /* 【v69】回调字号，防止换行 */
+        line-height: 1.2;
         margin-bottom: 1rem;
     }
 
