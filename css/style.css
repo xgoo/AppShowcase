@@ -503,11 +503,12 @@ body {
         display: none;
     }
     
-    /* Mobile font override - ensured visibility */
+    /* 【v70】移动端字号终极适配：使用 vw 动态缩放，确保不换行 */
     .hero h1 {
-        font-size: 2.5rem !important; /* 【v69】回调字号，防止换行 */
+        font-size: clamp(1.8rem, 10vw, 2.5rem) !important; 
         line-height: 1.2;
         margin-bottom: 1rem;
+        white-space: nowrap; /* 双保险：强制不换行 */
     }
 
     .hero-subtitle {
