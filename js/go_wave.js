@@ -1,5 +1,5 @@
 (function() {
-    // 围棋气韵 - 动态粒子波浪效果 (v75 响应式偏移版)
+    // 围棋气韵 - 动态粒子波浪效果 (v79 Steve精调版)
     // 容器: #hero-canvas-container
 
     var container = document.getElementById('hero-canvas-container');
@@ -9,19 +9,20 @@
     var particles, particle;
     var count = 0;
 
-    var SEPARATION = 80;
+    // 参数调整 (Steve精调)
+    var SEPARATION = 85; 
     var AMOUNTX = 60;
     var AMOUNTY = 40;
 
-    var target = new THREE.Vector3(0, 100, 0); // 【v77】注视点回调到 100 (抬头)
-    var waveOffset = -450; 
+    var target = new THREE.Vector3(0, 129, 0); // 微微抬头
+    var waveOffset = -450; // 默认值，会被 updateCameraConfig 覆盖
 
     init();
     animate();
 
     function init() {
         camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 1, 10000);
-        updateCameraConfig(); // 初始化时根据设备设置视角和偏移
+        updateCameraConfig();
 
         scene = new THREE.Scene();
 
@@ -72,17 +73,15 @@
         if (!container) return;
         var isMobile = container.clientWidth < 768;
         if (isMobile) {
-            // 移动端：拉远镜头，偏移量保持 -450
+            // 移动端：保持之前的自适应参数 (可按需微调)
             camera.position.z = 1400; 
             camera.position.y = 700; 
             waveOffset = -450;
         } else {
-            // 桌面端：【v78 双倍低角度】
-            // Camera Y: 400 -> 200 (极限低角度，强纵深感)
-            // WaveOffset: -750 (保持不变)
-            camera.position.z = 1000; 
-            camera.position.y = 200; 
-            waveOffset = -750; 
+            // 桌面端：Steve 精调参数
+            camera.position.z = 1031; 
+            camera.position.y = 0;   // 完全平视
+            waveOffset = -541;       // 深度下沉
         }
     }
 
@@ -107,7 +106,7 @@
             for (var iy = 0; iy < AMOUNTY; iy++) {
                 particle = particles[i++];
                 
-                // 使用动态 waveOffset
+                // 核心算法：双重正弦波 (温柔版 25幅) + 动态 offset
                 particle.position.y = (Math.sin((ix + count) * 0.3) * 25) + (Math.sin((iy + count) * 0.5) * 25) + waveOffset;
                 
                 particle.scale.x = particle.scale.y = (Math.sin((ix + count) * 0.3) + 1) * 2 + (Math.sin((iy + count) * 0.5) + 1) * 2;

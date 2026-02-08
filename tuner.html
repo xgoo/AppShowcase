@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go Wave Tuner - 围棋波浪调音台</title>
+    <style>
+        body { margin: 0; overflow: hidden; background-color: #0a0a0a; font-family: sans-serif; }
+        #canvas-container { width: 100vw; height: 100vh; }
+        
+        /* 模拟官网文字层，用于参照 */
+        .overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #fff;
+            pointer-events: none;
+            z-index: 10;
+        }
+        .overlay h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #ffffff 0%, #D4A853 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .overlay p { font-size: 1.2rem; color: #888; margin-bottom: 40px; }
+        .btn {
+            display: inline-block;
+            padding: 10px 30px;
+            background: linear-gradient(135deg, #D4A853 0%, #E8C97B 100%);
+            color: #0a0a0a;
+            border-radius: 50px;
+            font-weight: bold;
+        }
+
+        /* 调音面板 */
+        #tuner {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 300px;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #fff;
+            z-index: 100;
+        }
+        .control-group { margin-bottom: 15px; }
+        .control-group label { display: flex; justify-content: space-between; font-size: 0.9rem; margin-bottom: 5px; }
+        .control-group input { width: 100%; cursor: pointer; accent-color: #D4A853; }
+        .val { color: #D4A853; font-family: monospace; }
+        
+        #export-btn {
+            width: 100%;
+            padding: 10px;
+            background: #D4A853;
+            border: none;
+            border-radius: 6px;
+            color: #000;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        #export-btn:hover { background: #E8C97B; }
+        
+        #output {
+            margin-top: 10px;
+            width: 100%;
+            height: 60px;
+            background: #222;
+            border: 1px solid #444;
+            color: #ccc;
+            font-size: 0.8rem;
+            padding: 5px;
+            display: none;
+        }
+    </style>
+    <!-- 引用 Three.js -->
+    <script src="js/three.min.js"></script>
+</head>
+<body>
+
+    <div id="canvas-container"></div>
+
+    <div class="overlay">
+        <h1>围棋 · 艺术 · 科技</h1>
+        <p>十年专注，打造最优质的围棋应用生态</p>
+        <span class="btn">探索应用</span>
+    </div>
+
+    <div id="tuner">
+        <h3>🌊 波浪调音台</h3>
+        
+        <div class="control-group">
+            <label>Camera Y (高度) <span id="val-camY" class="val">200</span></label>
+            <input type="range" id="camY" min="0" max="2000" value="200">
+        </div>
+        
+        <div class="control-group">
+            <label>Camera Z (距离) <span id="val-camZ" class="val">1000</span></label>
+            <input type="range" id="camZ" min="500" max="2000" value="1000">
+        </div>
+
+        <div class="control-group">
+            <label>Target Y (注视点) <span id="val-targetY" class="val">100</span></label>
+            <input type="range" id="targetY" min="-500" max="500" value="100">
+        </div>
+
+        <div class="control-group">
+            <label>Wave Offset (下沉) <span id="val-offset" class="val">-750</span></label>
+            <input type="range" id="offset" min="-1000" max="0" value="-750">
+        </div>
+
+        <div class="control-group">
+            <label>Amplitude (幅度) <span id="val-amp" class="val">25</span></label>
+            <input type="range" id="amp" min="0" max="100" value="25">
+        </div>
+        
+        <div class="control-group">
+            <label>Separation (间距) <span id="val-sep" class="val">80</span></label>
+            <input type="range" id="sep" min="20" max="200" value="80">
+        </div>
+
+        <button id="export-btn">📋 复制参数</button>
+        <textarea id="output"></textarea>
+    </div>
+
+<script>
+    // Tuner Logic
+    var params = {
+        camY: 200,
+        camZ: 1000,
+        targetY: 100,
+        offset: -750,
+        amp: 25,
+        sep: 80
+    };
+
+    var container = document.getElementById('canvas-container');
+    var camera, scene, renderer;
+    var particles = [], particle;
+    var count = 0;
+    var AMOUNTX = 60, AMOUNTY = 40;
+    var target = new THREE.Vector3(0, params.targetY, 0);
+
+    init();
+    animate();
+    setupControls();
+
+    function init() {
+        camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 1, 10000);
+        updateCamera();
+
+        scene = new THREE.Scene();
+        rebuildParticles(); // Initial build
+
+        renderer = new THREE.CanvasRenderer({ alpha: true });
+        renderer.setSize(container.clientWidth, container.clientHeight);
+        renderer.setClearColor(0x0a0a0a, 0); // Transparent
+        
+        container.appendChild(renderer.domElement);
+        window.addEventListener('resize', onWindowResize, false);
+    }
+
+    function rebuildParticles() {
+        // Clear existing
+        for(var i=0; i<particles.length; i++) {
+            scene.remove(particles[i]);
+        }
+        particles = [];
+
+        var PI2 = Math.PI * 2;
+        var materialWhite = new THREE.ParticleCanvasMaterial({
+            color: 0xffffff,
+            program: function (context) {
+                context.beginPath();
+                context.arc(0, 0, 1, 0, PI2, true);
+                context.fill();
+            }
+        });
+        var materialBlack = new THREE.ParticleCanvasMaterial({
+            color: 0x222222, 
+            program: function (context) {
+                context.beginPath();
+                context.arc(0, 0, 1, 0, PI2, true);
+                context.fill();
+            }
+        });
+
+        var i = 0;
+        for (var ix = 0; ix < AMOUNTX; ix++) {
+            for (var iy = 0; iy < AMOUNTY; iy++) {
+                var isWhite = (ix + iy) % 2 === 0;
+                var material = isWhite ? materialWhite : materialBlack;
+                var p = new THREE.Particle(material);
+                
+                // Set initial X/Z based on Separation
+                p.position.x = ix * params.sep - ((AMOUNTX * params.sep) / 2);
+                p.position.z = iy * params.sep - ((AMOUNTY * params.sep) / 2);
+                
+                scene.add(p);
+                particles.push(p);
+            }
+        }
+    }
+
+    function updateCamera() {
+        camera.position.y = parseInt(params.camY);
+        camera.position.z = parseInt(params.camZ);
+        target.y = parseInt(params.targetY);
+        camera.lookAt(target);
+    }
+
+    function onWindowResize() {
+        camera.aspect = container.clientWidth / container.clientHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(container.clientWidth, container.clientHeight);
+    }
+
+    function animate() {
+        requestAnimationFrame(animate);
+        render();
+    }
+
+    function render() {
+        camera.lookAt(target);
+
+        var i = 0;
+        for (var ix = 0; ix < AMOUNTX; ix++) {
+            for (var iy = 0; iy < AMOUNTY; iy++) {
+                particle = particles[i++];
+                
+                // Dynamic Wave Calculation
+                particle.position.y = (Math.sin((ix + count) * 0.3) * params.amp) + 
+                                      (Math.sin((iy + count) * 0.5) * params.amp) + 
+                                      parseInt(params.offset);
+                
+                particle.scale.x = particle.scale.y = 
+                    (Math.sin((ix + count) * 0.3) + 1) * 2 + 
+                    (Math.sin((iy + count) * 0.5) + 1) * 2;
+            }
+        }
+
+        renderer.clear();
+        renderer.render(scene, camera);
+        count += 0.1;
+    }
+
+    // UI Controls Logic
+    function setupControls() {
+        const inputs = ['camY', 'camZ', 'targetY', 'offset', 'amp', 'sep'];
+        
+        inputs.forEach(id => {
+            const el = document.getElementById(id);
+            const valEl = document.getElementById('val-' + id);
+            
+            el.addEventListener('input', function(e) {
+                const val = parseInt(e.target.value);
+                params[id] = val;
+                valEl.innerText = val;
+                
+                if(id === 'camY' || id === 'camZ' || id === 'targetY') {
+                    updateCamera();
+                }
+                if(id === 'sep') {
+                    rebuildParticles(); // Need to rebuild grid when spacing changes
+                }
+            });
+        });
+
+        document.getElementById('export-btn').addEventListener('click', function() {
+            const json = JSON.stringify(params, null, 2);
+            const out = document.getElementById('output');
+            out.value = json;
+            out.style.display = 'block';
+            out.select();
+            document.execCommand('copy');
+            this.innerText = "✅ 已复制到剪贴板";
+            setTimeout(() => this.innerText = "📋 复制参数", 2000);
+        });
+    }
+</script>
+</body>
+</html>
