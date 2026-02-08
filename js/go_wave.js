@@ -1,7 +1,7 @@
 (function() {
-    // 围棋气韵 - 动态粒子波浪效果 (v68 终极修复版)
-    // 参数：移动端自适应，波浪偏移 -200
-    
+    // 围棋气韵 - 动态粒子波浪效果 (v75 响应式偏移版)
+    // 容器: #hero-canvas-container
+
     var container = document.getElementById('hero-canvas-container');
     if (!container) return;
 
@@ -14,13 +14,14 @@
     var AMOUNTY = 40;
 
     var target = new THREE.Vector3(0, 100, 0);
+    var waveOffset = -450; // 默认偏移量
 
     init();
     animate();
 
     function init() {
         camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 1, 10000);
-        updateCameraConfig();
+        updateCameraConfig(); // 初始化时根据设备设置视角和偏移
 
         scene = new THREE.Scene();
 
@@ -71,13 +72,15 @@
         if (!container) return;
         var isMobile = container.clientWidth < 768;
         if (isMobile) {
-            // 移动端：拉远镜头
+            // 移动端：拉远镜头，偏移量保持 -450
             camera.position.z = 1400; 
             camera.position.y = 700; 
+            waveOffset = -450;
         } else {
-            // 桌面端
+            // 桌面端：标准视角，大幅增加下沉偏移量 (-750)，防止遮挡副标题
             camera.position.z = 1000; 
             camera.position.y = 600; 
+            waveOffset = -750; 
         }
     }
 
@@ -102,9 +105,8 @@
             for (var iy = 0; iy < AMOUNTY; iy++) {
                 particle = particles[i++];
                 
-                // 【v74 最佳位置】
-                // 偏移量 -450：大幅下沉，确保波浪完全位于“探索应用”按钮下方
-                particle.position.y = (Math.sin((ix + count) * 0.3) * 25) + (Math.sin((iy + count) * 0.5) * 25) - 450;
+                // 使用动态 waveOffset
+                particle.position.y = (Math.sin((ix + count) * 0.3) * 25) + (Math.sin((iy + count) * 0.5) * 25) + waveOffset;
                 
                 particle.scale.x = particle.scale.y = (Math.sin((ix + count) * 0.3) + 1) * 2 + (Math.sin((iy + count) * 0.5) + 1) * 2;
             }
