@@ -24,10 +24,9 @@
         // 初始化相机
         camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 1, 10000);
         
-        // 【固定视角】高空俯瞰设定
+        // 【固定视角】
         camera.position.z = 1000; 
-        camera.position.y = 1000; // 高度锁定，上帝视角
-        // camera.position.x 默认为 0，居中
+        camera.position.y = 500; // 降低高度，从高空俯瞰改为中低空平视，增加纵深感
 
         scene = new THREE.Scene();
 
@@ -45,7 +44,7 @@
             }
         });
 
-        // 【黑子材质】哑光深灰，无描边，依靠与深黑背景的微妙色差
+        // 【黑子材质】哑光深灰
         var materialBlack = new THREE.ParticleCanvasMaterial({
             color: 0x222222, 
             program: function (context) {
@@ -107,8 +106,10 @@
             for (var iy = 0; iy < AMOUNTY; iy++) {
                 particle = particles[i++];
                 
-                // 核心算法：双重正弦波 (温柔版)
-                particle.position.y = (Math.sin((ix + count) * 0.3) * 25) + (Math.sin((iy + count) * 0.5) * 25);
+                // 核心算法：双重正弦波 (温柔版) + 【下沉偏移】
+                // 偏移量 -200：让整个波浪下沉，只在屏幕下方波动，不遮挡标题
+                particle.position.y = (Math.sin((ix + count) * 0.3) * 25) + (Math.sin((iy + count) * 0.5) * 25) - 200;
+                
                 particle.scale.x = particle.scale.y = (Math.sin((ix + count) * 0.3) + 1) * 2 + (Math.sin((iy + count) * 0.5) + 1) * 2;
             }
         }
