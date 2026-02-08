@@ -175,6 +175,21 @@ body {
     z-index: 10;
 }
 
+#hero-canvas-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Behind content but above background */
+    pointer-events: none; /* Let clicks pass through to background/nav if needed, but we have mouse interaction on document level */
+}
+
+/* Hide old decoration to avoid conflict */
+.hero-decoration {
+    display: none;
+}
+
 .hero h1 {
     font-size: clamp(2.5rem, 8vw, 5rem);
     font-weight: 700;
