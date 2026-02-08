@@ -3,6 +3,7 @@
    ======================================== */
 
 :root {
+    /* Colors */
     --color-wood: #DEB887;
     --color-wood-dark: #C4A574;
     --color-wood-light: #F5DEB3;
@@ -15,15 +16,18 @@
     --color-accent: #D4A853;
     --color-accent-light: #E8C97B;
     
+    /* Spacing */
     --space-xs: 0.5rem;
     --space-sm: 1rem;
     --space-md: 2rem;
     --space-lg: 4rem;
     --space-xl: 6rem;
     
+    /* Typography */
     --font-sans: 'Outfit', 'Noto Sans SC', -apple-system, sans-serif;
     --font-size-base: 16px;
     
+    /* Effects */
     --shadow-card: 0 10px 40px rgba(0, 0, 0, 0.3);
     --shadow-glow: 0 0 40px rgba(212, 168, 83, 0.2);
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -145,6 +149,7 @@ body {
     overflow: hidden;
 }
 
+/* Static Decoration (Optional, keep for fallback) */
 .hero::before {
     content: '';
     position: absolute;
@@ -501,7 +506,6 @@ body {
         display: none;
     }
     
-    /* 【v72 架构回归】将 v71 的内联补丁移回 CSS 文件 */
     /* 1. 字体防换行：使用 clamp + vw */
     .hero h1 {
         font-size: clamp(1.8rem, 10vw, 2.5rem) !important;
