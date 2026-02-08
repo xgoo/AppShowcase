@@ -25,7 +25,8 @@
     function init() {
         // 初始化相机
         camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 1, 10000);
-        camera.position.z = 1000; // 俯瞰视角
+        camera.position.z = 1000; // 距离
+        camera.position.y = 1000; // 【关键修改】初始抬高视角，相当于鼠标推到了顶端 (高空俯瞰)
 
         scene = new THREE.Scene();
 
