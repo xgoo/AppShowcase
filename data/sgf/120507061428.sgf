@@ -1,0 +1,8 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]GN[官子谱上卷第7题]HA[0]US[吴清源解说]AB[ap][bo][co][dp][dq][cq][eq][eo][bs]AW[ar][bq][bp][cr][cs][cp][fp][fq][gn]C[白先
+白棋寻求度过，如何连接呢?]
+
+(;W[fs]N[正解];B[fr];W[gr]LB[er:A][es:B]C[白1跳即可联络，黑2、白3后，黑若A粘，白B即可；黑2若A长，白棋同样B渡。
+恭喜答对！])
+(;W[fr]N[失败1]C[白1立是错觉];B[es]C[黑2跳后，白棋因为气紧无法渡过。])
+(;W[er]N[失败2];B[dr]LB[fr:A]C[黑2冲后，白有A位的断点。])
+(;W[es]N[失败3];B[fr];W[gr];B[dr];W[ds];B[fs]LB[er:A]C[白棋A位不入气]))
