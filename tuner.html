@@ -42,18 +42,34 @@
             top: 20px;
             right: 20px;
             width: 300px;
-            background: rgba(0, 0, 0, 0.8);
-            backdrop-filter: blur(10px);
-            padding: 20px;
+            background: rgba(0, 0, 0, 0.6); 
+            backdrop-filter: blur(8px);
+            padding: 15px;
             border-radius: 12px;
             border: 1px solid rgba(255, 255, 255, 0.1);
             color: #fff;
             z-index: 100;
+            transition: transform 0.3s ease;
         }
-        .control-group { margin-bottom: 15px; }
-        .control-group label { display: flex; justify-content: space-between; font-size: 0.9rem; margin-bottom: 5px; }
-        .control-group input { width: 100%; cursor: pointer; accent-color: #D4A853; }
-        .val { color: #D4A853; font-family: monospace; }
+        
+        #toggle-btn {
+            display: none; /* 桌面端隐藏 */
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: transparent;
+            border: 1px solid #D4A853;
+            color: #D4A853;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            cursor: pointer;
+        }
+
+        .control-group { margin-bottom: 12px; }
+        .control-group label { display: flex; justify-content: space-between; font-size: 0.85rem; margin-bottom: 4px; color: #ccc; }
+        .control-group input { width: 100%; cursor: pointer; accent-color: #D4A853; margin: 0; }
+        .val { color: #D4A853; font-family: monospace; font-weight: bold; }
         
         #export-btn {
             width: 100%;
@@ -64,7 +80,7 @@
             color: #000;
             font-weight: bold;
             cursor: pointer;
-            margin-top: 10px;
+            margin-top: 5px;
         }
         #export-btn:hover { background: #E8C97B; }
         
@@ -78,6 +94,28 @@
             font-size: 0.8rem;
             padding: 5px;
             display: none;
+            box-sizing: border-box;
+        }
+
+        /* 移动端适配 */
+        @media (max-width: 768px) {
+            #tuner {
+                top: 0;
+                left: 0;
+                right: 0;
+                width: 100%;
+                border-radius: 0 0 12px 12px;
+                box-sizing: border-box;
+                max-height: 60vh;
+                overflow-y: auto;
+            }
+            #tuner.collapsed {
+                transform: translateY(-90%);
+            }
+            #toggle-btn {
+                display: block;
+            }
+            .overlay h1 { font-size: 2rem; }
         }
     </style>
     <!-- 引用 Three.js -->
@@ -94,16 +132,16 @@
     </div>
 
     <div id="tuner">
-        <h3>🌊 波浪调音台</h3>
+        <h3 style="margin-top: 0; font-size: 1.1rem;">🌊 波浪调音台 <button id="toggle-btn">收起</button></h3>
         
         <div class="control-group">
-            <label>Camera Y (高度) <span id="val-camY" class="val">200</span></label>
-            <input type="range" id="camY" min="0" max="2000" value="200">
+            <label>Camera Y (高度) <span id="val-camY" class="val">700</span></label>
+            <input type="range" id="camY" min="0" max="2000" value="700">
         </div>
         
         <div class="control-group">
-            <label>Camera Z (距离) <span id="val-camZ" class="val">1000</span></label>
-            <input type="range" id="camZ" min="500" max="2000" value="1000">
+            <label>Camera Z (距离) <span id="val-camZ" class="val">1400</span></label>
+            <input type="range" id="camZ" min="500" max="2000" value="1400">
         </div>
 
         <div class="control-group">
@@ -112,8 +150,8 @@
         </div>
 
         <div class="control-group">
-            <label>Wave Offset (下沉) <span id="val-offset" class="val">-750</span></label>
-            <input type="range" id="offset" min="-1000" max="0" value="-750">
+            <label>Wave Offset (下沉) <span id="val-offset" class="val">-450</span></label>
+            <input type="range" id="offset" min="-1000" max="0" value="-450">
         </div>
 
         <div class="control-group">
@@ -133,10 +171,10 @@
 <script>
     // Tuner Logic
     var params = {
-        camY: 200,
-        camZ: 1000,
+        camY: 700,
+        camZ: 1400,
         targetY: 100,
-        offset: -750,
+        offset: -450,
         amp: 25,
         sep: 80
     };
@@ -147,6 +185,13 @@
     var count = 0;
     var AMOUNTX = 60, AMOUNTY = 40;
     var target = new THREE.Vector3(0, params.targetY, 0);
+
+    // Toggle Logic
+    document.getElementById('toggle-btn').addEventListener('click', function() {
+        var panel = document.getElementById('tuner');
+        panel.classList.toggle('collapsed');
+        this.innerText = panel.classList.contains('collapsed') ? '展开' : '收起';
+    });
 
     init();
     animate();
