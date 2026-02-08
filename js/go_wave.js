@@ -13,8 +13,8 @@
     var AMOUNTX = 60;
     var AMOUNTY = 40;
 
-    var target = new THREE.Vector3(0, 100, 0);
-    var waveOffset = -450; // 默认偏移量
+    var target = new THREE.Vector3(0, -200, 0); // 【v76】压低注视点，配合高机位
+    var waveOffset = -450; 
 
     init();
     animate();
@@ -77,9 +77,12 @@
             camera.position.y = 700; 
             waveOffset = -450;
         } else {
-            // 桌面端：标准视角，大幅增加下沉偏移量 (-750)，防止遮挡副标题
+            // 桌面端：【v76 调整】
+            // Camera Z: 1000 (保持不变)
+            // Camera Y: 600 -> 1000 (拉高机位，增加俯视感)
+            // WaveOffset: -750 (保持不变)
             camera.position.z = 1000; 
-            camera.position.y = 600; 
+            camera.position.y = 1000; 
             waveOffset = -750; 
         }
     }
