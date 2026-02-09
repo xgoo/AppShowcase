@@ -14,7 +14,7 @@
 }
 
 .roadmap-item {
-    background: rgba(255, 255, 255, 0.03);
+    background: var(--roadmap-bg);
     border-left: 4px solid #333;
     padding: 1.5rem;
     border-radius: 0 var(--radius) var(--radius) 0;
@@ -96,8 +96,61 @@
 }
 
 /* ========================================
-   Language Switcher
+   Theme Toggle
    ======================================== */
+.theme-toggle {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--color-text);
+    transition: var(--transition);
+    padding: 0;
+    margin-left: var(--space-sm);
+}
+
+.theme-toggle:hover {
+    background: rgba(212, 168, 83, 0.15);
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+}
+
+.theme-toggle svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Toggle visibility based on theme */
+[data-theme="light"] .theme-toggle .sun {
+    display: none;
+}
+[data-theme="light"] .theme-toggle .moon {
+    display: block;
+}
+:not([data-theme="light"]) .theme-toggle .sun {
+    display: block;
+}
+:not([data-theme="light"]) .theme-toggle .moon {
+    display: none;
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+    .theme-toggle {
+        width: 32px;
+        height: 32px;
+        margin-left: var(--space-xs);
+    }
+    .theme-toggle svg {
+        width: 18px;
+        height: 18px;
+    }
+}
 .lang-switcher {
     position: relative;
     margin-left: var(--space-sm);

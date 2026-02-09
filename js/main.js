@@ -19,9 +19,32 @@ document.addEventListener('DOMContentLoaded', () => {
     const nav = document.querySelector('.nav');
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
-            nav.style.background = 'rgba(10, 10, 10, 0.95)';
+            nav.classList.add('nav-scrolled');
         } else {
-            nav.style.background = 'rgba(10, 10, 10, 0.8)';
+            nav.classList.remove('nav-scrolled');
+        }
+    });
+
+    // Theme Toggle Logic
+    const themeToggle = document.getElementById('theme-toggle');
+    const currentTheme = localStorage.getItem('theme') || 'dark';
+    
+    if (currentTheme === 'light') {
+        document.documentElement.setAttribute('data-theme', 'light');
+    }
+
+    themeToggle.addEventListener('click', () => {
+        let theme = document.documentElement.getAttribute('data-theme');
+        if (theme === 'light') {
+            document.documentElement.removeAttribute('data-theme');
+            localStorage.setItem('theme', 'dark');
+            // Notify background
+            window.dispatchEvent(new CustomEvent('themeChanged', { detail: 'dark' }));
+        } else {
+            document.documentElement.setAttribute('data-theme', 'light');
+            localStorage.setItem('theme', 'light');
+            // Notify background
+            window.dispatchEvent(new CustomEvent('themeChanged', { detail: 'light' }));
         }
     });
 

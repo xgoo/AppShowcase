@@ -98,6 +98,27 @@
         renderer.setClearColor(0x0a0a0a, 0); 
         
         container.appendChild(renderer.domElement);
+        
+        // --- Theme Change Support ---
+        function updateTheme(theme) {
+            if (theme === 'light') {
+                materialWhite.color.setHex(0xaaaaaa); // 浅灰
+                materialBlack.color.setHex(0x333333); // 深灰
+            } else {
+                materialWhite.color.setHex(0xffffff); // 纯白
+                materialBlack.color.setHex(0x222222); // 暗黑
+            }
+        }
+
+        // Init theme
+        const initialTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+        updateTheme(initialTheme);
+
+        window.addEventListener('themeChanged', function(e) {
+            updateTheme(e.detail);
+        });
+        // --- End Theme Change Support ---
+
         window.addEventListener('resize', onWindowResize, false);
     }
 
