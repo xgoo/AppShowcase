@@ -1,0 +1,8 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]GN[b081]HA[0]EV[卷之二 结局手法之图]AB[qr][pr][pq][pp][oo][no][mp][lp][nq][kq][jq][jr][js]AW[np][op][oq][or][ps][mr][mq][lq][kr][ks]LB[qs:A]C[黑先
+请走出最佳官子手段，若简单的于A位叫吃，白空7目，还有更好的手段]
+
+(;B[ms]C[锐利的手筋！];W[lr]C[黑1看似是锐利的手筋，之后有连续手段吗?]
+(;B[os]C[好手！];W[ns];B[qs]C[恭喜答对！])
+(;B[qs];W[os]C[毫无所得])
+(;B[ns];W[os];B[qs];W[nr]C[毫无所得]))
+(;B[ns];W[os];B[qs];W[nr]C[毫无所得，重来吧]))
