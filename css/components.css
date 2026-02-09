@@ -60,6 +60,17 @@
     color: #000;
 }
 
+/* Light Mode Support for Tsumego Tabs */
+[data-theme="light"] .tsumego-tab {
+    color: #555;
+    border-color: rgba(212, 168, 83, 0.5);
+}
+
+[data-theme="light"] .tsumego-tab:hover {
+    color: #000;
+    border-color: var(--color-accent);
+}
+
 /* THE GOLDEN FIX: Isolation layer for WGo */
 .tsumego-display-wrapper {
     display: block; /* Force block for margin auto to work reliably */

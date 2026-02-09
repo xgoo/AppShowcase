@@ -344,6 +344,7 @@ body {
     font-weight: 600;
     vertical-align: middle;
     line-height: 1;
+    color: #fff; /* Force white text for contrast */
 }
 
 .platform-badge.ios {
