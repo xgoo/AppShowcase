@@ -1,0 +1,6 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]GN[c108]HA[0]EV[卷之三 界中生手之图 ]AB[bb][cc][cd][ce][df][dg][cg][bg][ee][fe][fc]AW[cf][bf][cb][db][dc][dd][de]C[白先
+粗粗看去白棋5子已经动弹不得，但有巧妙的手法可以做成劫活。此手段亦可应用在收官之中。]
+
+(;W[bc]C[要害！];B[bd];W[ab];B[ac];W[ba]LB[ad:A]C[恭喜答对！
+黑4若于5位立下，则白A位开劫，黑更重])
+(;W[ba];B[ab];W[be];B[bd];W[ad];B[bc];W[ca];B[af]C[失败，重来吧]))
