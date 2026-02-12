@@ -1,0 +1,8 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]GN[方朔偷桃]GC[《官子谱》上卷第474题]HA[0]RE[白先黑死]SO[《玄玄棋经》之方朔偷桃势]US[桥本宇太郎解说]AB[nq][no][mp][lp][kq][kr][jr][ir]AW[qp][op][oq][lq][lr][lo][kp][jp][iq][gq][hr]C[白先, 看似已死的白棋二子其实充满活力]
+
+(;W[ms]N[正解]
+(;B[nr]C[阻渡];W[or];B[ns];W[np]LB[mq:A][mo:B][mr:C]C[恭喜答对！黑A或C，白则B。黑B白A，黑棋由于气紧崩溃！])
+(;B[mr]MN[2]N[参考];W[os]C[巧妙的手筋！]))
+(;W[mr];B[nr]C[失败，重来吧])
+(;W[nr];B[mr]C[失败，重来吧])
+(;W[ls];B[mr]C[失败，重来吧]))
