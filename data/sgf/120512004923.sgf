@@ -1,0 +1,9 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]HA[0]AB[oc][od][oe][pe][qe][rd][rf][nb][mc][qa]AW[oa][ob][pb][pc][pd][qc][rc][sc]C[白先
+外围的气并不是很紧，如何净活呢？]
+
+(;W[rb];B[ra]C[长，破坏眼位];W[sa];B[sb];W[qb];B[sd];W[pa]C[恭喜答对！
+由于外侧气松，白棋成功的避免了劫活：）])
+(;W[ra];B[rb];W[sb]C[形成打劫，失败])
+(;W[qb];B[ra]
+(;W[rb];B[sa]C[弯四，失败，重来吧])
+(;W[sa];B[rb]C[失败，重来吧])))

@@ -1,0 +1,10 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]HA[0]AB[eq][cq][dp][cp][bo][hq][hp][ho][hn][gm][fm][em][dm][cm][cn]AW[fn][en][dn][co][do][fr][ep][fp][gp][gn][go][jq][jo]C[白先净活]
+
+(;W[dr];B[er]
+(;W[fq];B[dq];W[hr];B[ir];W[gs];B[iq];W[gq])
+(;W[gr];B[hr]C[失败，重来吧])
+(;W[hr];B[ir];W[fq];B[dq];W[gs];B[iq];W[gq]C[恭喜答对]))
+(;W[gr];B[hr]
+(;W[er];B[dr]C[失败，重来吧])
+(;W[dr];B[er]C[失败，重来吧]))
+(;W[er];B[gr];W[dr];B[dq];W[fq];B[cr]C[失败，重来吧]))
