@@ -137,6 +137,28 @@ body {
     margin-left: var(--space-xs);
 }
 
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+    margin-left: auto;
+}
+
+.nav-toggle span {
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-text);
+    border-radius: 2px;
+    transition: var(--transition);
+}
+
 .nav-links {
     display: flex;
     align-items: center;
@@ -568,12 +590,52 @@ body {
         font-size: 1rem;
     }
 
-    .nav-links {
+    .nav-toggle {
         display: flex;
-        gap: var(--space-xs);
-        font-size: 0.85rem;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--nav-bg-scrolled);
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        padding: var(--space-md);
+        gap: var(--space-md);
+        border-bottom: 1px solid var(--card-border);
+        text-align: center;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    .nav-links.active {
+        display: flex;
     }
     
+    .nav-links a {
+        width: 100%;
+        padding: var(--space-sm) 0;
+        font-size: 1.1rem;
+        border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .nav-links a:last-of-type {
+        border-bottom: none;
+    }
+
+    /* Transform hamburger into X when active */
+    .nav-toggle.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .nav-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .nav-toggle.active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
     .about-content {
         display: flex; 
         flex-direction: column;
