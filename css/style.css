@@ -114,6 +114,13 @@ body {
     gap: var(--space-xs);
 }
 
+.nav-utils {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    margin-left: auto;
+}
+
 .nav-brand .stone {
     width: 12px;
     height: 12px;
@@ -148,7 +155,6 @@ body {
     cursor: pointer;
     padding: 0;
     z-index: 1001;
-    margin-left: auto;
 }
 
 .nav-toggle span {
@@ -590,9 +596,47 @@ body {
         font-size: 1rem;
     }
 
-    .nav-toggle {
-        display: flex;
+    .theme-toggle {
+        margin-left: 0;
     }
+
+    .lang-switcher {
+        margin-left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: var(--space-sm) 0;
+    }
+
+    .lang-dropdown {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+        background: none;
+        border: none;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        width: 100%;
+    }
+
+    .lang-current {
+        display: none;
+    }
+
+    .lang-option {
+        width: auto;
+        padding: 6px 12px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+    }
+
+    .nav-toggle {
 
     .nav-links {
         display: none;
