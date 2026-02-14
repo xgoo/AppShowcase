@@ -10,6 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
             e.stopPropagation();
             navToggle.classList.toggle('active');
             navLinks.classList.toggle('active');
+            
+            // Close other dropdowns
+            document.querySelectorAll('.lang-dropdown').forEach(d => d.classList.remove('show'));
         });
 
         // Close menu when clicking a link
@@ -129,9 +132,10 @@ document.addEventListener('DOMContentLoaded', () => {
     stats.forEach(stat => statsObserver.observe(stat));
 });
 
-// Daniel Status Update Logic
+    // Daniel Status Update Logic
 async function updateDanielStatus() {
     const statusContainer = document.querySelector('#daniel-status .status-text');
+    if (!statusContainer) return;
     try {
         const response = await fetch('data/status.json');
         const data = await response.json();
@@ -139,7 +143,7 @@ async function updateDanielStatus() {
             statusContainer.textContent = "丹尼尔 (Daniel) 的日志: " + data.status;
         }
     } catch (e) {
-        statusContainer.textContent = "丹尼尔 (Daniel): 正在后台努力工作中... 🤖";
+        // Fallback handled by i18n
     }
 }
 

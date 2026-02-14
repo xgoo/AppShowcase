@@ -474,13 +474,48 @@ body {
     }
 
     .nav-links.active { display: flex; }
-    .nav-links a { font-size: 1.5rem; font-weight: 500; color: var(--color-text); width: 100%; padding: 1rem 0; }
-    .nav-toggle { display: flex; }
+    .nav-links a { font-size: 1.1rem; font-weight: 500; color: var(--color-text); width: 100%; padding: 0.8rem 0; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+    .nav-links a:last-child { border-bottom: none; }
+    .nav-toggle { display: flex; order: 3; }
 
-    /* Lang Switcher Mobile */
-    .lang-switcher { width: auto; margin: auto auto 2rem; }
-    .lang-dropdown { top: auto; bottom: calc(100% + 8px); right: 50%; transform: translateX(50%) translateY(10px); }
-    .lang-dropdown.show { transform: translateX(50%) translateY(0); }
+    /* Layout order for mobile navbar */
+    .theme-toggle { order: 1; }
+    .lang-switcher { order: 2; margin: 0; }
+    .nav-utils { gap: 0.5rem; }
+
+    /* Mobile Overlay Menu Adjustments */
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        bottom: auto;
+        background: var(--nav-bg-scrolled);
+        flex-direction: column;
+        padding: 1rem;
+        gap: 0;
+        text-align: left;
+        border-bottom: 1px solid var(--card-border);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+
+    /* Lang Switcher Mobile specific */
+    .lang-switcher { position: relative; width: auto; order: 2; }
+    .lang-current { display: flex; }
+    .lang-dropdown { 
+        position: absolute; 
+        top: calc(100% + 8px); 
+        bottom: auto; 
+        right: 0; 
+        left: auto; 
+        transform: translateY(-10px); 
+        width: 100px;
+        background: rgba(20, 20, 20, 0.98);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    }
+    .lang-dropdown.show { transform: translateY(0); }
+    .lang-option { font-size: 0.8rem; padding: 6px 10px; }
 
     .nav-toggle.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
     .nav-toggle.active span:nth-child(2) { opacity: 0; }
