@@ -478,9 +478,7 @@ body {
     .nav-links a:last-child { border-bottom: none; }
     .nav-toggle { display: flex; order: 3; }
 
-    /* Layout order for mobile navbar */
-    .theme-toggle { order: 1; }
-    .lang-switcher { order: 2; margin: 0; }
+    /* Mobile Navbar Utilities */
     .nav-utils { gap: 0.5rem; }
 
     /* Mobile Overlay Menu Adjustments */
@@ -501,7 +499,7 @@ body {
     }
 
     /* Lang Switcher Mobile specific */
-    .lang-switcher { position: relative; width: auto; order: 2; }
+    .lang-switcher { position: relative; width: auto; }
     .lang-current { display: flex; }
     .lang-dropdown { 
         position: absolute; 

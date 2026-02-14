@@ -161,8 +161,8 @@ const I18n = {
      * Render language switcher in nav
      */
     renderLangSwitcher() {
-        const nav = document.querySelector('.nav-links');
-        if (!nav || document.querySelector('.lang-switcher')) return;
+        const container = document.querySelector('.nav-utils');
+        if (!container || document.querySelector('.lang-switcher')) return;
         
         const switcher = document.createElement('div');
         switcher.className = 'lang-switcher';
@@ -217,7 +217,14 @@ const I18n = {
         
         switcher.appendChild(currentBtn);
         switcher.appendChild(dropdown);
-        nav.appendChild(switcher);
+        
+        // Inject between theme-toggle and nav-toggle
+        const navToggle = document.getElementById('nav-toggle');
+        if (navToggle) {
+            container.insertBefore(switcher, navToggle);
+        } else {
+            container.appendChild(switcher);
+        }
     }
 };
 
