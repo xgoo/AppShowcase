@@ -1,0 +1,6 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]HA[0]AB[am][bm][cm][cn][co][cp][eo][go][gq][hq][fr][er]AW[an][bn][bo][bp][cq][dq][eq][fq]N[黑先白死^一目了然]C[黑先]
+;B[br]N[正解]C[只此一手];W[bq]C[如何连回呢?]
+(;B[cs]N[？];W[bs]C[要点，无法避免成为劫争];B[ds];W[ar]N[黑失败])
+(;B[cr]N[？];W[dr];B[ds];W[ar];B[cs];W[bs]N[成劫]C[成为劫争，失败。])
+(;B[dr]N[？];W[cr];B[cs];W[bs];B[as];W[ds];B[es];W[aq]N[黑失败]C[黑接不归，失败。])
+(;B[bs]N[渡过]C[好着！！ 恭喜答对！]))
