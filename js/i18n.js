@@ -195,7 +195,7 @@ const I18n = {
             const option = document.createElement('button');
             option.className = 'lang-option' + (lang === this.currentLang ? ' active' : '');
             option.dataset.lang = lang;
-            option.textContent = fullNames[lang];
+            option.textContent = langNames[lang]; // Use short names for mobile
             option.addEventListener('click', () => {
                 this.setLang(lang);
                 currentBtn.textContent = langNames[lang];

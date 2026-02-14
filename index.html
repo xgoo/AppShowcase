@@ -68,27 +68,31 @@
     <header class="hero">
         <div id="hero-canvas-container"></div>
         <nav class="nav">
-            <div class="nav-brand">
+            <a href="#" class="nav-brand">
                 <span class="stone black"></span>
                 <span class="stone white"></span>
                 <span class="brand-text" data-i18n="nav.brand">围棋工坊</span>
-            </div>
-            <div class="nav-utils">
-                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
-                    <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="4.22" x2="19.78" y2="5.64"></line></svg>
-                    <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-                </button>
-                <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-            <div class="nav-links">
-                <a href="#apps" data-i18n="nav.apps">应用</a>
-                <a href="#about" data-i18n="nav.about">关于</a>
-                <a href="#contact" data-i18n="nav.contact">联系</a>
-                <!-- Language switcher will be injected here by i18n.js -->
+            </a>
+            <div class="nav-right">
+                <div class="nav-links">
+                    <a href="#" data-i18n="nav.home">首页</a>
+                    <a href="#apps" data-i18n="nav.apps">应用</a>
+                    <a href="#roadmap" data-i18n="nav.roadmap">动态</a>
+                    <a href="#tsumego" data-i18n="nav.tsumego">挑战</a>
+                    <a href="#about" data-i18n="nav.about">关于</a>
+                    <a href="#contact" data-i18n="nav.contact">联系</a>
+                </div>
+                <div class="nav-utils">
+                    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="4.22" x2="19.78" y2="5.64"></line></svg>
+                        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                    </button>
+                    <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
             </div>
         </nav>
         <div class="hero-content">
@@ -244,18 +248,18 @@
                         <p data-i18n="roadmap.item1.desc">成功对接 GitHub Actions，实现代码发布由丹尼尔全权运维。</p>
                     </div>
                 </div>
-                <div class="roadmap-item current">
-                    <div class="roadmap-date" data-i18n="roadmap.item2.date">进行中</div>
+                <div class="roadmap-item done">
+                    <div class="roadmap-date" data-i18n="roadmap.item2.date">2026.02.13</div>
                     <div class="roadmap-content">
-                        <h4 data-i18n="roadmap.item2.title">每日死活题挑战</h4>
-                        <p data-i18n="roadmap.item2.desc">引入交互式 WGo 棋盘。阿西监督中。正在优化移动端布局适配。</p>
+                        <h4 data-i18n="roadmap.item2.title">每日死活题挑战上线</h4>
+                        <p data-i18n="roadmap.item2.desc">交互式棋盘现已支持全平台适配，每日同步 XGoo 最新题库。</p>
                     </div>
                 </div>
-                <div class="roadmap-item future">
-                    <div class="roadmap-date" data-i18n="roadmap.item3.date">待启程</div>
+                <div class="roadmap-item current">
+                    <div class="roadmap-date" data-i18n="roadmap.item3.date">进行中</div>
                     <div class="roadmap-content">
-                        <h4 data-i18n="roadmap.item3.title">iTyping 深度优化</h4>
-                        <p data-i18n="roadmap.item3.desc">计划引入打字轨迹分析与弱项精准强化训练。</p>
+                        <h4 data-i18n="roadmap.item3.title">iTyping 2.0 研发中</h4>
+                        <p data-i18n="roadmap.item3.desc">正在重构打字引擎，计划引入更精准的打字轨迹分析与弱项强化。</p>
                     </div>
                 </div>
             </div>

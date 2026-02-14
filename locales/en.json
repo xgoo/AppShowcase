@@ -7,7 +7,10 @@
   },
   "nav": {
     "brand": "Go Game Studio",
+    "home": "Home",
     "apps": "Apps",
+    "roadmap": "News",
+    "tsumego": "Challenge",
     "about": "About",
     "contact": "Contact"
   },
@@ -54,14 +57,14 @@
       "desc": "Successfully integrated GitHub Actions, Daniel now handles all deployments."
     },
     "item2": {
-      "date": "In Progress",
-      "title": "Daily Tsumego Challenge",
-      "desc": "Introducing interactive WGo board. Under Asi's supervision. Optimizing mobile layout."
+      "date": "2026.02.13",
+      "title": "Daily Tsumego Challenge Live",
+      "desc": "Interactive board now supports all platforms, syncing daily from XGoo."
     },
     "item3": {
-      "date": "Coming Soon",
-      "title": "iTyping Deep Optimization",
-      "desc": "Planning to add typing trajectory analysis and targeted weakness training."
+      "date": "In Progress",
+      "title": "iTyping 2.0 Development",
+      "desc": "Refactoring typing engine, introducing advanced trajectory analysis."
     }
   },
   "tsumego": {
@@ -85,7 +88,7 @@
     "subtitle": "Questions or suggestions? Feel free to reach out"
   },
   "footer": {
-    "danielStatus": "Daniel is syncing...",
+    "danielStatus": "Daniel (Daniel): On duty Feb 14, website running stable. Happy Valentine's Day! 🌹",
     "copyright": "© 2026 Go Game Studio. All rights reserved."
   }
 }

@@ -7,7 +7,10 @@
   },
   "nav": {
     "brand": "圍棋工坊",
+    "home": "首頁",
     "apps": "應用",
+    "roadmap": "動態",
+    "tsumego": "挑戰",
     "about": "關於",
     "contact": "聯繫"
   },
@@ -54,14 +57,14 @@
       "desc": "成功對接 GitHub Actions，實現代碼發布由丹尼爾全權運維。"
     },
     "item2": {
-      "date": "進行中",
-      "title": "每日死活題挑戰",
-      "desc": "引入互動式 WGo 棋盤。阿西監督中。正在優化移動端佈局適配。"
+      "date": "2026.02.13",
+      "title": "每日死活題挑戰上線",
+      "desc": "互動式棋盤現已支援全平台適配，每日同步 XGoo 最新題庫。"
     },
     "item3": {
-      "date": "待啟程",
-      "title": "iTyping 深度優化",
-      "desc": "計劃引入打字軌跡分析與弱項精準強化訓練。"
+      "date": "進行中",
+      "title": "iTyping 2.0 研發中",
+      "desc": "正在重構打字引擎，計劃引入更精準的打字軌跡分析與弱項強化。"
     }
   },
   "tsumego": {
@@ -85,7 +88,7 @@
     "subtitle": "有任何問題或建議？歡迎聯繫"
   },
   "footer": {
-    "danielStatus": "丹尼爾正在同步中...",
+    "danielStatus": "丹尼尔 (Daniel): 2月14日值班中，官網運行穩定。祝大家情人節快樂！🌹",
     "copyright": "© 2026 圍棋工坊. All rights reserved."
   }
 }
