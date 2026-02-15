@@ -1,0 +1,9 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]GN[ ]HA[0]EV[李昌镐精讲围棋死活1]SO[《李昌镐围棋基础训练》初级篇、提高篇]US[阿浩]AB[ap][bp][cp][dp][dq][dr][br]AW[cs][ds][er][eq][ep][en][do][co][bo][ao][aq]C[黑先
+胜利就在眼前，也许成功只需要多算一两步！]
+
+(;B[bs]C[挡];W[cr]C[冲！]
+(;B[ar]C[恭喜答对！])
+(;B[cq];W[bq]C[失败，重来吧]))
+(;B[cr]
+(;W[bs]C[冲！破坏眼位！];B[ar];W[bq]C[直三，大侠请重新来过])
+(;W[bs];B[bq];W[ar];B[as];W[ar]C[胜败乃家常是也，大侠重新来过！])))
