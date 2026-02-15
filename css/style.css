@@ -548,6 +548,7 @@ body {
     [data-theme="light"] .lang-option:hover {
         background: rgba(0,0,0,0.05);
     }
+    .nav-toggle.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
     .nav-toggle.active span:nth-child(2) { opacity: 0; }
     .nav-toggle.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 
