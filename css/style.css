@@ -19,6 +19,7 @@
     --color-text-muted: #888888;
     --nav-bg: rgba(10, 10, 10, 0.8);
     --nav-bg-scrolled: rgba(10, 10, 10, 0.95);
+    --nav-menu-bg: rgba(20, 20, 20, 0.98); /* New variable for menus */
     --card-bg: linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
     --card-border: rgba(255, 255, 255, 0.08);
     --roadmap-bg: rgba(255, 255, 255, 0.03);
@@ -52,6 +53,7 @@
     --color-text-muted: #666666;
     --nav-bg: rgba(248, 249, 250, 0.8);
     --nav-bg-scrolled: rgba(248, 249, 250, 0.95);
+    --nav-menu-bg: rgba(255, 255, 255, 0.98); /* Light mode menu bg */
     --card-bg: linear-gradient(145deg, rgba(0,0,0,0.02) 0%, rgba(0,0,0,0.01) 100%);
     --card-border: rgba(0, 0, 0, 0.08);
     --roadmap-bg: rgba(0, 0, 0, 0.03);
@@ -248,7 +250,7 @@ body {
     top: calc(100% + 8px);
     right: 0;
     min-width: 120px;
-    background: rgba(20, 20, 20, 0.95);
+    background: var(--nav-menu-bg);
     backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
@@ -282,6 +284,8 @@ body {
 
 .lang-option:hover { background: rgba(255, 255, 255, 0.08); color: var(--color-text); }
 .lang-option.active { background: rgba(212, 168, 83, 0.15); color: var(--color-accent); font-weight: 500; }
+
+[data-theme="light"] .lang-option:hover { background: rgba(0, 0, 0, 0.05); }
 
 /* Hero Section */
 .hero {
@@ -470,7 +474,7 @@ body {
         right: 0;
         left: auto;
         width: 160px;
-        background: rgba(20, 20, 20, 0.98);
+        background: var(--nav-menu-bg);
         backdrop-filter: blur(20px);
         flex-direction: column;
         padding: 8px;
@@ -492,7 +496,7 @@ body {
     .nav-links a { 
         font-size: 0.9rem; 
         font-weight: 400; 
-        color: #eee !important; /* Force light text on dark background */
+        color: var(--color-text);
         width: 100%; 
         padding: 12px 16px; 
         border-bottom: none;
@@ -503,7 +507,7 @@ body {
 
     .nav-links a:hover {
         background: rgba(212, 168, 83, 0.15);
-        color: var(--color-accent) !important;
+        color: var(--color-accent);
     }
 
     /* Lang Switcher Mobile specific */
@@ -517,7 +521,7 @@ body {
         left: auto; 
         transform: translateY(-10px); 
         width: 120px;
-        background: rgba(20, 20, 20, 0.98);
+        background: var(--nav-menu-bg);
         box-shadow: 0 5px 15px rgba(0,0,0,0.5);
         border: 1px solid rgba(255, 255, 255, 0.1);
         border-radius: 12px;
@@ -529,12 +533,21 @@ body {
         font-size: 0.85rem; 
         padding: 10px 14px; 
         border-radius: 8px;
-        color: #eee !important;
+        color: var(--color-text);
     }
-    .lang-option:hover { background: rgba(255, 255, 255, 0.08); color: #fff !important; }
-    .lang-option.active { background: rgba(212, 168, 83, 0.15); color: var(--color-accent) !important; }
-
-    .nav-toggle.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .lang-option:hover { background: rgba(255, 255, 255, 0.08); color: var(--color-text); }
+    .lang-option.active { background: rgba(212, 168, 83, 0.15); color: var(--color-accent); }
+    
+    [data-theme="light"] .lang-dropdown,
+    [data-theme="light"] .nav-links {
+        border-color: rgba(0,0,0,0.1);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    
+    [data-theme="light"] .nav-links a:hover,
+    [data-theme="light"] .lang-option:hover {
+        background: rgba(0,0,0,0.05);
+    }
     .nav-toggle.active span:nth-child(2) { opacity: 0; }
     .nav-toggle.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 
