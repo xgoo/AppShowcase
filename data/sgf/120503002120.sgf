@@ -1,0 +1,14 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]GN[死之部  第1题 ]HA[0]AB[rd][sd][qe][pe][rf][od][nc][nb][oa]AW[pd][qd][rc][rb][pb][oc]C[黑先
+容易的问题，但次序很重要，利用气紧。]
+
+(;B[ra]C[正解]
+(;W[qa];B[qc];W[pc];B[sb]LB[pa:A][qb:B]C[恭喜答对！
+黑走1位靠后，白2若走A位，黑也是3打5渡。
+白2如在B位接，黑走4位破眼。])
+(;W[qc]C[变化];B[qa];W[pa];B[sc]LB[ob:A][sb:B]C[白若走1位接，黑2长、4冲，黑也死。下一步，A和B位，黑必能走到一处。]))
+(;B[ob];W[pc];B[qa];W[qb]
+(;B[pa];W[ra]C[失败，重来吧])
+(;B[ra];W[pa];B[sb];W[sa]
+(;B[ra];W[sc]C[失败，重来吧])
+(;B[sc];W[ra]C[失败，重来吧])))
+(;B[pa];W[qa]C[失败，重来吧]))
