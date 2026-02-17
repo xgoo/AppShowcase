@@ -1,0 +1,12 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]CA[gb2312]HA[0]AB[qa][qb][qd][rd][pc][oc][nc][mc][mb]AW[qf][re][rb][rc][qc][pb][ob][nb]C[黑先，如何吃住白棋呢? 
+提示：利用角部的特性，12位常出妙手]
+
+(;B[sb];W[sc]LB[ra:A][na:B]C[只好拐吃，若A位吃二子，黑2位叫吃，白提，黑B。白独眼净死]
+(;B[sd];W[sa];B[na]C[恭喜答对！黑2子成了金鸡独立，白不入气净死。])
+(;B[ra];W[sa]C[打劫，失败。还可以有更好的结果。
+]))
+(;B[sc];W[sb]
+(;B[sd];W[pa]
+(;B[ra];W[sa]LB[na:A][qa:B]C[AB见合，请重来。])
+(;B[na];W[ra]C[白已成活，失败。]))
+(;B[na];W[sd]LB[pd:A]C[失败，不仅被渡过，A位还等着被吃])))
