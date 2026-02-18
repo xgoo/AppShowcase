@@ -1,0 +1,9 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]GN[珍珑第4题 黑先]HA[0]AB[dr][er][dp][cp]AW[bo][cn][bm][eo][ep][eq][fr][gq]C[黑先。
+这是常见的棋形，并不复杂，但也有难点。角上可净活。]
+;B[br];W[ar]C[托！最大限度破坏黑棋眼位]
+(;B[bq];W[dq]
+(;B[cs]C[要点];W[cq];B[cr];W[es];B[as]C[恭喜答对])
+(;B[as];W[bs];B[cs];W[cq];B[cr];W[es];B[aq]C[恭喜答对！])
+(;B[cq];W[cs]C[失败，重来吧])
+(;B[es];W[cs];B[bs];W[aq]C[失败，重来吧]))
+(;B[aq];W[bq]C[失败，重来吧]))

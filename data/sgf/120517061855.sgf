@@ -1,0 +1,7 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]CA[gb2312]HA[0]AB[sc][rd][re][rf][qf][pf][of][nf][ne][nd][nc][oc][lc][pd][rb]AW[ob][pc][qb][qc][rc][qd][qe][pe][oe]C[黑先
+提示：占据要点，避免劫活]
+
+(;B[pa];W[qa];B[od]C[恭喜答对！])
+(;B[od];W[pa]LB[nb:A][sb:B][ra:C]C[失败。
+A位的成眼和B扑，C扑的劫已见合])
+(;B[nb];W[pa];B[od];W[sb];B[sa];W[ra]C[劫活，失败。]))

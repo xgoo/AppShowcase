@@ -1,0 +1,19 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]HA[0]PB[Black]PW[White]AB[cd][ed][ce][bf][cg][ec][eb]AW[cb][bd][bb][ae][da]C[黑先劫杀
+]
+
+(;B[be]N[正解]C[缩小眼位，只此一手！];W[cc]C[扩大眼位]
+(;B[af]C[好手！];W[ac]C[白棋只好做劫活。
+另，白４若接，黑则占据１２位要点，白净死
+　　白２若劫，黑亦占据１２位要点，白无法活];B[ad]C[恭喜答对！
+])
+(;B[ac];W[ad];B[ab];W[db];B[ba];W[bc]
+(;B[dc];W[ca]C[由于白棋外侧气松，攻击失败，重来吧])
+(;B[aa];W[ca];B[ab];W[aa];B[ba];W[ac];B[dc];W[aa]C[由于白棋外侧气松，攻击失败，重来吧])))
+(;B[be]N[变化];W[ad];B[ab];W[aa];B[ba];W[ac];B[cc])
+(;B[af]N[失败];W[aa]C[要点！];B[be];W[bc];B[db];W[ca])
+(;B[cc];W[bc]C[接，白棋意外的眼位丰富]
+(;B[ab];W[db];B[ba];W[be]C[失败，重来吧])
+(;B[be]
+(;W[aa]C[要点！
+失败，重来吧！]))
+(;B[db];W[aa]C[要点！失败，重来吧！])))
