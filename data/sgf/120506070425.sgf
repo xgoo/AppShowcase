@@ -1,0 +1,10 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]HA[0]AB[qa][rb][pb][pc][pd][re]AW[pa][oa][ob][oc][od][pe][qf][rf]C[白先
+落子需谨慎，顺手拈来的第一感往往是昏招]
+
+(;W[ra]C[好棋！];B[qc]LB[sa:A][rc:B][rd:C][qd:D]C[黑棋只好做劫活。
+此手若于A位提，白B，黑C，白D，将会形成金鸡独立，黑棋不入气崩溃])
+(;W[rc]C[三子正中？];B[rd]C[正中黑棋圈套];W[qd];B[qe]C[失败，重来吧])
+(;W[rd];B[rc]C[失败，重来吧])
+(;W[qd];B[rd];W[qc];B[qb];W[qe];B[rc]
+(;W[se];B[sa]C[失败，重来吧])
+(;W[sb];B[sa];W[ra];B[sc]C[失败，重来吧])))

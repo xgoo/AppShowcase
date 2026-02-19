@@ -1,0 +1,7 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]CA[gb2312]HA[0]AB[rb][qb][pc][oc][od][oe][of][pg][ph][qh][rh][sh][re]AW[rc][qc][qd][pd][pe][pf][qf][qg][rg][sg][se]C[黑先
+提示：初学者遇到死活题往往第一步就点进对方阵势，期望占据要点一举成功，却往往以失败告终。对于大部分的死活题来说，首先压缩眼位才是王道！]
+
+(;B[sc];W[rf]LB[sd:A]C[黑1缩小眼位，白2只好团。若走A，黑2，白简单净死];B[rd])
+(;B[rf];W[sc]C[黑1是低段棋手常犯的错误]
+(;B[rd];W[qe]C[共活，失败])
+(;B[sf];W[sd]C[共活，失败。])))
