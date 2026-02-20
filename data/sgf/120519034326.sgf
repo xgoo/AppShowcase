@@ -1,0 +1,8 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]GN[黑先]CA[gb2312]HA[0]EV[扳]AB[oq][pp][qp][rp][qq][qm][or]AW[sq][rq][qr][pr][pq][mq][nq][no]C[黑先——如何吃掉白棋角上五子呢? 
+希望此题能给初涉棋道的朋友一些启发。]
+
+(;B[ps]C[扳，只此一手];W[rs]
+(;B[os];W[op];B[rr];W[sr];B[qs]C[恭喜答对！])
+(;B[sr];W[op];B[rr];W[ss];B[rr];W[sr];B[os];W[nr]C[眼杀，失败。]))
+(;B[rs];W[rr]C[点杀?!];B[ps];W[op]LB[ss:A]C[杀起气来，黑棋是远远不够的。
+黑3若走4位，白A位扑净活]))
