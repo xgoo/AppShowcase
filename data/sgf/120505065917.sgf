@@ -1,0 +1,15 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]HA[0]PB[Black]PW[White]AB[de][ed][fd][fc][fb][hb][ce][ae][bf][cg]AW[dd][ec][eb][cb][fa][bd][aa]C[黑先净杀
+
+此题次序尤为重要]
+
+(;B[cd]N[正解];W[bc];B[bb];W[dc];B[da]C[好手！];W[ea]C[看似黑棋无法动弹，可否有致命一击的好手呢？];B[cc];W[ca];B[ac]C[恭喜答对！
+在一连串的手巾表演下，白棋遭全歼　XD
+
+另，白４若在黑３上一路叫吃，黑棋３３位单挤白棋即崩溃])
+(;B[cd]N[变化];W[bc];B[bb];W[ba];B[cc];W[dc];B[da];W[ab];B[ad])
+(;B[bc]N[失败1];W[cd];B[ad];W[bb]
+(;B[ab]C[成劫，失败，重来吧！];W[ac])
+(;B[ac];W[da]C[失败，重来吧]))
+(;B[cd]N[失败2];W[bc];B[dc];W[db];B[ba];W[ca]C[失败，重来吧])
+(;B[dc]N[失败3];W[bb]C[并！无计可施了吧];B[db];W[ca])
+(;B[bb]N[失败4]C[敌之要点，我之要点！];W[cd]C[接，白棋扩大眼位];B[ad];W[bc];B[dc];W[db];B[ac];W[ca]LB[ab:A][ea:B]C[立！下手AB成眼见合！];B[ea];W[ab]))
