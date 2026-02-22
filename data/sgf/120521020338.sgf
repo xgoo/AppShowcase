@@ -1,0 +1,12 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]CA[gb2312]HA[0]AB[pd][pe][pf][rf][rg][qh][ph][ri][mc][rb][qb][pc]AW[rj][qj][pj][oi][oh][ng][pg][qg][qf][qe][qc][rc]LB[og:A]C[《暗渡陈仓》黑先——如何度过？
+粗心的棋友一看到此型第一感一定是爬了尖，最后团做眼。可是这样右边的棋不仅无法成活，而且还损了角上的目。请利用A位白棋气紧的问题，成功暗渡陈仓！]
+
+(;B[se];W[rd]C[黑1要点，白2顽强抵抗]
+(;B[re];W[qd]C[好次序！];B[sc]C[正解，恭喜答对！])
+(;B[sc];W[re];B[sd]C[草率，损失一目棋。哪里出错了呢?]))
+(;B[re];W[qd];B[sd];W[sc];B[rd];W[sf];B[si];W[qi]C[失败，不仅后路被断，而且无法成活。])
+(;B[rd];W[re];B[se];W[qd];B[sc]C[成劫，无法满意。])
+(;B[qd]
+(;W[re];B[rd];W[se]C[被截断，失败。])
+(;W[re];B[se];W[sd]C[失败，重来吧]))
+(;B[sd];W[re]LB[se:A][sc:B]C[AB见合，失败]))

@@ -1,0 +1,7 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]HA[0]AB[pc][pd][qd][pe][re][rf][sf][pa][pb]AW[qb][qc][qe][qf][qg][rg][sg][pf][of][oe][od][ob][nb]C[白先劫杀]
+
+(;W[rd]N[正解];B[rc];W[sd];B[sb]LB[sc:A][rb:B]C[最顽强的抵抗，若A则白B，白棋可以通过扑的弃子手段收紧黑气，黑净死];W[rb];B[ra];W[sc];B[qa];W[sa]C[正解， 恭喜答对！])
+(;W[rd];B[rc]LB[se:A][rb:B]C[第一手必然，可随后准备了什么手段呢? 白若A黑则B，净活，白无法满意];W[sd]C[好棋！];B[sc];W[rb];B[se];W[rd];B[sd];W[sb];B[rd];W[oc]C[变化])
+(;W[rc]
+(;B[rd];W[sd];B[ra]C[失败，重来吧])
+(;B[rd];W[sb];B[ra]C[失败，重来吧])))
