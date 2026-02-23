@@ -1,0 +1,10 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]HA[0]AB[qp][qo][qn][pm][om][nm][mm][mn][lo][lp][lq][lr][mr][qr][qq]AW[ps][pr][pq][or][nr][mq][mp][mo][nn][on][oo][po]C[《荆轲刺秦》——黑先
+白棋中间一只大眼，下边一只后手眼，所以问题就在于如何先手使中间变为一只小眼。
+拿出荆轲刺秦的勇气，深入腹地，一击必杀！]
+
+(;B[nq];W[ns]LB[np:A][op:B]C[白2无法在A位打吃，黑3B位掐打，白亦无所抵抗];B[op];W[pp];B[no]C[吃倒扑，恭喜答对！])
+(;B[nq];W[np];B[op])
+(;B[op];W[pp]C[黑1不够深入];B[nq];W[oq];B[np];W[no]LB[ns:A][np:B]C[AB见合，失败，还魂重来吧！])
+(;B[np];W[ns]C[思考方法是对的，可惜不是先手。
+还魂重来过！])
+(;B[pp];W[op]C[失败，白棋已具活型。]))

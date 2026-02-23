@@ -1,0 +1,16 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]CA[gb2312]HA[0]AB[fp][gq][hs][hr][hq][fn][en][dn][cn][bo][bp][aq][ar][br][cs][dr][es][gp]AW[cq][dq][cp][do][ep][eq][er][fq][fr][gr][gs][bq][cr]C[黑先
+黑棋有妙手可以一举击溃白棋吗?]
+
+(;B[ds]C[接！只此一手];W[bs]C[扑！接不归！:P]
+(;B[eo]C[好棋]
+(;W[co];B[as]C[恭喜答对！
+起初粗粗一看，黑棋接不归。几招下来白棋不入气净死！])
+(;W[fs];B[ds];W[cs];B[co]C[变化图]))
+(;B[as];W[fs]
+(;B[ap];W[bs]
+(;B[cs];W[ds]C[失败，重来吧])
+(;B[ds];W[cs]C[失败，重来吧]))
+(;B[eo];W[bs]
+(;B[cs];W[ds]C[失败，重来吧])
+(;B[ds];W[ap]C[失败，重来吧]))))
+(;B[bs];W[ds]C[失败，重来吧]))
