@@ -1,0 +1,10 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]GN[围棋死活辞典 ]HA[0]AB[bo][co][cp][ep][eq][gr][er]AW[dq][dr][bp][bq][es]C[ 白先活——此型的要点在哪里？]
+
+(;W[ar]
+(;B[ap];W[bs]C[恭喜答对，白三目活。
+另：黑2若3位点，则白2位做眼，白活。])
+(;B[bs];W[ap];B[cr];W[cq];B[ds];W[br];B[fs];W[as]))
+(;W[cq];B[ap]C[失败，白棋净死])
+(;W[bs];B[cq];W[cr];B[ar]LB[ap:A][ds:B]C[AB见合
+失败，重来吧])
+(;W[ap];B[cq];W[cr];B[ar];W[br];B[ds]C[失败，重来吧]))

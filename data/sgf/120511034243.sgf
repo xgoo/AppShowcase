@@ -1,0 +1,10 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]GN[黑先]CA[gb2312]HA[0]EV[第一章 杀棋训练]AB[bn][co][dp][dn][en][fn][gn][gp][go][hq][gr][bq][bp][dq]AW[br][cq][cp][do][eo][fo][fp][fq][er]
+
+(;W[cr];B[dr];W[bs]C[敌之要点，我之要点];B[es];W[ds];B[fs];W[eq]C[正解，恭喜答对！
+黑3若5位立无法形成共活，差一气被杀])
+(;W[cr]C[白先劫活
+前几手为一本道的招法，重要的是之后的防守];B[dr];W[ar];B[es];W[fs];B[ds];W[fr];B[gq];W[cs];B[gs]C[失败。
+黑棋简单的扳粘，外侧形成共活，里侧壮烈牺牲])
+(;W[cr];B[dr];W[ds];B[bs]C[12常出妙手！];W[ar];B[cs];W[as];B[cs];W[eq];B[es]
+(;W[ep];B[fs]C[失败，重来吧])
+(;W[fs];B[aq]C[失败，重来吧])))

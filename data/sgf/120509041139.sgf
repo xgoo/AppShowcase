@@ -1,0 +1,18 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]GN[c106]HA[0]EV[卷之三 界中生手之图 ]AB[dr][dq][dp][cp][br]AW[er][fq][ep][eo][cn][bo]C[白先劫杀
+
+提示，12位常出妙手]
+
+(;W[bq];B[bp];W[bs]C[妙！];B[cs]C[白3妙！];W[ar]C[恭喜答对！])
+(;W[aq];B[bq]
+(;W[ar];B[ap]C[失败，重来吧])
+(;W[cs];B[ds]
+(;W[ar];B[cr]C[失败，重来吧])
+(;W[cr];B[ar];W[bs];B[bp]C[失败，重来吧])))
+(;W[ar];B[bq]
+(;W[aq];B[ap]C[失败，重来吧])
+(;W[cs];B[ds]
+(;W[aq];B[cr]C[失败，重来吧])
+(;W[cr];B[aq]C[失败，重来吧])))
+(;W[cs];B[ds]
+(;W[bq];B[bp];W[ap];B[ar]C[失败，重来吧])
+(;W[aq];B[bq]C[失败，重来吧])))
