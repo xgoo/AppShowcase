@@ -1,0 +1,8 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]CA[gb2312]HA[0]AB[cq][dq][er][fq][fp][fo][en][cn][co][cr]AW[br][bq][bp][bo][bn][bm][cm][dm][fm][fn][go][gp][gq][gr][fr]C[黑先——要点在哪里，是下边做眼么? 
+在思考做眼的同时也要预测到对手破眼的手法。]
+
+(;B[dp];W[ds];B[dn]C[恭喜答对！
+白1若3位冲不是先手，黑在下面成眼即可。])
+(;B[ds];W[eo]C[断！要害！]
+(;B[ep];W[dp];B[do];W[cp]C[黑棋大块只有一只眼，失败。])
+(;B[dn];W[dp]LB[eq:A]C[即将被吃倒扑，失败。])))

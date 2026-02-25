@@ -1,0 +1,10 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]GN[c110]HA[0]EV[卷之三 界中生手之图 ]AB[dr][cr][cp][dp][ep][eq][fp][gp][hp]AW[kr][iq][ip][io][gn][en][cn][co][bp][br][dq][gq][fq][fr]C[黑先
+此题还可活? 请同学们注意扑的运用 :)]
+;B[bq]C[必然];W[aq]C[黑1挖，必然]
+(;B[ar];W[as]LB[cq:A][bs:B]C[提，若于A位提，则黑B形成劫争。];B[cq];W[bo];B[hq];W[hr];B[gr]C[妙手！];W[gs]C[扑? 白提了后黑棋有后续手段么?]
+(;B[er]LB[es:A][cs:B]C[恭喜答对！
+白AB位的劫争很重，黑基本成活！])
+(;B[es];W[cs]C[失败，离成功咫尺之遥])
+(;B[cs];W[ap]C[失败，离成功咫尺之遥！]))
+(;B[cq];W[ar]LB[cs:A][ds:B]C[黑3提过于简单，白4粘后黑棋失去了A，B位的先手。
+失败，重来吧]))
