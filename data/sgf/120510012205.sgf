@@ -1,0 +1,9 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]HA[0]AB[qb][qc][pd][oe][nf][nd][nc][mb][mc][kb]AW[nb][ob][pb][oc][oh][mh][ld][me][ne][pe][od]C[黑先
+提示：第一着黑棋必须粘上。此后，黑棋可利用巧妙的行棋次序而脱险。]
+;B[of];W[pf]C[贴住！]
+(;B[pg]C[扳，寻找头绪！];W[qg]
+(;B[nh]
+(;W[ni];B[ng];W[og];B[oi];W[ph];B[mi];W[nj];B[mg];W[lh];B[lg];W[kg];B[kh];W[li];B[kf];W[jg];B[lf]C[恭喜答对！])
+(;W[ng];B[og];W[ph];B[mg];W[ni];B[lg]C[恭喜答对！]))
+(;B[ph];W[og]C[失败，重来吧]))
+(;B[nh]C[过于直接];W[og]C[紧气！];B[ng];W[ni]C[失败，重来吧]))

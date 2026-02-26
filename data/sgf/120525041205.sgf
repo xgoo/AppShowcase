@@ -1,0 +1,6 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]CA[gb2312]HA[0]AB[da][eb][ec][dd][ee][df][cf][bf][af]AW[ce][cd][bd][ba][bb][cb][db]C[黑先——请根据白棋的眼型走出正确的杀棋方法。]
+
+(;B[dc];W[ae];B[cc];W[bc];B[be];W[ad];B[ab]C[恭喜答对！从外侧压迫眼位。])
+(;B[ad];W[ac]C[失败，白棋已活])
+(;B[ac];W[ab];B[ad];W[bc]LB[ae:A][dc:B]C[黑1看似是战略要点，实则不然。AB见合，失败。])
+(;B[ab];W[ac]C[失败，重来吧]))
