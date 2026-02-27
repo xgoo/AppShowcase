@@ -1,0 +1,18 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]CA[gb2312]HA[0]AB[ao][bo][co][do][eo][fo][dp][gp][hp][hq]AW[ap][bp][cp][dq][ep][fp][fq][gq][hr][iq][jq]C[黑先，白空里味恶之极，但黑棋没有两把刷子是无法暴动成功的 XD]
+;B[cq];W[bq]C[黑1断，寻找头绪。白2只此一手];B[cr];W[br]C[一本道]
+(;B[er]C[跳刺，好棋！];W[eq];B[gr]C[断！];W[fr]C[只好打吃];B[fs];W[gs]
+(;B[ds]LB[ir:A]C[由于黑棋可A位断紧住白棋气，白棋只好拼劫。
+恭喜答对！])
+(;B[dr];W[es]C[毫无收获，失败，重来吧]))
+(;B[dr];W[eq]
+(;B[er];W[fr];B[fs];W[gr];B[bs];W[ar]LB[es:A][cs:B]C[AB各有一扑，黑棋不入气失败，白棋大笑：）
+失败，重来吧])
+(;B[gr];W[fr]C[只好打吃];B[gs];W[hs]LB[fs:A][bs:B]C[我是不会傻乎乎的在A位叫吃，被黑棋扳B然后吃我不入气的 : P]))
+(;B[gr];W[fr]C[打吃]
+(;B[dr];W[eq];B[bs];W[ar]
+(;B[cs];W[er]C[不入气。
+失败，重来吧。])
+(;B[es];W[gs]
+(;B[er];W[cs]C[失败，重来吧])
+(;B[cs];W[er]C[失败，重来吧])))
+(;B[er];W[dr]C[失败，重来吧])))
