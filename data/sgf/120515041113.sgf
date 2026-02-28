@@ -1,0 +1,7 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]HA[0]AB[rb][sc][sd][qc][pc][pd][pe][pf][pg][ph][pi][qi][ri][si][rg]AW[qb][rc][rd][qd][qe][qf][qg][qh][sh][sf][rh]C[黑先，此题比上一题稍复杂，但运用的原理是一样的。]
+
+(;B[sa];W[se];B[rf];W[sb];B[sc]C[恭喜答对！])
+(;B[sa];W[rf];B[se]C[恭喜答对！])
+(;B[pb];W[se]LB[rf:A][sb:B]C[失败，AB见合已无法避免。])
+(;B[ra];W[se];B[rf];W[sb];B[sc];W[qa]C[黑1与正解的意思很相近了，但是手法还需斟酌！
+请大侠重新来过！]))

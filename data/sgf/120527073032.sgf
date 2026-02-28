@@ -1,0 +1,6 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]GN[围棋基础训练]HA[0]SO[《李昌镐围棋基础训练》初级篇、提高篇]US[阿浩]AB[br][cr][dr][dq][dp][gq][co][cn][cm][bm][am][an]AW[bn][do][eo][dm][dl][bl][cl][ao][cp][cq][bq][aq][ar][al]C[黑先——在激烈的对杀过程中一步也不能错。]
+
+(;B[bp];W[ap];B[bo]C[恭喜答对！])
+(;B[bo];W[bp];B[ap]C[黑1单提一子，白2会顽强的走成打劫。])
+(;B[ap];W[bp];B[bo];W[dn]C[黑1扑大损，不仅形成打劫，而且还是紧气劫])
+(;B[bs];W[bo]C[失败，重来吧]))

@@ -1,0 +1,13 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]HA[0]AB[pl][pm][pn][qn][rm][ql][sk][rk][rj][sj][qo][qp][qq][rq]AW[sq][rr][qr][pr][oq][rp][ro][rn][sm][oo][on][ol][ok][oj][qk][qj][qi][ri][si]
+
+(;B[sp];W[so]C[提，只此一手];B[sl];W[rl];B[rk];W[sk];B[sl];W[sr];B[sn];W[sp];B[sj];W[rj];B[sk];W[sm]C[成劫，恭喜答对！])
+(;B[sl];W[rl]C[提]
+(;B[rk];W[sp]
+(;B[sl];W[sn]C[假眼，重来吧])
+(;B[sn];W[sk];B[sl];W[sj]C[仍然是假眼，重来吧。
+之前哪步棋需要斟酌呢？]))
+(;B[sn];W[sp]
+(;B[sl];W[rk]C[失败，重来吧])
+(;B[rk];W[sk];B[sl];W[sj]C[失败，重来吧]))
+(;B[sp];W[sk]C[失败，重来吧。
+请重新考虑行棋次序！])))
