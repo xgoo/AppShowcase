@@ -1,0 +1,6 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]GN[官子谱上卷第186图]HA[0]US[吴清源解说]AB[rg][sc][rc][qc][qd][qe][qf][oe][og][oi][pj][qk][ql][qm][rm][sm][rh]AW[rd][re][rf][qg][qh][qi][ri][si][sk][sl][rl]C[白先净活
+第二只眼在哪里？]
+
+(;W[sf]N[正解];B[sd]C[黑2不得已，否则白2后，单在左边白棋就已经做出两眼。];W[rk]C[白1时，因有倒脱靴手筋，左方已先确保一只眼，次再于3位做出第二只眼。];B[se];W[sg]C[原本评注：“1、3、5妙”。];B[sh];W[rf]C[第一个倒脱靴];B[rj];W[qj];B[sj];W[rk]C[第二个倒脱靴
+恭喜答对！])
+(;W[rk]N[失败];B[sf];W[sg];B[sd];W[sh];B[rg]C[白棋失去左边的眼，净死。]))

@@ -1,0 +1,8 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]CA[gb2312]HA[0]AB[rs][rr][qq][qp][pp][op][np][mp][lq][kq][jq][jr]AW[kr][lr][mr][mq][nq][oq][pq][qr][qs]C[黑先——是断吃两子还是点方?]
+
+(;B[pr];W[or];B[ns];W[ps];B[os];W[pr]C[恭喜答对！])
+(;B[pr];W[or];B[ps];W[ns]C[失败，白净活])
+(;B[os]
+(;W[ns];B[or];W[pr];B[ks];W[ls]C[失败，白棋净活。])
+(;W[ns];B[pr];W[or];B[ps]C[失败，重来吧]))
+(;B[or];W[pr];B[os];W[ns];B[ks];W[ls]C[失败，重来吧]))
