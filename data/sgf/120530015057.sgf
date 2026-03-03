@@ -1,0 +1,7 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]CA[gb2312]HA[0]AB[la][mc][mb][kb][jb][ic][je][jd][ld][le][me][ne][od][pd][qd][rc][rb][ra][qa]AW[lb][lc][kc][nd][md][nb][nc][oc][pc][qc][qb][pa]C[《出奇不意》——黑先
+单纯的逃跑两子是不行的，那么还有别的方法吗? 次序上有没有什么需要注意的。]
+
+(;B[pb];W[ob]C[先扑，次序！];B[na];W[ma];B[mb]C[恭喜答对，白棋由于不入气无法吃接不归。])
+(;B[ma];W[na];B[ka];W[ob]C[失败，白两眼活])
+(;B[na];W[oa]C[接不归，失败。])
+(;B[oa];W[ob];B[pb]C[劫杀，并不是最好的结果，请重来]))
