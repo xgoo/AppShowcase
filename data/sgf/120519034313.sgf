@@ -1,0 +1,9 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]CA[gb2312]HA[0]EV[围棋死活杰作集(藤泽秀行著)]AB[nb][mb][nc][nd][od][pe][qe][re][ra]AW[qa][rc][qc][pd][oc][ob]C[黑先净杀
+朋友们的第一感往往是从外侧缩小眼位还是‘生猛的’从内部爆破呢？]
+
+(;B[oa];W[pa];B[na];W[pb];B[rb];W[qd];B[qb]C[恭喜答对！
+黑1，3冷静，白奋力挣扎也无法成活。])
+(;B[oa];W[pa];B[qb];W[na];B[rb];W[sb];B[ma];W[pc]C[失败])
+(;B[oa];W[pb];B[rb];W[sb];B[qd]C[变化])
+(;B[qb];W[rb];B[pa];W[pb]C[失败])
+(;B[pa];W[pb];B[qb];W[rb]C[成劫，失败]))

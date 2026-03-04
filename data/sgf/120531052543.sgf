@@ -1,0 +1,5 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]CA[gb2312]HA[0]EV[第一部—无条件杀或无条件活]AB[dc][ec][fb][gb][hc][dd][bd][bf][cg][ef][ee][eg][cc]AW[de][ce][cd][bc][ad][cb][fc][fd][ed]LB[eb:A][bb:B][ab:C]C[黑先——如何净吃白棋呢? 首先要防止A位被吃，B位直接断打会遭到白C位做劫抵抗]
+
+(;B[da];W[be];B[bb];W[ba];B[ab];W[ac];B[db];W[aa];B[bb]C[恭喜答对！])
+(;B[bb];W[ab]C[劫，失败，请重来])
+(;B[db];W[da];B[eb];W[be];B[bb];W[ba]C[失败，仍然是劫杀]))

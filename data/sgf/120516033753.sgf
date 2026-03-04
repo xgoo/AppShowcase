@@ -1,0 +1,22 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]GN[第四章  难解诘棋  第10题]HA[0]EV[第四章  难解诘棋  第10题]BT[山西]WT[广东]RO[2]AB[ao][bo][co][do][eo][fo][go][gp][gq][hr][ir][gs]AW[bp][cr][fr][fs][fq][fp][gr]C[黑先，最终成劫。]
+
+(;B[bq]C[正解第一步];W[br]
+(;B[ar];W[cq];B[aq]
+(;W[dp]C[白的最强手]
+(;B[ep]C[正着];W[cp]
+(;B[dr]
+(;W[eq]C[白的最强手]
+(;B[ds]C[正着];W[ap];B[dq];W[as];B[cs];W[aq];B[bs];W[hs];B[ar]C[恭喜答对，劫杀！])
+(;B[cs]N[失败九]C[失败九];W[ds];B[es];W[bs];B[ap];W[ds]))
+(;W[ap]N[白应错三]C[白应错三];B[cs];W[eq];B[dq];W[as];B[aq];W[hs];B[bq]))
+(;B[ap]N[失败八]C[失败八];W[eq];B[dr];W[ds]))
+(;B[bs]N[失败五]C[失败五];W[dr];B[eq];W[ep];B[cs];W[er];B[ds];W[es]))
+(;W[ep]N[白应错一]C[白应错一];B[dp];W[dq];B[er];W[es];B[bs])
+(;W[cp]N[白应错二]C[白应错二];B[ap];W[dp];B[bs]))
+(;B[cq]N[失败七]C[失败七];W[dq];B[ar];W[ds]C[胜负乃家常事也，请大侠重新来过！]))
+(;B[dq]N[失败一]C[失败一];W[dr];B[eq];W[bq];B[er];W[bs]C[胜负乃家常事也，请大侠重新来过！])
+(;B[cq]N[失败二]C[失败二];W[br];B[dr];W[dq];B[eq];W[dp];B[cp];W[ep];B[er];W[hs];B[ar];W[bs]C[胜负乃家常事也，请大侠重新来过！])
+(;B[dr]N[失败三]C[失败三];W[dq];B[er];W[cq];B[eq];W[ep];B[dp];W[hs];B[br];W[bq]C[胜负乃家常事也，请大侠重新来过！])
+(;B[br]N[失败四]C[失败四];W[bq];B[cq];W[ar];B[bs];W[dr];B[cp];W[aq]C[胜负乃家常事也，请大侠重新来过！])
+(;B[eq]N[失败五]C[失败五];W[dr];B[bq];W[br];B[er];W[aq];B[ap];W[cq];B[cp];W[as]C[胜负乃家常事也，请大侠重新来过！])
+(;B[er]N[失败六]C[失败六];W[dr];B[bq];W[br];B[eq];W[aq];B[ap];W[cq];B[cp];W[as]C[胜负乃家常事也，请大侠重新来过！]))
