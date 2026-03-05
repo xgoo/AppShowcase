@@ -1,0 +1,6 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]GN[围棋死活辞典]HA[0]AB[bs][br][cq][cp][do][ep][fp][gp][hp][iq][ir][is][hs]AW[cs][cr][dq][eq][er][fq][gq][gs][hr]C[黑先——请注意缩小眼位常用的手法与次序]
+
+(;B[gr];W[fr];B[es];W[fs];B[ds];W[dr];B[hq]C[恭喜答对！])
+(;B[es];W[fs];B[gr];W[ds]C[失败，请重来])
+(;B[ds];W[dr];B[fs];W[fr];B[gr]C[打劫，失败，请重来])
+(;B[fs];W[fr]C[劫杀，并不是最好的结果]))

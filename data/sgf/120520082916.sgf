@@ -1,0 +1,6 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]GN[黑先]CA[gb2312]HA[0]EV[第二章 活棋训练]AB[gr][hr][hq][hp][ho][dn][co][cp][dp][ep][eq][bq][dm][cm][bm][fm][fn][fq]AW[hs][ir][iq][ip][io][in][gq][gp][fp][go][gn][gm][gl][bn][cn][br][cq][dq][am][bl][cl][dl][dk][fl][em][er][fr]C[黑先——黑棋上方有一只后手眼，那么焦点就在下边，黑棋如何能做出一只先手眼呢? 
+请注意：黑棋的气也有些紧。]
+
+(;B[dr];W[cr];B[ds];W[cs];B[ar];W[es];B[bo];W[an];B[ao];W[al];B[eo]C[正解，次序井然。恭喜答对！])
+(;B[bo];W[aq]C[1打吃，过于简单了吧];B[an];W[eo];B[ap];W[bp]C[失败，劫争已经无法避免])
+(;B[cr];W[dr]C[从角部动手，思考方向正确，可是..];B[ar];W[bp];B[bs];W[bo];B[an];W[eo]C[失败, 终为气紧所连累，活一个小角显然无法满意。]))

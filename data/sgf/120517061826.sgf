@@ -1,0 +1,12 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]GN[官子谱上卷第226图]HA[0]US[吴清源解说]AB[co][cp][dq][eq][dr]AW[er][fr][fq][ep][do][dn][cn][cl]C[白先
+全杀是不可能，但是劫杀或割掉尾巴是可行的]
+
+(;W[br]N[正解]C[“2之二”的急所];B[bq];W[cr];B[ds]
+(;W[bp]C[卡！]
+(;B[bo]C[黑6以下牺牲四子，委屈做活。];W[cq];B[ap];W[dp];B[ar];W[es];B[bn];W[bm];B[an]C[白棋先手吃到左边四黑子，原本评注：“5妙，6宜二一扳做劫。”
+黑6可以在10位扳，白7位打吃，黑8位做劫。
+恭喜答对！])
+(;B[ar]N[参考2];W[cq];B[ap]C[劫争]))
+(;W[cq]N[参考1];B[ar];W[bp];B[bs];W[aq];B[cs]C[劫争])
+(;W[bo];B[bp];W[bn];B[ar]LB[ap:A][bs:B]C[AB见合，失败，重来吧！]))
+(;W[bq];B[br]C[急所被占，净活]))
