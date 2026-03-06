@@ -1,0 +1,13 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]CA[gb2312]HA[0]EV[围棋死活杰作集(藤泽秀行著)]AB[rc][rd][mb][mc][lb][nd][od][pd][qd][ra]AW[sb][rb][qc][pc][oc][nc][nb]C[《朴实之刀》——黑先净杀
+请利用白棋气紧的弱点]
+
+(;B[na];W[pa]LB[qb:A][pb:B][qa:C]C[对于黑1扳，白2无法挡住，否则黑A断，白B吃，黑C粘后，白棋两边不入气简单净死。]
+(;B[oa];W[qa]C[顶住，看似两眼已具雏形];B[ob]C[恭喜答对！白棋在黑1，3，5朴实的刀锋下无处遁行。])
+(;B[qb];W[qa]C[失败，重来吧])
+(;B[pb];W[qb]C[失败，重来吧]))
+(;B[na];W[oa];B[qb];W[pb];B[qa]C[变化])
+(;B[qb];W[pb];B[qa];W[pa];B[na];W[sa]C[失败])
+(;B[oa];W[na];B[qb];W[pb];B[pa]C[失败])
+(;B[pa];W[oa]
+(;B[pb];W[qb]C[失败，重来吧])
+(;B[qb];W[pb]C[失败，重来吧])))

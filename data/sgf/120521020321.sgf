@@ -1,0 +1,12 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]HA[0]AB[pd][pe][pf][od][oc][se][rd][qd]AW[qe][re][rf][qg][pg][og][nf][me][md][mb][nb]C[《单刀赴会》白先——展示地躺刀法的时刻到了
+可是此刻应该使用什么刀呢? 长刀? 短刀? 下路? 中路?]
+
+(;W[qa];B[pb]C[白1长刀！一寸长一分强！];W[pa];B[oa];W[ob];B[ra];W[qb];B[rb];W[qc]C[恭喜答对！
+白1直指要害，黑棋妄图抵抗，终因无法截断白棋，自身眼位不全失败。])
+(;W[pa];B[qb]C[白1小李飞刀，徐徐逼近要害。
+黑2固守中原];W[qa];B[ra]C[固若金汤，刀被夹住，动弹不得。
+请拔刀重来！])
+(;W[pb];B[ob]C[白1东洋刀法，挥刀直刺。];W[oa];B[qb];W[qa];B[ra];W[rb];B[pa]C[成劫，白棋刀法过于直白。
+请拔刀重来！])
+(;W[pb];B[ob];W[oa];B[qb];W[rb];B[qa];W[pa];B[pc];W[na];B[ra];W[rc];B[sb];W[sc];B[sd];W[sa];B[qc]C[黑成活，白棋招法不连贯。
+请重来！]))
