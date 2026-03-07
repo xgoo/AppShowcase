@@ -1,0 +1,9 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]CA[gb2312]HA[0]AB[re][md][nc][oc][od][oe][pd][pf][qg][qf][qe][qd][rc][sf]AW[sc][rb][qc][pc][ob][nb][mc][ld][me][ne][ng][pg][ph][rh][rg][rf][qh]C[《有机可乘》——黑先
+白棋一路打吃以为轻松灭掉了黑棋眼位，其实黑棋还有一线生机，请莫要放弃！]
+
+(;B[pb];W[qb];B[sb]
+(;W[rd];B[sd]LB[mb:A][pa:B]C[恭喜答对！
+黑棋有A位叫吃的先手和B位立下，白4走5位亦成劫。])
+(;W[sd];B[mb];W[nd];B[pa];W[lb];B[ra]C[变化图]))
+(;B[sd];W[sb]C[黑1卖掉变化，失败。])
+(;B[sb];W[rd]C[无法出棋]))

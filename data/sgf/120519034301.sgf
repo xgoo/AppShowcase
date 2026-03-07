@@ -1,0 +1,9 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]HA[0]AB[ge][fd][ed][ee][ef][ff][bd][be][ce][de][gc][gd]AW[bc][cd][dd][ec][fc][gb][hc][hd][he][gf][gg][fg][eg][dg][cg][bf]C[黑先活
+白棋角部的气异常的紧，但是很容易走出随手棋导致瞬间崩溃。]
+
+(;B[fb];W[eb]C[只好拐吃];B[cc];W[dc]C[好次序！];B[cb];W[bb];B[ba];W[db];B[ca]C[正解   恭喜答对！
+1，3，5凸显了次序的重要性，计算不缜密便拔刀，无论如何是不可取的。])
+(;B[dc];W[cc]C[黑1断打，成竹在胸。];B[db];W[eb]C[白4顽强抵抗];B[da];W[cb]C[黑5再如何巧妙也无济于事。
+失败，重来吧])
+(;B[cc];W[dc];B[cb];W[bb];B[fb];W[db]C[吃在这边];B[hb];W[ib];B[ga];W[ca]C[尽管打拔一子也无法成活，甚至外侧无法夹过。
+失败，重来吧]))
