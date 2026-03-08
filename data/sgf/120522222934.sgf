@@ -1,0 +1,7 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]GN[珍珑第3题 白先]HA[0]AB[qc][pc][qd][rd][rb][sc][pe][oe][ne][nd][mb][lc]AW[sa][qb][pb][ob][oc][od][pd][qe][re][qg][se]C[黑先
+做过XGoo死活题的朋友对此型一定很熟悉吧，在这相似的棋型里，黑方最好的应对手法是什么呢]
+;B[sd];W[ra]C[黑1必然]
+(;B[qf];W[rf];B[qa];W[pa];B[nc];W[sb];B[qa];W[sb];B[sa];W[ra];B[rg];W[sb];B[sf];W[rc]LB[pf:a]C[恭喜答对！
+黑3要着，这一着如不注意，黑将无劫材。由于黑3和白4的预先交换，产生了黑13的劫材。白14、16连续提劫，角上劫胜可活。
+但在实战中，白14也许会在a位提。])
+(;B[qa];W[pa];B[nc];W[sb];B[qa];W[sb];B[sa];W[ra];B[nb];W[sb]C[失败，黑无劫财。]))
