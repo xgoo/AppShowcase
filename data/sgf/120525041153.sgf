@@ -1,0 +1,7 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]CA[gb2312]HA[0]AB[pb][pc][qd][rd][qe][oe][ne][rf][rg]AW[of][pf][qf][qh][rh][re][se][sd][rc][qc]C[黑先——边上2子已经死亡了吗?]
+
+(;B[sb];W[rb];B[sc];W[sa];B[sc];W[sb];B[sf];W[sc];B[qb]C[恭喜答对，1路点是此型常用的手筋])
+(;B[rb];W[qg]C[如此黑棋英雄气短，普通的收气方法无法救回2子。])
+(;B[sc];W[sb];B[qb];W[qg]C[如此黑棋英雄气短，普通的收气方法无法救回2子。])
+(;B[sf];W[sc];B[qb];W[qg]C[黑棋气不够，失败。])
+(;B[qb];W[qg]C[如此黑棋英雄气短，普通的收气方法无法救回2子。]))

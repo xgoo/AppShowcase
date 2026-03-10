@@ -1,0 +1,9 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]GN[ ]HA[0]EV[李昌镐精讲围棋死活2]SO[《李昌镐围棋基础训练》初级篇、提高篇]US[阿浩]AB[do][co][bl][cl][dl][el][fl][gm][gn][go][gp][fp][eq][dq][cq][br][ar][en]AW[dp][cp][am][ep][eo][fo][bm][bo][bp][bq][fn]C[白先——白棋左边已经有一只眼，那么焦点就在如何通过攻击黑棋中间3子获取第二只眼。]
+
+(;W[dm];B[cm];W[cn];B[em];W[dn]C[恭喜答对，白1妙。])
+(;W[em]
+(;B[cn];W[dn];B[cm];W[fm];B[dm]C[失败，重来吧])
+(;B[cn];W[cm];B[dm];W[dn]C[成劫，并不是最佳答案。]))
+(;W[dn];B[cn];W[em];B[cm]C[中间无法成眼，左边的眼位也被破坏了。失败，重来吧])
+(;W[cm];B[dn];W[cn];B[aq];W[ap];B[an]C[失败，重来吧])
+(;W[cn];B[dn];W[cm];B[aq];W[ap];B[an]C[失败，重来吧]))
