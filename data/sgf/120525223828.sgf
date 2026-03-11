@@ -1,0 +1,7 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]HA[0]AB[ss][sr][sq][rq][qq][pp][qo][or][np][mp][mq][kq][kp][kr][ls]AW[lr][mr][nr][nq][oq][os][ps][qr][rr]C[黑先——白棋左右两只眼必得其一?]
+
+(;B[pr];W[pq]C[提了];B[pr];W[or]C[白棋危险了];B[rs];W[qs];B[ms]C[恭喜答对])
+(;B[rs];W[ms]
+(;B[qs];W[pr]C[失败，重来吧])
+(;B[pr];W[pq]C[失败，重来吧]))
+(;B[ms];W[rs]C[白已活，请重来]))

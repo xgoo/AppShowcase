@@ -1,0 +1,7 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]GN[围棋死活辞典   ]HA[0]AB[br][cq][dp][cn][en][ep][fp][gq][hq][iq][ir][is]AW[cr][ds][dq][eq][fq][gr][hr][gp][go][io][gm]C[黑先——白棋下面净活了吗? 请拿出看家本领进行攻杀。]
+
+(;B[as];W[bq];B[cp];W[er];B[cs]C[成劫，恭喜答对！])
+(;B[er];W[fr]LB[bq:A][hs:B]C[失败，A位的吃一子和B位的做活必得其一。])
+(;B[bs];W[bq];B[cp];W[ar];B[bp];W[er]C[失败，白已净活])
+(;B[fs];W[bq];B[cp];W[bs]C[失败，重来吧])
+(;B[fr];W[er]C[失败，重来吧]))
