@@ -1,0 +1,8 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]CA[gb2312]HA[0]AB[pa][ma][kb][jb][jd][kd][ld][md][nd][qf][pe][oc][pc][qb][qa]AW[qc][oa][pb][ob][nb][nc][mc][lc][lb][ka]C[黑先——白棋一子貌似断在黑棋要害上，难道只有弃子忍气吞声吗?]
+;B[rc];W[qd]C[黑1必然，白2只好长]
+(;B[ra];W[sb]C[点，若拐下，黑4位成眼已净活];B[rd];W[rb];B[qe];W[sa];B[qa];W[qb];B[la]C[恭喜答对，白棋吃四子意外的只成一只后手眼。])
+(;B[rb];W[rd]C[失败，对杀起来，黑棋气无论如何是不够的])
+(;B[sb];W[ra];B[rb];W[rd]C[黑3虎亦无法解决问题])
+(;B[rd];W[rb]
+(;B[qe];W[ra]LB[la:A][sb:B]C[AB见合，白棋成活。])
+(;B[sb];W[ra]LB[la:A][re:B]C[AB见合，失败。])))

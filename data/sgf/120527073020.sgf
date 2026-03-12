@@ -1,0 +1,7 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]GN[围棋基础训练]HA[0]SO[《李昌镐围棋基础训练》初级篇、提高篇]US[阿浩]AB[ap][bq][cq][bo][dp][ep][fp][gp][hp][hq][hr][hs]AW[fq][gq][gr][gs][fs][eq][cr][br][aq][es]C[黑先——白棋形状有些怪异，从哪里入手呢]
+
+(;B[dr];W[dq]
+(;B[er];W[ds];B[bs];W[ar];B[cs];W[as];B[cs]C[恭喜答对！双倒扑！];W[fr];B[dr])
+(;B[bs];W[er];B[ar];W[ds]C[1，3看似巧妙，白3简单成眼，已经活了]))
+(;B[ar];W[dr]C[白活，失败])
+(;B[bs];W[dr];B[ar];W[cs]C[失败，重来吧]))
