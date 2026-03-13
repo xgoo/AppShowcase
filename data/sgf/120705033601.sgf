@@ -1,0 +1,7 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]GN[黑先]CA[gb2312]HA[0]EV[眼杀]AB[qr][rr][rq][qp][qo][po][pm][qm][rm][qs]AW[ps][pr][pq][pp][qq][rp][sq][ro][rn][sn]C[黑先——围棋里有句趣话‘有眼杀瞎’，是指什么呢?]
+
+(;B[sp]
+(;W[so];B[ss];W[sp];B[qn]C[恭喜答对。白棋气紧不入气])
+(;W[so];B[sr];W[rs];B[sp]C[成劫，不是最佳答案]))
+(;B[sr];W[sp];B[qn];W[rs]C[失败，差一气])
+(;B[ss];W[sp];B[qn];W[sr]C[失败]))

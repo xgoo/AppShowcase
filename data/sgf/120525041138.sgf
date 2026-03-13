@@ -1,0 +1,12 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]HA[0]AB[cr][bq][bp][cp][dp][ep][fp][gq][gr]AW[br][cq][dq][eq][fq][er][hq][gp][ip][ir][go][en][dn][cm][bn]N[黑先活^妙趣]C[黑先——貌似无论从哪边打吃，白棋都会立下破眼。想净活是要充分利用黑棋下侧二子的。]
+
+(;B[bs];W[ar]
+(;B[es]
+(;W[fs];B[ds];W[hr];B[aq];W[gs];B[as]LB[dr:A]C[恭喜答对！白棋A位不入气，黑两眼成活！])
+(;W[ds]
+(;B[fs];W[hr];B[cs]C[恭喜答对])
+(;B[fs];W[dr];B[fr];W[cs];B[cr]C[恭喜答对，白棋被吃倒扑])))
+(;B[ds];W[dr]C[成劫，失败]))
+(;B[ar];W[bs];B[cs];W[ap]C[破眼]
+(;B[es];W[fs];B[as];W[hr];B[dr];W[ds]C[黑1从这边打，以下成劫。还有更好的活棋方法，请重来])
+(;B[fr];W[fs];B[gs];W[es]C[失败，由于黑棋不入气，无法对杀。])))
