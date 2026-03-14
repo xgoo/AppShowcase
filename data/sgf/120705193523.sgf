@@ -1,0 +1,5 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]HA[0]EV[TOM死活题]AB[db][dc][dd][de][df][dg][dh][ch][bh][ah][ce][ie]AW[cf][cg][bg][ag][af][be][cd][cc]C[黑先——白棋已经有一只眼，那么只好最大限度的深入破坏掉白棋眼位，最终成功成劫]
+
+(;B[ad];W[ac]C[黑点是急所];B[bc];W[bb];B[ab];W[bd];B[cb]C[恭喜答对！])
+(;B[bb];W[bc]C[简单成活])
+(;B[ac];W[ad]C[换种走法试试]))

@@ -1,0 +1,12 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]CA[gb2312]HA[0]AB[sq][rq][qp][ro][pp][op][np][mq][lq][kr][nr][ns]AW[mr][nq][oq][or][os][qr]C[黑先——白棋已经吃住黑二子，那么焦点就在如何破掉角部的眼位，请利用白棋四子气紧的缺陷]
+
+(;B[pq];W[pr]C[失败，重来吧])
+(;B[pr]
+(;W[pq];B[qq];W[ps]C[失败，重来吧])
+(;W[pq];B[qs];W[rs];B[rr];W[ps];B[ss];W[qs]C[失败，重来吧]))
+(;B[rr];W[qs];B[pq];W[pr]C[失败，重来吧])
+(;B[qs]
+(;W[rr];B[pr];W[pq];B[qq];W[ms]
+(;B[sr];W[ps]C[失败，重来吧])
+(;B[rs];W[ps];B[sr];W[ss];B[rs]C[失败，重来吧]))
+(;W[rr];B[rs];W[sr];B[pr];W[pq];B[qq];W[ms];B[ss]C[恭喜答对，黑1托为手筋，多送一子好手！])))
