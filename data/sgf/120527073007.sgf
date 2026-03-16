@@ -1,0 +1,13 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]CA[gb2312]HA[0]AB[bm][cl][em][en][ep][eq][fq][dq][er][bp][bn]AW[br][cq][dr][dp][dn][cn][bo][ao]C[黑先]
+
+(;B[cp]
+(;W[do]
+(;B[bs];W[cr];B[ar];W[aq];B[ds];W[as]C[正解！恭喜答对！])
+(;B[bq];W[cr]
+(;B[ds];W[ar]C[失败，重来吧])
+(;B[ar];W[bs];B[ds];W[aq]C[失败，重来吧])))
+(;W[bq];B[ds];W[cs];B[cr]C[变化图]))
+(;B[ds];W[cp]
+(;B[do];W[cr]C[失败，重来吧])
+(;B[cr];W[do]C[失败，重来吧]))
+(;B[do];W[cp];B[ds];W[cr]C[失败，重来吧]))

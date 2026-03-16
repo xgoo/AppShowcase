@@ -1,0 +1,8 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]CA[gb2312]HA[0]AB[pd][pc][oc][ob][nb][qe][re]AW[mb][mc][nc][ne][pe][pf][rf][sd][rd][qd]C[黑先——一座皆惊]
+
+(;B[sb];W[rb];B[rc];W[qc];B[qb]
+(;W[sc];B[ra]C[正解——恭喜答对！])
+(;W[ra];B[se]C[变化图]))
+(;B[qc];W[sb];B[rb];W[sc]C[失败，黑死])
+(;B[qb];W[sb];B[pa];W[na];B[rb];W[ra]C[失败])
+(;B[rc];W[sb];B[sc];W[qc];B[qb];W[rb]C[失败，重来吧]))

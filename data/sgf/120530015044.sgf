@@ -1,0 +1,17 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]CA[gb2312]HA[0]EV[第一部—无条件杀或无条件活]AB[ab][bc][bd][cb][db][dc][dd][de][ee][fd][gd][hd][hc]AW[ce][ba][ad][ae][be][cd][cc][cg][df][eg][ff][fe][ed][ec][fc][gc][hb][ic][jc]C[黑先——此型一眼看上去就会知道要在白棋气紧的四子上做文章，可仅此而已吗？]
+
+(;B[gb]
+(;W[fb];B[fa];W[ga];B[ea];W[jb];B[ca];W[bb]
+(;B[ac];W[aa];B[bc]C[恭喜答对！])
+(;B[aa];W[bb]C[失败]))
+(;W[fb]
+(;B[ea];W[ga];B[fa];W[jb];B[ca];W[bb]
+(;B[aa];W[bb];B[ba];W[ac]C[失败，就差一点。])
+(;B[ac];W[aa];B[bc];W[ac];B[ab]C[恭喜答对]))
+(;B[fa];W[ga];B[ea];W[jb];B[ca];W[bb]
+(;B[aa];W[bb];B[ba];W[ac]C[失败，请重来吧])
+(;B[ac];W[aa];B[bc];W[ac];B[ab]C[恭喜答对]))))
+(;B[eb];W[gb];B[ca];W[ea];B[fa];W[fb]C[失败，黑1单拐太直白了。])
+(;B[ea];W[gb]
+(;B[ca];W[eb]C[失败])
+(;B[eb];W[ca]C[失败])))
