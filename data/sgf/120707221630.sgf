@@ -1,0 +1,7 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]HA[0]EV[TOM死活题]AB[rr][qr][or][oq][op][pp]AW[qp][rp][rq][qn][po][oo][np][nq][nr][lr]C[黑先——是扩大眼位还是占据要点?]
+
+(;B[ps];W[sr];B[rs]C[恭喜答对！])
+(;B[sr];W[os]C[扳]
+(;B[ps];W[qq]C[失败，重来吧];B[rs];W[pr]C[失败，重来吧])
+(;B[qq];W[pr]C[失败，重来吧！]))
+(;B[qq];W[sr]C[你想得太简单了吧？重来吧！]))

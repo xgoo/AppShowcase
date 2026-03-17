@@ -1,0 +1,5 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]HA[0]EV[围棋死活杰作集(藤泽秀行著)]AB[rb][qb][qd][pd][oe][ne][mf][lf][ke][kd][kc][kb][jb][oa]AW[pa][pb][oc][nc][nb][me][le][lc][lb]C[黑先白死——次序是关键。]
+
+(;B[la];W[ma];B[mc];W[md];B[ld])
+(;B[la];W[ma];B[mc];W[ld];B[nd]C[恭喜答对])
+(;B[ld];W[mc];B[ma];W[la];B[na];W[pc]C[至此成双活。失败。]))
