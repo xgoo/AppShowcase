@@ -1,0 +1,6 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]CA[gb2312]HA[0]AB[sb][qc][rj][rh][qh][ph][pg][pf][pe][pd][pc][oa][ob][pb]AW[sh][rg][qg][qe][qd][sc][rc][rb][qb][pa]C[黑先——常做死活题的朋友第一感就知道这道题将会是通过金鸡独立完成的，但是如果选择正确的手法呢?]
+
+(;B[re];W[rd]C[1位要点，只此一手];B[qf];W[rf];B[se];W[sd];B[qa];W[sa];B[pa]C[好次序！恭喜答对！])
+(;B[qf];W[re]C[黑1单冲。失败，白已成活——那么，白2是不是要点呢?])
+(;B[se];W[re]C[黑1点，无谋，不仅没成功杀棋，自己还送死了])
+(;B[sf];W[re]LB[se:A][sg:B]C[AB见合，白成活]))

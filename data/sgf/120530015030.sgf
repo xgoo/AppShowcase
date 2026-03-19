@@ -1,0 +1,16 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]CA[gb2312]HA[0]EV[第四部—特选10题]AB[fc][hb][cb][bc][bd][cd][dd][ed][fb]AW[ab][bb][cc][dc][db][ec][fd][gd][hc][ib][jc]C[黑先——对杀和成眼的要点在哪里?]
+
+(;B[eb];W[ca]
+(;B[ba]
+(;W[gb];B[da];W[ea];B[fa];W[gc];B[da];W[cb];B[ac]C[劫，恭喜答对！])
+(;W[aa];B[gc];W[hd];B[ea];W[da];B[ga]C[如此双方皆活])
+(;W[fa];B[ga];W[gc]
+(;B[da];W[ea];B[da];W[ea];B[fa]C[劫])
+(;B[ea];W[gb]C[失败])
+(;B[gb];W[ea];B[da];W[ea]C[失败])))
+(;B[ea];W[gb]C[失败，有眼杀瞎])
+(;B[gc];W[hd]
+(;B[ga];W[ea]C[失败，请重来])
+(;B[ea];W[ga]C[失败，请重来])))
+(;B[ea];W[ca];B[gc];W[hd];B[ga];W[eb]C[失败，黑无法活])
+(;B[da];W[ca];B[ea];W[gb]C[失败，有眼杀瞎。]))
