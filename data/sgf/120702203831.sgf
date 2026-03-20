@@ -1,0 +1,9 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]CA[gb2312]HA[0]AB[cp][dp][ep][co][dn][fq][fr][fs][bq][cq][bp]AW[cr][eq][er][es][fp][gp][gq][gr][fn][em][dm][cm][bn][bo]C[黑先——黑棋上边有一只后手眼，那么焦点就在于如何利用白棋气紧，在角部形成一只先手眼]
+
+(;B[dr]
+(;W[ds]C[黑1挖只此一手，对此白不能单立一子，黑棋会通过简单的收气形成角部先手眼];B[br];W[dq]
+(;B[as];W[eo]C[巧妙！];B[cs];W[gs];B[dr]C[恭喜答对！])
+(;B[bs];W[eo];B[ap];W[ar]C[失败，哪里出问题了呢?])))
+(;B[br];W[dr]LB[bs:A][eo:B]C[失败，重来吧
+AB均为后手眼])
+(;B[cs];W[dr]C[没有利用到白棋气紧的弱点，失败]))
