@@ -1,0 +1,4 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]HA[0]AB[ps][pr][pq][pp][ns][nr][mr][lr][kr][oo][on]AW[mq][nq][oq][op][or][os][po][qo][rp][rr][mm]C[黑先杀白——黑棋4气，白棋3气，但是白棋似乎很轻松的就能逃出去。]
+
+(;B[lo];W[mo];B[mp];W[lp];B[kp];W[np];B[mn];W[ln];B[no];W[nn];B[lq]C[恭喜答对])
+(;B[mp];W[lq]C[长];B[kp];W[no]C[失败，重来吧];B[mo];W[nn]LB[om:A][np:B]C[AB见合，失败]))
