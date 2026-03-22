@@ -1,0 +1,10 @@
+(;CA[gb2312]AB[pc][pd][pe][qd][re][rf][sf][pa][pb]AW[nb][ob][od][oe][of][pf][qe][qf]
+[qg][rg][sg][qc][qb]C[白先
+咋一看，似乎比较简单，但稍不注意就会落入圈套。
+您若把问题看得过于复杂，经冥思苦想反不能得其解。本图就是这样一个巧妙的问题。(正解率20%)]
+AP[MultiGo:4.4.3]SZ[19]MULTIGOGM[1]
+;W[rd]C[必然];B[rc];W[sd]
+(;B[sb]C[黑此时的最佳应手];W[rb];B[ra];W[sc];B[qa];W[sa]C[双方最佳应法--劫，恭喜答对！])
+(;B[sc]
+(;W[se];B[rb]C[黑净活，重来吧！])
+(;W[rb];B[se];W[rd];B[sd];W[sb];B[rd];W[oc]C[白7扑，以下至黑11止。黑被全歼，白着法漂亮。恭喜答对！])))

@@ -1,0 +1,5 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]GN[黑先]CA[gb2312]HA[0]EV[要点]AB[or][oq][rr][rq]AW[rp][qp][pp][op][np][mp][mr][nr]C[黑先——做活的要点在哪里呢？]
+
+(;B[rs];W[os];B[ps];W[pr];B[pq];W[qs];B[qr]C[恭喜答对！])
+(;B[qq];W[pr];B[pq];W[os];B[qs];W[ps]C[黑棋眼位不够，失败，重来吧])
+(;B[os];W[sq];B[sr];W[qr];B[qq];W[pq];B[pr];W[qs];B[sp];W[rs]C[失败，重来吧]))
