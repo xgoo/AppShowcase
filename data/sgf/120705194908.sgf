@@ -1,0 +1,9 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]HA[0]EV[TOM死活题]AB[rq][rp][qp][po][pn][pm][pl][qk][qj]AW[rs][qr][pq][pp][qo][qn][qm][ro][mq]C[黑先——此题为经典形状]
+
+(;B[sn];W[rm]
+(;B[so];W[rr]C[退是好手];B[rl];W[sm];B[sl]C[恭喜答对])
+(;B[rl];W[so];B[sm];W[rr];B[ql];W[sq]C[失败，重来吧]))
+(;B[so];W[sn]C[挡];B[rm];W[sp]C[提了];B[ql];W[rl];B[rk];W[rr];B[sq]C[成劫，失败])
+(;B[rm]
+(;W[rl];B[ql];W[sm];B[so];W[rn];B[sp];W[sn];B[rk];W[rr]C[黑棋差一气告负])
+(;W[rl];B[sn];W[rn];B[so];W[sm];B[sp];W[ql];B[rk];W[rr]C[失败，请重来])))

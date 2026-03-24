@@ -1,0 +1,12 @@
+(;CA[gb2312]AB[mb][mc][nc][od][oe][of][pf][qf][re][rd][sd][ma]AW[rb][rc][pc][pd][pe]
+[oc][nb]C[黑先
+虽然只有如此狭小的空间，但变化却相当复杂。(正解率22%)]AP[MultiGo:4.4.3]
+SZ[19]MULTIGOGM[1]
+
+(;B[sc];W[sb]
+(;B[qb]
+(;W[qc];B[pa];W[pb];B[qa];W[oa];B[ra];W[sa];B[qa]C[恭喜答对])
+(;W[pb];B[qa];W[qc];B[oa]C[恭喜答对]))
+(;B[pa];W[oa];B[qb];W[pb];B[ra];W[qa]C[成劫
+失败，重来吧！]))
+(;B[oa];W[pa];B[qa];W[qb];B[pb];W[ob];B[na];W[pa]C[成劫，重来吧！]))

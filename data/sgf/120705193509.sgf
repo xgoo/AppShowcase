@@ -1,0 +1,9 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]HA[0]EV[TOM死活题]AB[qs][qr][qq][qp][qo][os][ns][nr]AW[sr][rp][ro][qm][om][oo][oq][nq][mq][mr][ms]C[黑先——好像黑棋眼位不全的样子，可是细心的棋友就会发现黑棋弯三的位置藏着一只后手眼，那么焦点就在如何先手在角部成一只眼。]
+
+(;B[rn];W[qn];B[rq];W[rm];B[sp];W[sn];B[rr];W[ss];B[or];W[pr];B[pq]C[恭喜答对];W[ps];B[or]C[恭喜答对！])
+(;B[rq];W[rn]
+(;B[rr];W[sq]C[失败，重来吧])
+(;B[sq]
+(;W[or]C[失败，重来吧])
+(;W[or];B[ss];W[rr]C[失败，重来吧])))
+(;B[or];W[rn]C[失败，重来吧]))
