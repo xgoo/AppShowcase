@@ -1,0 +1,11 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]CA[gb2312]HA[0]EV[第一部—无条件杀或无条件活]AB[cc][cf][df][ag][bg][ch][ff][he][gc][hb][fb][eb][ec][bc]AW[db][dc][dd][ed][fd][fc][be][bd][bf]C[黑先——黑棋三子在角部无法成活，杀气亦无法成立，那么似乎利用白棋左边的断点作文章了]
+
+(;B[cb];W[da];B[cd];W[ce];B[de];W[ca]
+(;B[ab];W[ba]
+(;B[af];W[bb];B[ad];W[ac];B[bc]C[恭喜答对！])
+(;B[ad];W[bb];B[ae];W[ac];B[bc]C[恭喜答对！]))
+(;B[ac];W[ab]C[失败，重来吧])
+(;B[ba];W[ac]C[失败，重来吧]))
+(;B[cd];W[ce]
+(;B[de];W[bb]C[失败，这边对杀明显不利])
+(;B[cb];W[ba]C[失败，由于黑棋已经撞了一气，白2点就成立了，黑棋无法对杀])))

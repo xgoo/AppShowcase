@@ -1,0 +1,5 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]HA[0]AB[sr][rr][qq][pq][nq][nr]AW[jq][mr][mq][mp][op][pp][qp][rp][rq]C[白先——此图为常型]
+
+(;W[ps];B[or];W[qr];B[pr];W[rs];B[qs]C[恭喜答对])
+(;W[oq];B[or];W[ns];B[ps]C[失败])
+(;W[or];B[oq];W[ns];B[pr]C[失败]))
