@@ -1,0 +1,5 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]GN[白先]CA[gb2312]HA[0]EV[第一章 杀棋训练]AB[dr][er][eq][fp][cp][cr][fn][hs][hr][hq][hp][eo][ho]AW[do][bp][bo][cn][fl][em][gn][hn][in][io][ip][iq][ir][is][cs][br][cq][dq][ep][ds][en]C[白先——一不小心就会成打劫和共活]
+
+(;W[fo];B[go];W[fr];B[fq];W[gq];B[gr];W[fs]C[正解，恭喜答对！])
+(;W[fo];B[go];W[gq];B[eo];W[gr];B[dp];W[bq];B[es]C[失败])
+(;W[go];B[dp];W[bq];B[gp];W[fr];B[gr];W[es];B[fs]C[失败]))

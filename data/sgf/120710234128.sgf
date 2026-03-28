@@ -1,0 +1,6 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]GN[疏豁角43——刚打照面]HA[0]EV[革集]AB[br][cp][co][bo][dp][ep]AW[bn][cn][dn][en][fo][gp][fq][eq][dq]C[白先——守株待兔怎么样?]
+
+(;W[dr];B[cr];W[cs];B[bs];W[ap];B[ao];W[bq];B[cq];W[ar]C[恭喜答对])
+(;W[cq];B[bq];W[ap];B[ao];W[cr];B[bs]C[失败])
+(;W[cr];B[cq];W[dr];B[bs];W[ap];B[ao];W[ar];B[bq];W[aq]C[失败，重来吧])
+(;W[ap];B[ao]C[失败，重来吧]))
