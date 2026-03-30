@@ -1,0 +1,9 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]HA[0]EV[TOM死活题]AB[rq][qq][pq][oq][pp][pr][pn][qn]AW[or][nr][nq][op][oo][po][qo][qp][rr][mo]C[黑先活——此题看似复杂，可是排除掉绝路，就只剩下单行道了]
+
+(;B[sp];W[ro];B[rs];W[qs]
+(;B[ps];W[ss];B[sr];W[sq];B[qr]C[恭喜答对])
+(;B[sr];W[ss]C[最终结果是劫嘛?]
+(;B[qr];W[sq];B[ps]C[恭喜答对！连环劫！])
+(;B[ps];W[rp];B[qr];W[sq];B[rs]C[恭喜答对！连环劫])))
+(;B[sr];W[rs];B[sp];W[ro];B[rp];W[ps]C[失败，重来吧])
+(;B[rp];W[ro];B[sr];W[rs]LB[ps:A][sp:B]C[AB见合，失败，重来吧]))
