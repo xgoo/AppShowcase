@@ -1,0 +1,5 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]GN[黑先]CA[gb2312]HA[0]EV[点]AB[pq][pp][qp][qo][qn][rm][pm][nm][mo][lp][lq][lr][pr]AW[qq][qr][ps][or][oq][op][oo][ns][mr][mq]C[黑先——白棋已有一只眼，如何把第二只破掉呢？]
+
+(;B[sr];W[rp];B[sp];W[ro];B[so];W[sn];B[sq];W[rq];B[rn]C[恭喜答对！])
+(;B[rs];W[rr];B[qs];W[ss];B[qs];W[rp]C[失败，成劫])
+(;B[sq];W[sr];B[rr];W[rq];B[ss];W[rp];B[qs]C[失败，成劫]))
