@@ -1,0 +1,11 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]GN[疏豁角11——伏翼]HA[0]EV[革集]AB[qo][ro][pp][op][nq][nr][ns]AW[or][os][qr][qp][rp]C[黑先]
+
+(;B[rr];W[qq];B[qs];W[rs];B[ss];W[ps];B[pq];W[rs]C[劫活，恭喜答对
+])
+(;B[sr]
+(;W[rr];B[sp];W[rq];B[sq];W[pq]C[失败，重来吧])
+(;W[rr]
+(;B[sp];W[rq];B[pq];W[ss]
+(;B[pr];W[qs]C[净活];B[rs];W[sq]C[净活，失败])
+(;B[rs];W[sq];B[pr];W[qs]C[失败，重来吧]))
+(;B[sp]))))

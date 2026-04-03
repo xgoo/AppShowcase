@@ -1,0 +1,10 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]GN[围棋基础训练]HA[0]SO[《李昌镐围棋基础训练》初级篇、提高篇]US[阿浩]AB[cl][ek][el][em][dn][gn][go][gp][fp][fq][eq][dr][dq][bo][co][cp]AW[en][fm][fn][fo][fl][hl][ho][hp][hq][eo][ep][dp][aq][br][cr][cq][bp][gr]C[黑先——出头的手筋在哪里?]
+
+(;B[gl];W[gm];B[hn];W[in];B[hm];W[gk];B[im]C[恭喜答对！])
+(;B[hm];W[im];B[il];W[hn];B[gm];W[gl]C[失败，黑棋无疾而终])
+(;B[in];W[hn];B[gm];W[gl];B[hm];W[im]C[失败])
+(;B[im];W[hm];B[hn];W[in]C[失败])
+(;B[gm];W[gl]C[无法出头])
+(;B[hn];W[in]
+(;B[im];W[hm]C[失败])
+(;B[gl];W[gk]C[失败])))
