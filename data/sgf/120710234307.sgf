@@ -1,0 +1,5 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]GN[黑先]CA[gb2312]HA[0]EV[第二章 活棋训练]AB[dp][dr][eq][fq][gr][fs][bp][cq]AW[br][bq][cp][co][do][ds][hr][hq][gq][eo][fp]C[黑先——角部特殊性！]
+
+(;B[cr];W[cs];B[es];W[ep];B[ar];W[bo];B[bs];W[ap];B[cs]C[正解，恭喜答对！])
+(;B[cr];W[cs];B[es];W[ep];B[aq];W[as];B[bo];W[bn];B[ap];W[an];B[bs];W[cs]C[劫活，不能满意])
+(;B[cr];W[cs];B[es];W[ep];B[bs];W[cs];B[ar]C[失败]))
