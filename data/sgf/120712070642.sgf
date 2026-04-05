@@ -1,0 +1,8 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]GN[官子谱上卷第27图]HA[0]US[吴清源解说]AB[le][lf][md][mc][nf][ng][ph][pi][ri][rd][qe][pe][pd][pc][ob]AW[ld][lc][me][nd][oe][of][pf][qf][rf][re][rh][qd]C[白先——白龙看似危在旦夕]
+
+(;W[qc]N[正解]
+(;B[rc];W[qb];B[rb]
+(;W[pb]C[妙];B[qa];W[mb];B[nc];W[oc]C[白棋大龙起死回生])
+(;W[oc]N[失败];B[pb];W[mb]C[白3吃到两个黑子];B[od]C[黑4挤，白棋大龙被断，全军覆没。]))
+(;B[qb]N[参考]C[正解图的黑2在本图1位打];W[rc];B[rb];W[sd];B[mb]C[黑棋也可如此进行]))
+(;W[rc];B[qc];W[sd];B[rb]C[劫活，失败]))
