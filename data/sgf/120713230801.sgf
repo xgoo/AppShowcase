@@ -1,0 +1,10 @@
+(;GM[1]AP[StoneBase:SGFParser.3.0.1]SZ[19]GN[官子谱上卷第54图]HA[0]US[吴清源解说]AB[ir][jr][jq][hq][gq][fq][dq][dp][do]AW[cq][cp][co][dn][eo][fo][gp][hp][ip][iq][hr]C[白先——请走出最佳官子次序]
+
+(;W[eq];B[er];W[gr];B[fr];W[dr];B[ep];W[fp]C[恭喜答对])
+(;W[eq]
+(;B[er];W[dr];B[ep];W[fp];B[eq]
+(;W[gr];B[cr]C[失败])
+(;W[cr];B[gr]C[失败，白棋收获甚微]))
+(;B[dr];W[er]
+(;B[ep];W[fr]C[此图黑棋崩溃])
+(;B[es];W[gs];B[gr];W[fs];B[ep];W[ds];B[fp];W[hs];B[cs];W[cr]C[劫]))))
